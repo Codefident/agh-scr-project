@@ -1,0 +1,213 @@
+package trafficLights
+public
+	with Data_Model;
+	with SEI;
+	
+	
+	-- DATA --
+	data Signal
+		properties
+			Data_Model::Enumerators => ("Go", "Stop", "ChangingSignal", "Failure");
+			Data_Size => 20 bytes;
+	end Signal;
+	
+	data RequestSignal
+		properties
+			Data_Model::Data_Representation => Boolean;
+			Data_Size => 2 bytes;
+	end RequestSignal;
+	
+	data LightStatus
+		properties
+			Data_Model::Data_Representation => Boolean;
+	end LightStatus;
+	
+	
+	-- SYSTEM --
+	system TrafficLightsSystem
+	end TrafficLightsSystem;
+	
+	system implementation TrafficLightsSystem.impl
+		subcomponents
+			-- lights
+			mainCarLight: device CarTrafficLight;
+			sideCarLight: device CarTrafficLight;
+			tramLight: device TramTrafficLight;
+			mainPedLight: device PedTrafficLight;
+			sidePedLight: device PedTrafficLight;
+			
+			-- sensors and buttons
+			pedButtonMain: device PedButton.impl;
+			pedButtonSide: device PedButton.impl;
+			tramSensor: device TramSensor.impl;
+			
+			-- other components
+			cpu: processor CPU.impl;
+			mem: memory Mem.impl;
+			commBus: bus CommBus.impl;
+			
+			-- processes
+			mainController: process MainController.impl;
+			
+			
+		connections
+			-- Pedestrian and tram request connections
+			c1: port pedButtonMain.requestSignal -> mainController.receiveRequest;
+			c2: port pedButtonSide.requestSignal -> mainController.receiveRequest;
+			c3: port tramSensor.requestSignal -> mainController.receiveRequest;
+
+			-- Signal output from controller to lights
+			c4: port mainController.sendSignal -> mainCarLight.signalReceive;
+			c5: port mainController.sendSignal -> sideCarLight.signalReceive;
+			c6: port mainController.sendSignal -> tramLight.signalReceive;
+			c7: port mainController.sendSignal -> mainPedLight.signalReceive;
+			c8: port mainController.sendSignal -> sidePedLight.signalReceive;
+			
+			-- Bus
+			b1: bus access pedButtonMain.busConn <-> commBus;
+			b2: bus access pedButtonSide.busConn <-> commBus;
+			b3: bus access tramSensor.busConn <-> commBus;
+			b4: bus access mainCarLight.busConn <-> commBus;
+			b5: bus access sideCarLight.busConn <-> commBus;
+			b6: bus access tramLight.busConn <-> commBus;
+			b7: bus access mainPedLight.busConn <-> commBus;
+			b8: bus access sidePedLight.busConn <-> commBus;
+			bcpu: bus access cpu.busConn <-> commBus;
+			bmem: bus access mem.busConn <-> commBus;
+	end TrafficLightsSystem.impl;
+	
+	
+	-- PROCESSES --
+	process MainController
+		features
+			receiveRequest: in data port RequestSignal;
+			receiveLightStatus: in data port LightStatus;
+			sendSignal: out data port Signal;
+	end MainController;
+	
+	process implementation MainController.impl
+		subcomponents
+			pedButtonThread: thread PedButtonThread.impl;
+			tramSensorThread: thread TramSensorThread.impl;
+			lightThread: thread LightThread.impl;
+		connections
+			c1: port receiveRequest -> tramSensorThread.dataIn;
+			c2: port receiveRequest -> pedButtonThread.dataIn;
+			c3: port lightThread.dataOut -> sendSignal;
+			c4: port receiveLightStatus -> lightThread.dataIn;
+	end MainController.impl;
+	
+	process CarLightController
+		features
+			receiveSignal: in data port Signal;
+			sendStatus: out data port LightStatus;
+	end CarLightController;
+	 
+	
+	
+	-- THREADS --
+	thread PedButtonThread
+		features
+			dataIn: in data port RequestSignal;
+	end PedButtonThread;
+	thread implementation PedButtonThread.impl
+	end PedButtonThread.impl;
+	
+	thread TramSensorThread
+		features
+			dataIn: in data port RequestSignal;
+	end TramSensorThread;
+	thread implementation TramSensorThread.impl
+	end TramSensorThread.impl;
+	
+	thread LightThread
+		features
+			dataOut: out data port Signal;
+			dataIn: in data port LightStatus;
+	end LightThread;
+	thread implementation LightThread.impl
+	end LightThread.impl;
+	
+	
+	-- PROCESSOR --
+	processor CPU
+		features
+			busConn: requires bus access CommBus;
+		properties
+			SEI::MIPSCapacity => 120.0 mips;
+	end CPU;
+	processor implementation CPU.impl
+	end CPU.impl;
+	
+	
+	-- MEMORY --
+	memory Mem
+		features
+			busConn: requires bus access CommBus;
+	end Mem;
+	memory implementation Mem.impl
+	end Mem.impl;
+	
+	
+	-- BUS --
+	bus CommBus
+	end CommBus;
+	bus implementation CommBus.impl
+	end CommBus.impl;
+	
+	
+	-- DEVICES --
+	device CarTrafficLight
+		features
+			signalReceive: in data port Signal;
+			sendStatus: out data port LightStatus;
+			busConn: requires bus access CommBus;
+		properties
+			SEI::GrossWeight => 17.0 kg;
+	end CarTrafficLight;
+	device implementation CarTrafficLight.impl
+	end CarTrafficLight.impl;
+	
+	device TramTrafficLight
+		features
+			signalReceive: in data port Signal;
+			sendStatus: out data port LightStatus;
+			busConn: requires bus access CommBus;
+		properties
+			SEI::GrossWeight => 12.0 kg;
+	end TramTrafficLight;
+	device implementation TramTrafficLight.impl
+	end TramTrafficLight.impl;
+	
+	device PedTrafficLight
+		features
+			signalReceive: in data port Signal;
+			sendStatus: out data port LightStatus;
+			busConn: requires bus access CommBus;
+		properties
+			SEI::GrossWeight => 8.0 kg;
+	end PedTrafficLight;
+	device implementation PedTrafficLight.impl
+	end PedTrafficLight.impl;
+	
+	device PedButton
+		features
+			requestSignal: out data port RequestSignal;
+			busConn: requires bus access CommBus;
+		properties
+			SEI::GrossWeight => 1.0 kg;
+	end PedButton;
+	device implementation PedButton.impl
+	end PedButton.impl;
+	
+	device TramSensor
+		features
+			requestSignal: out data port RequestSignal;
+			busConn: requires bus access CommBus;
+		properties
+			SEI::GrossWeight => 10.0 kg;
+	end TramSensor;
+	device implementation TramSensor.impl
+	end TramSensor.impl;
+	
+end trafficLights;
