@@ -63,6 +63,13 @@ public
 			c7: port mainController.sendSignal -> mainPedLight.signalReceive;
 			c8: port mainController.sendSignal -> sidePedLight.signalReceive;
 			
+			-- Light Status
+			c9: port mainCarLight.sendStatus -> mainController.receiveLightStatus;
+			c10: port sideCarLight.sendStatus -> mainController.receiveLightStatus;
+			c11: port tramLight.sendStatus -> mainController.receiveLightStatus;
+			c12: port mainPedLight.sendStatus -> mainController.receiveLightStatus;
+			c13: port sidePedLight.sendStatus -> mainController.receiveLightStatus;
+			
 			-- Bus
 			b1: bus access pedButtonMain.busConn <-> commBus;
 			b2: bus access pedButtonSide.busConn <-> commBus;
