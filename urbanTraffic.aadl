@@ -1,0 +1,26 @@
+package urbanTraffic
+public
+	with trafficLights;
+	with emergencyVehicle;
+	
+	---- top system
+	system UrbanTrafficSystem
+	end UrbanTrafficSystem;
+	
+	system implementation UrbanTrafficSystem.impl
+		subcomponents
+			trafficLightsSystem: system trafficLights::TrafficLightsSystem.impl;
+			emergencyVehicleSystem: system emergencyVehicle::EmergencyVehicleSystem.impl;
+			radioBus: bus Radio.impl;
+		connections
+			b_lights: bus access radioBus -> trafficLightsSystem.radioBus;
+			b_emergency: bus access radioBus -> emergencyVehicleSystem.radioBus;
+	end UrbanTrafficSystem.impl;
+	
+	
+	bus Radio
+	end Radio;
+	bus implementation Radio.impl
+	end Radio.impl;
+	
+end urbanTraffic;

@@ -2,7 +2,8 @@ package trafficLights
 public
 	with Data_Model;
 	with SEI;
-	
+	with urbanTraffic;
+	with emergencyVehicle;
 	
 	-- DATA --
 	data Signal
@@ -25,10 +26,13 @@ public
 	
 	-- SYSTEM --
 	system TrafficLightsSystem
+		features
+			radioBus: requires bus access urbanTraffic::Radio;
 	end TrafficLightsSystem;
 	
 	system implementation TrafficLightsSystem.impl
 		subcomponents
+			
 			-- lights
 			mainCarLight: device CarTrafficLight;
 			sideCarLight: device CarTrafficLight;
@@ -36,10 +40,11 @@ public
 			mainPedLight: device PedTrafficLight;
 			sidePedLight: device PedTrafficLight;
 			
-			-- sensors and buttons
+			-- other devices
 			pedButtonMain: device PedButton.impl;
 			pedButtonSide: device PedButton.impl;
 			tramSensor: device TramSensor.impl;
+			radioReceiver: device RadioReceiver.impl;
 			
 			-- other components
 			cpu: processor CPU.impl;
@@ -70,6 +75,9 @@ public
 			c12: port mainPedLight.sendStatus -> mainController.receiveLightStatus;
 			c13: port sidePedLight.sendStatus -> mainController.receiveLightStatus;
 			
+			-- Emergency signal
+			c14: port radioReceiver.outEmergencySignal -> mainController.receiveEmergencySignal;
+			
 			-- Bus
 			b1: bus access pedButtonMain.busConn <-> commBus;
 			b2: bus access pedButtonSide.busConn <-> commBus;
@@ -81,6 +89,8 @@ public
 			b8: bus access sidePedLight.busConn <-> commBus;
 			bcpu: bus access cpu.busConn <-> commBus;
 			bmem: bus access mem.busConn <-> commBus;
+			brecRadio: bus access radioBus -> radioReceiver.radioBus;
+			brecComm: bus access radioReceiver.busConn <-> commBus;
 	end TrafficLightsSystem.impl;
 	
 	
@@ -89,6 +99,7 @@ public
 		features
 			receiveRequest: in data port RequestSignal;
 			receiveLightStatus: in data port LightStatus;
+			receiveEmergencySignal: in data port emergencyVehicle::EmergencySignal;
 			sendSignal: out data port Signal;
 	end MainController;
 	
@@ -96,20 +107,15 @@ public
 		subcomponents
 			pedButtonThread: thread PedButtonThread.impl;
 			tramSensorThread: thread TramSensorThread.impl;
+			radioReceiverThread: thread RadioReceiverThread.impl;
 			lightThread: thread LightThread.impl;
 		connections
 			c1: port receiveRequest -> tramSensorThread.dataIn;
 			c2: port receiveRequest -> pedButtonThread.dataIn;
 			c3: port lightThread.dataOut -> sendSignal;
 			c4: port receiveLightStatus -> lightThread.dataIn;
+			c5: port receiveEmergencySignal -> radioReceiverThread.dataIn;
 	end MainController.impl;
-	
-	process CarLightController
-		features
-			receiveSignal: in data port Signal;
-			sendStatus: out data port LightStatus;
-	end CarLightController;
-	 
 	
 	
 	-- THREADS --
@@ -135,6 +141,13 @@ public
 	thread implementation LightThread.impl
 	end LightThread.impl;
 	
+	thread RadioReceiverThread
+		features
+			dataIn: in data port emergencyVehicle::EmergencySignal;
+			dataOut: out data port emergencyVehicle::EmergencySignal;
+	end RadioReceiverThread;
+	thread implementation RadioReceiverThread.impl
+	end RadioReceiverThread.impl;
 	
 	-- PROCESSOR --
 	processor CPU
@@ -145,7 +158,6 @@ public
 	end CPU;
 	processor implementation CPU.impl
 	end CPU.impl;
-	
 	
 	-- MEMORY --
 	memory Mem
@@ -216,5 +228,14 @@ public
 	end TramSensor;
 	device implementation TramSensor.impl
 	end TramSensor.impl;
+	
+	device RadioReceiver
+		features
+			outEmergencySignal: out data port emergencyVehicle::EmergencySignal;
+			radioBus: requires bus access urbanTraffic::Radio;
+			busConn: requires bus access CommBus;
+	end RadioReceiver;
+	device implementation RadioReceiver.impl
+	end RadioReceiver.impl;
 	
 end trafficLights;

@@ -1,0 +1,59 @@
+package emergencyVehicle
+public
+	with Data_Model;
+	with urbanTraffic;
+	
+	
+	-- DATA --
+	data EmergencySignal
+		properties
+			Data_Model::Data_Representation => String;
+	end EmergencySignal;
+	
+	
+	-- SYSTEM --
+	system EmergencyVehicleSystem
+		features
+			radioBus: requires bus access urbanTraffic::Radio;
+	end EmergencyVehicleSystem;
+	
+	system implementation EmergencyVehicleSystem.impl
+		subcomponents
+			radioSignalEmitter: device RadioSignalEmitter.impl;
+			emergencyVehicleController: process EmergencyVehicleController.impl;
+		connections
+			b: bus access radioBus -> radioSignalEmitter.radioBus;
+	end EmergencyVehicleSystem.impl;
+	
+	
+	-- PROCESS --
+	process EmergencyVehicleController
+		features
+			sendEmergencySignal: out data port EmergencySignal;
+	end EmergencyVehicleController;
+	
+	process implementation EmergencyVehicleController.impl
+		subcomponents
+			radioEmitterThread: thread RadioEmitterThread.impl;
+		connections
+			c1: port radioEmitterThread.dataOut -> sendEmergencySignal;
+	end EmergencyVehicleController.impl;
+	
+	-- THREADS --
+	thread RadioEmitterThread
+		features
+			dataIn: in data port EmergencySignal;
+			dataOut: out data port EmergencySignal;
+	end RadioEmitterThread;
+	thread implementation RadioEmitterThread.impl
+	end RadioEmitterThread.impl;
+	
+	-- DEVICES --
+	device RadioSignalEmitter
+		features
+			sendEmergencySignal: out data port EmergencySignal;
+			radioBus: requires bus access urbanTraffic::Radio;
+	end RadioSignalEmitter;
+	device implementation RadioSignalEmitter.impl
+	end RadioSignalEmitter.impl;
+end emergencyVehicle;

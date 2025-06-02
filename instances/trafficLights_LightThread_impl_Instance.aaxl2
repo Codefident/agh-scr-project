@@ -23,7 +23,7 @@
         </ownedValue>
         <propertyAssociation href="../trafficLights.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedPropertyAssociation.1"/>
       </ownedPropertyAssociation>
-      <feature xsi:type="aadl2:DataPort" href="../trafficLights.aadl#/0/@ownedPublicSection/@ownedClassifier.12/@ownedDataPort.0"/>
+      <feature xsi:type="aadl2:DataPort" href="../trafficLights.aadl#/0/@ownedPublicSection/@ownedClassifier.11/@ownedDataPort.0"/>
     </featureInstance>
     <featureInstance name="dataIn" type="/2">
       <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
@@ -35,7 +35,7 @@
         </ownedValue>
         <propertyAssociation href="../trafficLights.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedPropertyAssociation.0"/>
       </ownedPropertyAssociation>
-      <feature xsi:type="aadl2:DataPort" href="../trafficLights.aadl#/0/@ownedPublicSection/@ownedClassifier.12/@ownedDataPort.1"/>
+      <feature xsi:type="aadl2:DataPort" href="../trafficLights.aadl#/0/@ownedPublicSection/@ownedClassifier.11/@ownedDataPort.1"/>
     </featureInstance>
     <classifier xsi:type="aadl2:ThreadImplementation" href="../trafficLights.aadl#trafficLights.LightThread.impl"/>
     <systemOperationMode name="No Modes"/>

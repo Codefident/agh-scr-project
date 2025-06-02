@@ -8,7 +8,7 @@
           <unit href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#/0/@ownedPropertyType.0/@ownedLiteral.0"/>
         </ownedValue>
       </ownedValue>
-      <propertyAssociation href="../trafficLights.aadl#/0/@ownedPublicSection/@ownedClassifier.26/@ownedPropertyAssociation.0"/>
+      <propertyAssociation href="../trafficLights.aadl#/0/@ownedPublicSection/@ownedClassifier.27/@ownedPropertyAssociation.0"/>
     </ownedPropertyAssociation>
     <featureInstance name="requestSignal" direction="out" type="/1">
       <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
@@ -29,10 +29,10 @@
         </ownedValue>
         <propertyAssociation href="../trafficLights.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPropertyAssociation.1"/>
       </ownedPropertyAssociation>
-      <feature xsi:type="aadl2:DataPort" href="../trafficLights.aadl#/0/@ownedPublicSection/@ownedClassifier.26/@ownedDataPort.0"/>
+      <feature xsi:type="aadl2:DataPort" href="../trafficLights.aadl#/0/@ownedPublicSection/@ownedClassifier.27/@ownedDataPort.0"/>
     </featureInstance>
     <featureInstance name="busConn" category="busAccess" type="/2">
-      <feature xsi:type="aadl2:BusAccess" href="../trafficLights.aadl#/0/@ownedPublicSection/@ownedClassifier.26/@ownedBusAccess.0"/>
+      <feature xsi:type="aadl2:BusAccess" href="../trafficLights.aadl#/0/@ownedPublicSection/@ownedClassifier.27/@ownedBusAccess.0"/>
     </featureInstance>
     <classifier xsi:type="aadl2:DeviceImplementation" href="../trafficLights.aadl#trafficLights.PedButton.impl"/>
     <systemOperationMode name="No Modes"/>
