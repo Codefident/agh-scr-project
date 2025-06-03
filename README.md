@@ -45,9 +45,17 @@
     sygnału radiowego, który zostanie odebrany
     przez odpowiedni odbiornik na skrzyżowaniu.
     ```
+
+    Przykładowe skrzyżowanie (_źródło: Google Maps_)
+   ![Screenshot from 2025-06-03 13-23-06](https://github.com/user-attachments/assets/694396a5-5f10-4772-baef-3c02791ab7a6)
+
+    Przykładowy pojazd uprzywilejowany (_źródło: Wikisłownik)
+    ![image](https://github.com/user-attachments/assets/e160ba80-7e08-42d2-8d24-1629c221fb5e)
+
+
     
 
-4. **Komponenty**:
+5. **Komponenty**:
     - system `UrbanTrafficSystem` - system nadrzędny, pomagający spiąć ze sobą system świateł oraz pojazdów uprzywilejowanych,
     - system `TrafficLightsSystem` - system sygnalizacji świetlnej,
     - system `EmergencyVehicleSystem` - system nadający sygnały w pojeździe uprzywilejowanym,
@@ -70,7 +78,7 @@
     - thread `LightThread` - wątek pośredniczący w komunikacji między kontrolerem a sygnalizatorem, odbiera od kontrolera sygnał i wysyła mu status sygnalizatora,
     - thread `RadioReceiverThread` - wątek odpowiadający za odbieranie żądań od pojazdów uprzywilejowanych
   
-5. **Model - schematy**
+6. **Model - schematy**
    - `UrbanTrafficSystem`
      ![Screenshot from 2025-06-03 03-13-24](https://github.com/user-attachments/assets/e218a097-983d-4473-b1a2-224142532c33)
 
@@ -81,13 +89,13 @@
    - `EmergencyVehicleSystem`
    ![Screenshot from 2025-06-03 03-10-04](https://github.com/user-attachments/assets/bda19caa-292e-4558-ba7f-70a90d7d9095)
 
-6. **Analizy modelu**
+7. **Analizy modelu**
    - Check Binding Constraints - "No problems found" ✅
    - Check Connection Binding Consistency - Brak ostrzeżeń oraz błędów ✅
   
-7. **Inne informacje zależne od tematu**
+8. **Inne informacje zależne od tematu**
     Brak.
 
-8. **Literatura**
+9. **Literatura**
    - [https://en.wikipedia.org/wiki/Traffic_signal_preemption#Vehicular_device_types](https://en.wikipedia.org/wiki/Traffic_signal_preemption#Vehicular_device_types)
    - [https://leotek.com/traffic-light-sensors/](https://leotek.com/traffic-light-sensors/)
