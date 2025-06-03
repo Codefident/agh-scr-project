@@ -18,25 +18,95 @@ public
 	end EmergencyVehicleSystem;
 	
 	system implementation EmergencyVehicleSystem.impl
+		
 		subcomponents
 			radioSignalEmitter: device RadioSignalEmitter.impl;
+			button: device EmiteSignalButton.impl;
+			
+			cpu: processor VehicleCPU.impl;
+			mem: memory VehicleMemory.impl;
+			vehicleBus: bus VehicleBus.impl;
+			
 			emergencyVehicleController: process EmergencyVehicleController.impl;
+			
 		connections
-			b: bus access radioBus -> radioSignalEmitter.radioBus;
+			c1: port button.requestToSendEmergencySignal -> emergencyVehicleController.receiveRequest;
+			c2: port emergencyVehicleController.sendEmergencySignal -> radioSignalEmitter.inEmergencySignal;
+			
+			b1: bus access radioSignalEmitter.vehicleBus <-> vehicleBus;
+			b2: bus access button.vehicleBus <-> vehicleBus;
+			
+			bcpu: bus access cpu.vehicleBus <-> vehicleBus;
+			bmem: bus access mem.vehicleBus <-> vehicleBus;
+			 
+			brad: bus access radioBus -> radioSignalEmitter.radioBus;
+			
+		-- actual
+		properties
+			-- Processor bindings
+			Actual_Processor_Binding => (reference(cpu)) applies to emergencyVehicleController;
+			Actual_Processor_Binding => (reference(cpu)) applies to emergencyVehicleController.radioEmitterThread;
+			Actual_Processor_Binding => (reference(cpu)) applies to emergencyVehicleController.buttonThread;
+	
+			-- Memory bindings
+			Actual_Memory_Binding => (reference(mem)) applies to emergencyVehicleController;
+			Actual_Memory_Binding => (reference(mem)) applies to emergencyVehicleController.radioEmitterThread;
+			Actual_Memory_Binding => (reference(mem)) applies to emergencyVehicleController.buttonThread;
+	
+			-- Connection bindings (to vehicleBus)
+			Actual_Connection_Binding => (reference(vehicleBus)) applies to c1;
+			Actual_Connection_Binding => (reference(vehicleBus)) applies to c2;
+	
+			-- Device connection bindings
+			Actual_Connection_Binding => (reference(vehicleBus)) applies to b1;
+			Actual_Connection_Binding => (reference(vehicleBus)) applies to b2;
+			Actual_Connection_Binding => (reference(vehicleBus)) applies to bcpu;
+			Actual_Connection_Binding => (reference(vehicleBus)) applies to bmem;
+		
+			
+			
 	end EmergencyVehicleSystem.impl;
+	
+	
+	-- CPU --
+	processor VehicleCPU
+		features
+			vehicleBus: requires bus access VehicleBus;
+	end VehicleCPU;
+	processor implementation VehicleCPU.impl
+	end VehicleCPU.impl;
+	
+	
+	-- Memory --
+	memory VehicleMemory
+		features
+			vehicleBus: requires bus access VehicleBus;
+	end VehicleMemory;
+	memory implementation VehicleMemory.impl
+
+	end VehicleMemory.impl;
+	
+	-- BUS --
+	bus VehicleBus
+	end VehicleBus;
+	bus implementation VehicleBus.impl
+	end VehicleBus.impl;
 	
 	
 	-- PROCESS --
 	process EmergencyVehicleController
 		features
 			sendEmergencySignal: out data port EmergencySignal;
+			receiveRequest: in event port;
 	end EmergencyVehicleController;
 	
 	process implementation EmergencyVehicleController.impl
 		subcomponents
 			radioEmitterThread: thread RadioEmitterThread.impl;
+			buttonThread: thread ButtonThread.impl;
 		connections
-			c1: port radioEmitterThread.dataOut -> sendEmergencySignal;
+			c1: port receiveRequest -> buttonThread.eventIn;
+			c2: port radioEmitterThread.dataOut -> sendEmergencySignal;
 	end EmergencyVehicleController.impl;
 	
 	-- THREADS --
@@ -48,12 +118,29 @@ public
 	thread implementation RadioEmitterThread.impl
 	end RadioEmitterThread.impl;
 	
+	thread ButtonThread
+		features
+			eventIn: in event port;
+			eventOut: out event port;
+	end ButtonThread;
+	thread implementation ButtonThread.impl
+	end ButtonThread.impl;
+	
 	-- DEVICES --
 	device RadioSignalEmitter
 		features
-			sendEmergencySignal: out data port EmergencySignal;
+			inEmergencySignal: in event port;
 			radioBus: requires bus access urbanTraffic::Radio;
+			vehicleBus: requires bus access VehicleBus;
 	end RadioSignalEmitter;
 	device implementation RadioSignalEmitter.impl
 	end RadioSignalEmitter.impl;
+	
+	device EmiteSignalButton
+		features
+			requestToSendEmergencySignal: out event port;
+			vehicleBus: requires bus access VehicleBus;
+	end EmiteSignalButton;
+	device implementation EmiteSignalButton.impl
+	end EmiteSignalButton.impl;
 end emergencyVehicle;

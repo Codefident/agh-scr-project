@@ -9,7 +9,7 @@ public
 	data Signal
 		properties
 			Data_Model::Enumerators => ("Go", "Stop", "ChangingSignal", "Failure");
-			Data_Size => 20 bytes;
+			Data_Size => 15 bytes;
 	end Signal;
 	
 	data RequestSignal
@@ -21,6 +21,7 @@ public
 	data LightStatus
 		properties
 			Data_Model::Data_Representation => Boolean;
+			Data_Size => 2 bytes;
 	end LightStatus;
 	
 	
@@ -57,9 +58,9 @@ public
 			
 		connections
 			-- Pedestrian and tram request connections
-			c1: port pedButtonMain.requestSignal -> mainController.receiveRequest;
-			c2: port pedButtonSide.requestSignal -> mainController.receiveRequest;
-			c3: port tramSensor.requestSignal -> mainController.receiveRequest;
+			c1: port pedButtonMain.requestSignal -> mainController.receivePedMainRequest;
+			c2: port pedButtonSide.requestSignal -> mainController.receivePedSideRequest;
+			c3: port tramSensor.requestSignal -> mainController.receiveTramRequest;
 
 			-- Signal output from controller to lights
 			c4: port mainController.sendSignal -> mainCarLight.signalReceive;
@@ -91,13 +92,42 @@ public
 			bmem: bus access mem.busConn <-> commBus;
 			brecRadio: bus access radioBus -> radioReceiver.radioBus;
 			brecComm: bus access radioReceiver.busConn <-> commBus;
+			
+		-- Actual bindings
+		properties
+			Actual_Processor_Binding => (reference(cpu)) applies to mainController;
+			Actual_Processor_Binding => (reference(cpu)) applies to mainController.pedButtonThread;
+			Actual_Processor_Binding => (reference(cpu)) applies to mainController.tramSensorThread;
+			Actual_Processor_Binding => (reference(cpu)) applies to mainController.radioReceiverThread;
+			Actual_Processor_Binding => (reference(cpu)) applies to mainController.lightThread;
+		
+			Actual_Memory_Binding => (reference(mem)) applies to mainController;
+			Actual_Memory_Binding => (reference(mem)) applies to mainController.pedButtonThread;
+			Actual_Memory_Binding => (reference(mem)) applies to mainController.tramSensorThread;
+			Actual_Memory_Binding => (reference(mem)) applies to mainController.radioReceiverThread;
+			Actual_Memory_Binding => (reference(mem)) applies to mainController.lightThread;
+		
+			Actual_Connection_Binding => (reference(commBus)) applies to pedButtonMain.busConn;
+			Actual_Connection_Binding => (reference(commBus)) applies to pedButtonSide.busConn;
+			Actual_Connection_Binding => (reference(commBus)) applies to tramSensor.busConn;
+			Actual_Connection_Binding => (reference(commBus)) applies to mainCarLight.busConn;
+			Actual_Connection_Binding => (reference(commBus)) applies to sideCarLight.busConn;
+			Actual_Connection_Binding => (reference(commBus)) applies to tramLight.busConn;
+			Actual_Connection_Binding => (reference(commBus)) applies to mainPedLight.busConn;
+			Actual_Connection_Binding => (reference(commBus)) applies to sidePedLight.busConn;
+			Actual_Connection_Binding => (reference(commBus)) applies to cpu.busConn;
+			Actual_Connection_Binding => (reference(commBus)) applies to mem.busConn;
+			Actual_Connection_Binding => (reference(commBus)) applies to radioReceiver.busConn;
+			
 	end TrafficLightsSystem.impl;
 	
 	
 	-- PROCESSES --
 	process MainController
 		features
-			receiveRequest: in data port RequestSignal;
+			receivePedMainRequest: in data port RequestSignal;
+			receivePedSideRequest: in data port RequestSignal;
+			receiveTramRequest: in data port RequestSignal;
 			receiveLightStatus: in data port LightStatus;
 			receiveEmergencySignal: in data port emergencyVehicle::EmergencySignal;
 			sendSignal: out data port Signal;
@@ -110,11 +140,12 @@ public
 			radioReceiverThread: thread RadioReceiverThread.impl;
 			lightThread: thread LightThread.impl;
 		connections
-			c1: port receiveRequest -> tramSensorThread.dataIn;
-			c2: port receiveRequest -> pedButtonThread.dataIn;
-			c3: port lightThread.dataOut -> sendSignal;
-			c4: port receiveLightStatus -> lightThread.dataIn;
-			c5: port receiveEmergencySignal -> radioReceiverThread.dataIn;
+			c1: port receiveTramRequest -> tramSensorThread.dataIn;
+			c2: port receivePedMainRequest -> pedButtonThread.dataIn;
+			c3: port receivePedSideRequest -> pedButtonThread.dataIn;
+			c4: port lightThread.dataOut -> sendSignal;
+			c5: port receiveLightStatus -> lightThread.dataIn;
+			c6: port receiveEmergencySignal -> radioReceiverThread.dataIn;
 	end MainController.impl;
 	
 	

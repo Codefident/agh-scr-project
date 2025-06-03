@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="ASCII"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aadl2="http://aadl.info/AADL/2.0" xmlns:instance="http://aadl.info/AADL/2.0/instance">
+  <instance:SystemInstance name="EmiteSignalButton_impl_Instance" category="device">
+    <featureInstance name="requestToSendEmergencySignal" category="eventPort" direction="out">
+      <feature xsi:type="aadl2:EventPort" href="../emergencyVehicle.aadl#/0/@ownedPublicSection/@ownedClassifier.17/@ownedEventPort.0"/>
+    </featureInstance>
+    <featureInstance name="vehicleBus" category="busAccess" type="/1">
+      <feature xsi:type="aadl2:BusAccess" href="../emergencyVehicle.aadl#/0/@ownedPublicSection/@ownedClassifier.17/@ownedBusAccess.0"/>
+    </featureInstance>
+    <classifier xsi:type="aadl2:DeviceImplementation" href="../emergencyVehicle.aadl#emergencyVehicle.EmiteSignalButton.impl"/>
+    <systemOperationMode name="No Modes"/>
+    <componentImplementation xsi:type="aadl2:DeviceImplementation" href="../emergencyVehicle.aadl#emergencyVehicle.EmiteSignalButton.impl"/>
+  </instance:SystemInstance>
+  <instance:ComponentInstance name="emergencyVehicle::VehicleBus" category="bus">
+    <classifier xsi:type="aadl2:BusType" href="../emergencyVehicle.aadl#emergencyVehicle.VehicleBus"/>
+  </instance:ComponentInstance>
+</xmi:XMI>

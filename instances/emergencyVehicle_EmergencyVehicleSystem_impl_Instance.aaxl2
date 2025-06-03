@@ -1,31 +1,76 @@
 <?xml version="1.0" encoding="ASCII"?>
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aadl2="http://aadl.info/AADL/2.0" xmlns:instance="http://aadl.info/AADL/2.0/instance">
   <instance:SystemInstance name="EmergencyVehicleSystem_impl_Instance" category="system">
-    <featureInstance name="radioBus" category="busAccess" type="/2">
+    <featureInstance name="radioBus" category="busAccess" type="/1">
       <feature xsi:type="aadl2:BusAccess" href="../emergencyVehicle.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedBusAccess.0"/>
     </featureInstance>
+    <componentInstance name="vehicleBus" category="bus">
+      <subcomponent xsi:type="aadl2:BusSubcomponent" href="../emergencyVehicle.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedBusSubcomponent.0"/>
+      <index>0</index>
+      <classifier xsi:type="aadl2:BusImplementation" href="../emergencyVehicle.aadl#emergencyVehicle.VehicleBus.impl"/>
+    </componentInstance>
     <componentInstance name="radioSignalEmitter" category="device">
-      <featureInstance name="sendEmergencySignal" direction="out" type="/1">
-        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
-          <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
-          <ownedValue>
-            <ownedValue xsi:type="aadl2:NamedValue">
-              <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.7"/>
-            </ownedValue>
-          </ownedValue>
-          <propertyAssociation href="../emergencyVehicle.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedPropertyAssociation.0"/>
-        </ownedPropertyAssociation>
-        <feature xsi:type="aadl2:DataPort" href="../emergencyVehicle.aadl#/0/@ownedPublicSection/@ownedClassifier.7/@ownedDataPort.0"/>
+      <featureInstance name="inEmergencySignal" category="eventPort">
+        <feature xsi:type="aadl2:EventPort" href="../emergencyVehicle.aadl#/0/@ownedPublicSection/@ownedClassifier.15/@ownedEventPort.0"/>
       </featureInstance>
-      <featureInstance name="radioBus" category="busAccess" type="/2">
-        <feature xsi:type="aadl2:BusAccess" href="../emergencyVehicle.aadl#/0/@ownedPublicSection/@ownedClassifier.7/@ownedBusAccess.0"/>
+      <featureInstance name="radioBus" category="busAccess" type="/1">
+        <feature xsi:type="aadl2:BusAccess" href="../emergencyVehicle.aadl#/0/@ownedPublicSection/@ownedClassifier.15/@ownedBusAccess.0"/>
+      </featureInstance>
+      <featureInstance name="vehicleBus" category="busAccess" type="/2">
+        <feature xsi:type="aadl2:BusAccess" href="../emergencyVehicle.aadl#/0/@ownedPublicSection/@ownedClassifier.15/@ownedBusAccess.1"/>
       </featureInstance>
       <subcomponent xsi:type="aadl2:DeviceSubcomponent" href="../emergencyVehicle.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedDeviceSubcomponent.0"/>
       <index>0</index>
       <classifier xsi:type="aadl2:DeviceImplementation" href="../emergencyVehicle.aadl#emergencyVehicle.RadioSignalEmitter.impl"/>
     </componentInstance>
+    <componentInstance name="button" category="device">
+      <featureInstance name="requestToSendEmergencySignal" category="eventPort" direction="out">
+        <feature xsi:type="aadl2:EventPort" href="../emergencyVehicle.aadl#/0/@ownedPublicSection/@ownedClassifier.17/@ownedEventPort.0"/>
+      </featureInstance>
+      <featureInstance name="vehicleBus" category="busAccess" type="/2">
+        <feature xsi:type="aadl2:BusAccess" href="../emergencyVehicle.aadl#/0/@ownedPublicSection/@ownedClassifier.17/@ownedBusAccess.0"/>
+      </featureInstance>
+      <subcomponent xsi:type="aadl2:DeviceSubcomponent" href="../emergencyVehicle.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedDeviceSubcomponent.1"/>
+      <index>0</index>
+      <classifier xsi:type="aadl2:DeviceImplementation" href="../emergencyVehicle.aadl#emergencyVehicle.EmiteSignalButton.impl"/>
+    </componentInstance>
+    <componentInstance name="mem" category="memory">
+      <featureInstance name="vehicleBus" category="busAccess" type="/2">
+        <feature xsi:type="aadl2:BusAccess" href="../emergencyVehicle.aadl#/0/@ownedPublicSection/@ownedClassifier.5/@ownedBusAccess.0"/>
+      </featureInstance>
+      <subcomponent xsi:type="aadl2:MemorySubcomponent" href="../emergencyVehicle.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedMemorySubcomponent.0"/>
+      <index>0</index>
+      <classifier xsi:type="aadl2:MemoryImplementation" href="../emergencyVehicle.aadl#emergencyVehicle.VehicleMemory.impl"/>
+    </componentInstance>
     <componentInstance name="emergencyVehicleController" category="process">
-      <featureInstance name="sendEmergencySignal" direction="out" type="/1">
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Processor_Binding"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:ListValue">
+            <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="/0/@componentInstance.5"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../emergencyVehicle.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedPropertyAssociation.0"/>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Memory_Binding"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:ListValue">
+            <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="/0/@componentInstance.3"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../emergencyVehicle.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedPropertyAssociation.3"/>
+      </ownedPropertyAssociation>
+      <featureInstance name="sendEmergencySignal" direction="out" type="/3">
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Memory_Binding"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:ListValue">
+              <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="/0/@componentInstance.3"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="../emergencyVehicle.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedPropertyAssociation.3"/>
+        </ownedPropertyAssociation>
         <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
           <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
           <ownedValue>
@@ -35,10 +80,40 @@
           </ownedValue>
           <propertyAssociation href="../emergencyVehicle.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedPropertyAssociation.0"/>
         </ownedPropertyAssociation>
-        <feature xsi:type="aadl2:DataPort" href="../emergencyVehicle.aadl#/0/@ownedPublicSection/@ownedClassifier.3/@ownedDataPort.0"/>
+        <feature xsi:type="aadl2:DataPort" href="../emergencyVehicle.aadl#/0/@ownedPublicSection/@ownedClassifier.9/@ownedDataPort.0"/>
+      </featureInstance>
+      <featureInstance name="receiveRequest" category="eventPort">
+        <feature xsi:type="aadl2:EventPort" href="../emergencyVehicle.aadl#/0/@ownedPublicSection/@ownedClassifier.9/@ownedEventPort.0"/>
       </featureInstance>
       <componentInstance name="radioEmitterThread" category="thread">
-        <featureInstance name="dataIn" type="/1">
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Processor_Binding"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:ListValue">
+              <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="/0/@componentInstance.5"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="../emergencyVehicle.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedPropertyAssociation.1"/>
+        </ownedPropertyAssociation>
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Memory_Binding"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:ListValue">
+              <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="/0/@componentInstance.3"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="../emergencyVehicle.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedPropertyAssociation.4"/>
+        </ownedPropertyAssociation>
+        <featureInstance name="dataIn" type="/3">
+          <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+            <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Memory_Binding"/>
+            <ownedValue>
+              <ownedValue xsi:type="aadl2:ListValue">
+                <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="/0/@componentInstance.3"/>
+              </ownedValue>
+            </ownedValue>
+            <propertyAssociation href="../emergencyVehicle.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedPropertyAssociation.4"/>
+          </ownedPropertyAssociation>
           <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
             <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
             <ownedValue>
@@ -48,9 +123,18 @@
             </ownedValue>
             <propertyAssociation href="../emergencyVehicle.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedPropertyAssociation.0"/>
           </ownedPropertyAssociation>
-          <feature xsi:type="aadl2:DataPort" href="../emergencyVehicle.aadl#/0/@ownedPublicSection/@ownedClassifier.5/@ownedDataPort.0"/>
+          <feature xsi:type="aadl2:DataPort" href="../emergencyVehicle.aadl#/0/@ownedPublicSection/@ownedClassifier.11/@ownedDataPort.0"/>
         </featureInstance>
-        <featureInstance name="dataOut" direction="out" type="/1">
+        <featureInstance name="dataOut" direction="out" type="/3">
+          <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+            <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Memory_Binding"/>
+            <ownedValue>
+              <ownedValue xsi:type="aadl2:ListValue">
+                <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="/0/@componentInstance.3"/>
+              </ownedValue>
+            </ownedValue>
+            <propertyAssociation href="../emergencyVehicle.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedPropertyAssociation.4"/>
+          </ownedPropertyAssociation>
           <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
             <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
             <ownedValue>
@@ -60,25 +144,214 @@
             </ownedValue>
             <propertyAssociation href="../emergencyVehicle.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedPropertyAssociation.0"/>
           </ownedPropertyAssociation>
-          <feature xsi:type="aadl2:DataPort" href="../emergencyVehicle.aadl#/0/@ownedPublicSection/@ownedClassifier.5/@ownedDataPort.1"/>
+          <feature xsi:type="aadl2:DataPort" href="../emergencyVehicle.aadl#/0/@ownedPublicSection/@ownedClassifier.11/@ownedDataPort.1"/>
         </featureInstance>
-        <subcomponent xsi:type="aadl2:ThreadSubcomponent" href="../emergencyVehicle.aadl#/0/@ownedPublicSection/@ownedClassifier.4/@ownedThreadSubcomponent.0"/>
+        <subcomponent xsi:type="aadl2:ThreadSubcomponent" href="../emergencyVehicle.aadl#/0/@ownedPublicSection/@ownedClassifier.10/@ownedThreadSubcomponent.0"/>
         <index>0</index>
         <classifier xsi:type="aadl2:ThreadImplementation" href="../emergencyVehicle.aadl#emergencyVehicle.RadioEmitterThread.impl"/>
+      </componentInstance>
+      <componentInstance name="buttonThread" category="thread">
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Processor_Binding"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:ListValue">
+              <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="/0/@componentInstance.5"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="../emergencyVehicle.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedPropertyAssociation.2"/>
+        </ownedPropertyAssociation>
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Memory_Binding"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:ListValue">
+              <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="/0/@componentInstance.3"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="../emergencyVehicle.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedPropertyAssociation.5"/>
+        </ownedPropertyAssociation>
+        <featureInstance name="eventIn" category="eventPort">
+          <feature xsi:type="aadl2:EventPort" href="../emergencyVehicle.aadl#/0/@ownedPublicSection/@ownedClassifier.13/@ownedEventPort.0"/>
+        </featureInstance>
+        <featureInstance name="eventOut" category="eventPort" direction="out">
+          <feature xsi:type="aadl2:EventPort" href="../emergencyVehicle.aadl#/0/@ownedPublicSection/@ownedClassifier.13/@ownedEventPort.1"/>
+        </featureInstance>
+        <subcomponent xsi:type="aadl2:ThreadSubcomponent" href="../emergencyVehicle.aadl#/0/@ownedPublicSection/@ownedClassifier.10/@ownedThreadSubcomponent.1"/>
+        <index>0</index>
+        <classifier xsi:type="aadl2:ThreadImplementation" href="../emergencyVehicle.aadl#emergencyVehicle.ButtonThread.impl"/>
       </componentInstance>
       <subcomponent xsi:type="aadl2:ProcessSubcomponent" href="../emergencyVehicle.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedProcessSubcomponent.0"/>
       <index>0</index>
       <classifier xsi:type="aadl2:ProcessImplementation" href="../emergencyVehicle.aadl#emergencyVehicle.EmergencyVehicleController.impl"/>
     </componentInstance>
-    <connectionInstance name="radioBus -> radioSignalEmitter.radioBus" kind="accessConnection" destination="/0/@componentInstance.0/@featureInstance.1" source="/0/@featureInstance.0">
-      <connectionReference context="/0" source="/0/@featureInstance.0" destination="/0/@componentInstance.0/@featureInstance.1">
+    <componentInstance name="cpu" category="processor">
+      <featureInstance name="vehicleBus" category="busAccess" type="/2">
+        <feature xsi:type="aadl2:BusAccess" href="../emergencyVehicle.aadl#/0/@ownedPublicSection/@ownedClassifier.3/@ownedBusAccess.0"/>
+      </featureInstance>
+      <subcomponent xsi:type="aadl2:ProcessorSubcomponent" href="../emergencyVehicle.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedProcessorSubcomponent.0"/>
+      <index>0</index>
+      <classifier xsi:type="aadl2:ProcessorImplementation" href="../emergencyVehicle.aadl#emergencyVehicle.VehicleCPU.impl"/>
+    </componentInstance>
+    <connectionInstance name="radioBus -> radioSignalEmitter.radioBus" kind="accessConnection" destination="/0/@componentInstance.1/@featureInstance.1" source="/0/@featureInstance.0">
+      <connectionReference context="/0" source="/0/@featureInstance.0" destination="/0/@componentInstance.1/@featureInstance.1">
+        <connection xsi:type="aadl2:AccessConnection" href="../emergencyVehicle.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedAccessConnection.4"/>
+      </connectionReference>
+    </connectionInstance>
+    <connectionInstance name="vehicleBus -> radioSignalEmitter.vehicleBus" complete="true" kind="accessConnection" destination="/0/@componentInstance.1/@featureInstance.2" source="/0/@componentInstance.0">
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Connection_Binding"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:ListValue">
+            <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="/0/@componentInstance.0"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../emergencyVehicle.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedPropertyAssociation.8"/>
+      </ownedPropertyAssociation>
+      <connectionReference context="/0" source="/0/@componentInstance.0" destination="/0/@componentInstance.1/@featureInstance.2" reverse="true">
         <connection xsi:type="aadl2:AccessConnection" href="../emergencyVehicle.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedAccessConnection.0"/>
+      </connectionReference>
+    </connectionInstance>
+    <connectionInstance name="vehicleBus -> button.vehicleBus" complete="true" kind="accessConnection" destination="/0/@componentInstance.2/@featureInstance.1" source="/0/@componentInstance.0">
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Connection_Binding"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:ListValue">
+            <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="/0/@componentInstance.0"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../emergencyVehicle.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedPropertyAssociation.9"/>
+      </ownedPropertyAssociation>
+      <connectionReference context="/0" source="/0/@componentInstance.0" destination="/0/@componentInstance.2/@featureInstance.1" reverse="true">
+        <connection xsi:type="aadl2:AccessConnection" href="../emergencyVehicle.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedAccessConnection.1"/>
+      </connectionReference>
+    </connectionInstance>
+    <connectionInstance name="vehicleBus -> cpu.vehicleBus" complete="true" kind="accessConnection" destination="/0/@componentInstance.5/@featureInstance.0" source="/0/@componentInstance.0">
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Connection_Binding"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:ListValue">
+            <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="/0/@componentInstance.0"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../emergencyVehicle.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedPropertyAssociation.10"/>
+      </ownedPropertyAssociation>
+      <connectionReference context="/0" source="/0/@componentInstance.0" destination="/0/@componentInstance.5/@featureInstance.0" reverse="true">
+        <connection xsi:type="aadl2:AccessConnection" href="../emergencyVehicle.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedAccessConnection.2"/>
+      </connectionReference>
+    </connectionInstance>
+    <connectionInstance name="vehicleBus -> mem.vehicleBus" complete="true" kind="accessConnection" destination="/0/@componentInstance.3/@featureInstance.0" source="/0/@componentInstance.0">
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Connection_Binding"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:ListValue">
+            <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="/0/@componentInstance.0"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../emergencyVehicle.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedPropertyAssociation.11"/>
+      </ownedPropertyAssociation>
+      <connectionReference context="/0" source="/0/@componentInstance.0" destination="/0/@componentInstance.3/@featureInstance.0" reverse="true">
+        <connection xsi:type="aadl2:AccessConnection" href="../emergencyVehicle.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedAccessConnection.3"/>
+      </connectionReference>
+    </connectionInstance>
+    <connectionInstance name="radioSignalEmitter.vehicleBus -> vehicleBus" complete="true" kind="accessConnection" destination="/0/@componentInstance.0" source="/0/@componentInstance.1/@featureInstance.2">
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Connection_Binding"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:ListValue">
+            <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="/0/@componentInstance.0"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../emergencyVehicle.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedPropertyAssociation.8"/>
+      </ownedPropertyAssociation>
+      <connectionReference context="/0" source="/0/@componentInstance.1/@featureInstance.2" destination="/0/@componentInstance.0">
+        <connection xsi:type="aadl2:AccessConnection" href="../emergencyVehicle.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedAccessConnection.0"/>
+      </connectionReference>
+    </connectionInstance>
+    <connectionInstance name="button.requestToSendEmergencySignal -> emergencyVehicleController.buttonThread.eventIn" complete="true" kind="portConnection" destination="/0/@componentInstance.4/@componentInstance.1/@featureInstance.0" source="/0/@componentInstance.2/@featureInstance.0">
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Connection_Binding"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:ListValue">
+            <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="/0/@componentInstance.0"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../emergencyVehicle.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedPropertyAssociation.6"/>
+      </ownedPropertyAssociation>
+      <connectionReference context="/0" source="/0/@componentInstance.2/@featureInstance.0" destination="/0/@componentInstance.4/@featureInstance.1">
+        <connection xsi:type="aadl2:PortConnection" href="../emergencyVehicle.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedPortConnection.0"/>
+      </connectionReference>
+      <connectionReference context="/0/@componentInstance.4" source="/0/@componentInstance.4/@featureInstance.1" destination="/0/@componentInstance.4/@componentInstance.1/@featureInstance.0">
+        <connection xsi:type="aadl2:PortConnection" href="../emergencyVehicle.aadl#/0/@ownedPublicSection/@ownedClassifier.10/@ownedPortConnection.0"/>
+      </connectionReference>
+    </connectionInstance>
+    <connectionInstance name="button.vehicleBus -> vehicleBus" complete="true" kind="accessConnection" destination="/0/@componentInstance.0" source="/0/@componentInstance.2/@featureInstance.1">
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Connection_Binding"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:ListValue">
+            <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="/0/@componentInstance.0"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../emergencyVehicle.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedPropertyAssociation.9"/>
+      </ownedPropertyAssociation>
+      <connectionReference context="/0" source="/0/@componentInstance.2/@featureInstance.1" destination="/0/@componentInstance.0">
+        <connection xsi:type="aadl2:AccessConnection" href="../emergencyVehicle.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedAccessConnection.1"/>
+      </connectionReference>
+    </connectionInstance>
+    <connectionInstance name="mem.vehicleBus -> vehicleBus" complete="true" kind="accessConnection" destination="/0/@componentInstance.0" source="/0/@componentInstance.3/@featureInstance.0">
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Connection_Binding"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:ListValue">
+            <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="/0/@componentInstance.0"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../emergencyVehicle.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedPropertyAssociation.11"/>
+      </ownedPropertyAssociation>
+      <connectionReference context="/0" source="/0/@componentInstance.3/@featureInstance.0" destination="/0/@componentInstance.0">
+        <connection xsi:type="aadl2:AccessConnection" href="../emergencyVehicle.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedAccessConnection.3"/>
+      </connectionReference>
+    </connectionInstance>
+    <connectionInstance name="emergencyVehicleController.radioEmitterThread.dataOut -> radioSignalEmitter.inEmergencySignal" complete="true" kind="portConnection" destination="/0/@componentInstance.1/@featureInstance.0" source="/0/@componentInstance.4/@componentInstance.0/@featureInstance.1">
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Connection_Binding"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:ListValue">
+            <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="/0/@componentInstance.0"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../emergencyVehicle.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedPropertyAssociation.7"/>
+      </ownedPropertyAssociation>
+      <connectionReference context="/0/@componentInstance.4" source="/0/@componentInstance.4/@componentInstance.0/@featureInstance.1" destination="/0/@componentInstance.4/@featureInstance.0">
+        <connection xsi:type="aadl2:PortConnection" href="../emergencyVehicle.aadl#/0/@ownedPublicSection/@ownedClassifier.10/@ownedPortConnection.1"/>
+      </connectionReference>
+      <connectionReference context="/0" source="/0/@componentInstance.4/@featureInstance.0" destination="/0/@componentInstance.1/@featureInstance.0">
+        <connection xsi:type="aadl2:PortConnection" href="../emergencyVehicle.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedPortConnection.1"/>
+      </connectionReference>
+    </connectionInstance>
+    <connectionInstance name="cpu.vehicleBus -> vehicleBus" complete="true" kind="accessConnection" destination="/0/@componentInstance.0" source="/0/@componentInstance.5/@featureInstance.0">
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Connection_Binding"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:ListValue">
+            <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="/0/@componentInstance.0"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../emergencyVehicle.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedPropertyAssociation.10"/>
+      </ownedPropertyAssociation>
+      <connectionReference context="/0" source="/0/@componentInstance.5/@featureInstance.0" destination="/0/@componentInstance.0">
+        <connection xsi:type="aadl2:AccessConnection" href="../emergencyVehicle.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedAccessConnection.2"/>
       </connectionReference>
     </connectionInstance>
     <classifier xsi:type="aadl2:SystemImplementation" href="../emergencyVehicle.aadl#emergencyVehicle.EmergencyVehicleSystem.impl"/>
     <systemOperationMode name="No Modes"/>
     <componentImplementation xsi:type="aadl2:SystemImplementation" href="../emergencyVehicle.aadl#emergencyVehicle.EmergencyVehicleSystem.impl"/>
   </instance:SystemInstance>
+  <instance:ComponentInstance name="urbanTraffic::Radio" category="bus">
+    <classifier xsi:type="aadl2:BusType" href="../urbanTraffic.aadl#urbanTraffic.Radio"/>
+  </instance:ComponentInstance>
+  <instance:ComponentInstance name="emergencyVehicle::VehicleBus" category="bus">
+    <classifier xsi:type="aadl2:BusType" href="../emergencyVehicle.aadl#emergencyVehicle.VehicleBus"/>
+  </instance:ComponentInstance>
   <instance:ComponentInstance name="emergencyVehicle::EmergencySignal" category="data">
     <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
       <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
@@ -90,8 +363,5 @@
       <propertyAssociation href="../emergencyVehicle.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedPropertyAssociation.0"/>
     </ownedPropertyAssociation>
     <classifier xsi:type="aadl2:DataType" href="../emergencyVehicle.aadl#emergencyVehicle.EmergencySignal"/>
-  </instance:ComponentInstance>
-  <instance:ComponentInstance name="urbanTraffic::Radio" category="bus">
-    <classifier xsi:type="aadl2:BusType" href="../urbanTraffic.aadl#urbanTraffic.Radio"/>
   </instance:ComponentInstance>
 </xmi:XMI>

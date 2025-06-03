@@ -11,7 +11,10 @@
         </ownedValue>
         <propertyAssociation href="../emergencyVehicle.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedPropertyAssociation.0"/>
       </ownedPropertyAssociation>
-      <feature xsi:type="aadl2:DataPort" href="../emergencyVehicle.aadl#/0/@ownedPublicSection/@ownedClassifier.3/@ownedDataPort.0"/>
+      <feature xsi:type="aadl2:DataPort" href="../emergencyVehicle.aadl#/0/@ownedPublicSection/@ownedClassifier.9/@ownedDataPort.0"/>
+    </featureInstance>
+    <featureInstance name="receiveRequest" category="eventPort">
+      <feature xsi:type="aadl2:EventPort" href="../emergencyVehicle.aadl#/0/@ownedPublicSection/@ownedClassifier.9/@ownedEventPort.0"/>
     </featureInstance>
     <componentInstance name="radioEmitterThread" category="thread">
       <featureInstance name="dataIn" type="/1">
@@ -24,7 +27,7 @@
           </ownedValue>
           <propertyAssociation href="../emergencyVehicle.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedPropertyAssociation.0"/>
         </ownedPropertyAssociation>
-        <feature xsi:type="aadl2:DataPort" href="../emergencyVehicle.aadl#/0/@ownedPublicSection/@ownedClassifier.5/@ownedDataPort.0"/>
+        <feature xsi:type="aadl2:DataPort" href="../emergencyVehicle.aadl#/0/@ownedPublicSection/@ownedClassifier.11/@ownedDataPort.0"/>
       </featureInstance>
       <featureInstance name="dataOut" direction="out" type="/1">
         <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
@@ -36,15 +39,31 @@
           </ownedValue>
           <propertyAssociation href="../emergencyVehicle.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedPropertyAssociation.0"/>
         </ownedPropertyAssociation>
-        <feature xsi:type="aadl2:DataPort" href="../emergencyVehicle.aadl#/0/@ownedPublicSection/@ownedClassifier.5/@ownedDataPort.1"/>
+        <feature xsi:type="aadl2:DataPort" href="../emergencyVehicle.aadl#/0/@ownedPublicSection/@ownedClassifier.11/@ownedDataPort.1"/>
       </featureInstance>
-      <subcomponent xsi:type="aadl2:ThreadSubcomponent" href="../emergencyVehicle.aadl#/0/@ownedPublicSection/@ownedClassifier.4/@ownedThreadSubcomponent.0"/>
+      <subcomponent xsi:type="aadl2:ThreadSubcomponent" href="../emergencyVehicle.aadl#/0/@ownedPublicSection/@ownedClassifier.10/@ownedThreadSubcomponent.0"/>
       <index>0</index>
       <classifier xsi:type="aadl2:ThreadImplementation" href="../emergencyVehicle.aadl#emergencyVehicle.RadioEmitterThread.impl"/>
     </componentInstance>
+    <componentInstance name="buttonThread" category="thread">
+      <featureInstance name="eventIn" category="eventPort">
+        <feature xsi:type="aadl2:EventPort" href="../emergencyVehicle.aadl#/0/@ownedPublicSection/@ownedClassifier.13/@ownedEventPort.0"/>
+      </featureInstance>
+      <featureInstance name="eventOut" category="eventPort" direction="out">
+        <feature xsi:type="aadl2:EventPort" href="../emergencyVehicle.aadl#/0/@ownedPublicSection/@ownedClassifier.13/@ownedEventPort.1"/>
+      </featureInstance>
+      <subcomponent xsi:type="aadl2:ThreadSubcomponent" href="../emergencyVehicle.aadl#/0/@ownedPublicSection/@ownedClassifier.10/@ownedThreadSubcomponent.1"/>
+      <index>0</index>
+      <classifier xsi:type="aadl2:ThreadImplementation" href="../emergencyVehicle.aadl#emergencyVehicle.ButtonThread.impl"/>
+    </componentInstance>
+    <connectionInstance name="receiveRequest -> buttonThread.eventIn" kind="portConnection" destination="/0/@componentInstance.1/@featureInstance.0" source="/0/@featureInstance.1">
+      <connectionReference context="/0" source="/0/@featureInstance.1" destination="/0/@componentInstance.1/@featureInstance.0">
+        <connection xsi:type="aadl2:PortConnection" href="../emergencyVehicle.aadl#/0/@ownedPublicSection/@ownedClassifier.10/@ownedPortConnection.0"/>
+      </connectionReference>
+    </connectionInstance>
     <connectionInstance name="radioEmitterThread.dataOut -> sendEmergencySignal" kind="portConnection" destination="/0/@featureInstance.0" source="/0/@componentInstance.0/@featureInstance.1">
       <connectionReference context="/0" source="/0/@componentInstance.0/@featureInstance.1" destination="/0/@featureInstance.0">
-        <connection xsi:type="aadl2:PortConnection" href="../emergencyVehicle.aadl#/0/@ownedPublicSection/@ownedClassifier.4/@ownedPortConnection.0"/>
+        <connection xsi:type="aadl2:PortConnection" href="../emergencyVehicle.aadl#/0/@ownedPublicSection/@ownedClassifier.10/@ownedPortConnection.1"/>
       </connectionReference>
     </connectionInstance>
     <classifier xsi:type="aadl2:ProcessImplementation" href="../emergencyVehicle.aadl#emergencyVehicle.EmergencyVehicleController.impl"/>
