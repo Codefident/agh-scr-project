@@ -52,33 +52,39 @@
     Przykładowy pojazd uprzywilejowany (_źródło: Wikisłownik)
     ![image](https://github.com/user-attachments/assets/e160ba80-7e08-42d2-8d24-1629c221fb5e)
 
-
-    
-
 5. **Komponenty**:
-    - system `UrbanTrafficSystem` - system nadrzędny, pomagający spiąć ze sobą system świateł oraz pojazdów uprzywilejowanych,
-    - system `TrafficLightsSystem` - system sygnalizacji świetlnej,
-    - system `EmergencyVehicleSystem` - system nadający sygnały w pojeździe uprzywilejowanym,
-    - device `CarTrafficLight` - sygnalizator świetlny dla samochodów,
-    - device `TramTrafficLight` - sygnalizator świetlny dla tramwajów,
-    - device `PedTrafficLight` - sygnalizator świetlny dla pieszych,
-    - device `PedButton` - przycisk dla pieszych, którego naciśnięcie powiadamia kontroler o tym, że pieszy oczekuje na sygnał zielony,
-    - device `TramSensor` - czujnik wykrywający zbliżający się tramwaj, działa podobnie do przycisku dla pieszych,
-    - device `RadioReceiver` - odbiornik sygnału wysyłanego przez pojazdy uprzywilejowane,
-    - device `RadioSignalEmitter` - nadajnik sygnału radiowego w pojeździe uprzywilejowanym,
-    - device `EmiteSignalButton` - przycisk pozwalający nadać sygnał z pojazdu uprzywilejowanego,
-    - processor `CPU` - procesor działający w układzie sterującym sygnalizacją świetlną,
-    - processor `VehicleCPU` - procesor zamontowany w pojeździe uprzywilejowanym,
-    - memory `Mem`, `VehicleMem` - pamięć, odpowiednio dla sygnalizacji i dla pojazdu,
-    - bus `CommBus`, `VehicleBus` - magistrale, odpowiednio dla sygnalizacji i dla pojazdu,
-    - bus `Radio` - fale radiowe spinające służące do komunikacji pojazdu uprzywilejowanego,
-    - process `MainController` - proces sterujący działaniem sygnalizacji świetlnej, to on przyjmuje requesty i rozsyła sygnały do każdego sygnalizatora,
-    - process `EmergencyVehicleController` - proces, który pośredniczy pomiędzy przyciskiem w pojeździe uprzywilejowanym, a nadajnikiem,
-    - thread `PedButtonThread`, `TramSensorThread` - wątki dla przycisku i sensorów, pośredniczą w wysyłaniu próśb o zielone światło,
-    - thread `LightThread` - wątek pośredniczący w komunikacji między kontrolerem a sygnalizatorem, odbiera od kontrolera sygnał i wysyła mu status sygnalizatora,
-    - thread `RadioReceiverThread` - wątek odpowiadający za odbieranie żądań od pojazdów uprzywilejowanych
+    - **data**:
+        - data...
+    - **system**:
+        - system `UrbanTrafficSystem` - system nadrzędny, pomagający spiąć ze sobą system świateł oraz pojazdów uprzywilejowanych,
+        - system `TrafficLightsSystem` - system sygnalizacji świetlnej,
+        - system `EmergencyVehicleSystem` - system nadający sygnały w pojeździe uprzywilejowanym,
+    - **device**:
+        - device `CarTrafficLight` - sygnalizator świetlny dla samochodów,
+        - device `TramTrafficLight` - sygnalizator świetlny dla tramwajów,
+        - device `PedTrafficLight` - sygnalizator świetlny dla pieszych,
+        - device `PedButton` - przycisk dla pieszych, którego naciśnięcie powiadamia kontroler o tym, że pieszy oczekuje na sygnał zielony,
+        - device `TramSensor` - czujnik wykrywający zbliżający się tramwaj, działa podobnie do przycisku dla pieszych,
+        - device `RadioReceiver` - odbiornik sygnału wysyłanego przez pojazdy uprzywilejowane,
+        - device `RadioSignalEmitter` - nadajnik sygnału radiowego w pojeździe uprzywilejowanym,
+        - device `EmiteSignalButton` - przycisk pozwalający nadać sygnał z pojazdu uprzywilejowanego,
+    - **processor**:
+        - processor `CPU` - procesor działający w układzie sterującym sygnalizacją świetlną,
+        - processor `VehicleCPU` - procesor zamontowany w pojeździe uprzywilejowanym,
+    - **memory**:
+        - memory `Mem`, `VehicleMem` - pamięć, odpowiednio dla sygnalizacji i dla pojazdu,
+    - **bus**:
+        - bus `CommBus`, `VehicleBus` - magistrale, odpowiednio dla sygnalizacji i dla pojazdu,
+        - bus `Radio` - fale radiowe spinające służące do komunikacji pojazdu uprzywilejowanego,
+    - **process**:
+        - process `MainController` - proces sterujący działaniem sygnalizacji świetlnej, to on przyjmuje requesty i rozsyła sygnały do każdego sygnalizatora,
+        - process `EmergencyVehicleController` - proces, który pośredniczy pomiędzy przyciskiem w pojeździe uprzywilejowanym, a nadajnikiem,
+    - **thread**:
+        - thread `PedButtonThread`, `TramSensorThread` - wątki dla przycisku i sensorów, pośredniczą w wysyłaniu próśb o zielone światło,
+        - thread `LightThread` - wątek pośredniczący w komunikacji między kontrolerem a sygnalizatorem, odbiera od kontrolera sygnał i wysyła mu status sygnalizatora,
+        - thread `RadioReceiverThread` - wątek odpowiadający za odbieranie żądań od pojazdów uprzywilejowanych
   
-6. **Model - schematy**
+7. **Model - schematy**
    - `UrbanTrafficSystem`
      ![Screenshot from 2025-06-03 03-13-24](https://github.com/user-attachments/assets/e218a097-983d-4473-b1a2-224142532c33)
 
@@ -89,13 +95,13 @@
    - `EmergencyVehicleSystem`
    ![Screenshot from 2025-06-03 03-10-04](https://github.com/user-attachments/assets/bda19caa-292e-4558-ba7f-70a90d7d9095)
 
-7. **Analizy modelu**
+8. **Analizy modelu**
    - Check Binding Constraints - "No problems found" ✅
    - Check Connection Binding Consistency - Brak ostrzeżeń oraz błędów ✅
   
-8. **Inne informacje zależne od tematu**
+9. **Inne informacje zależne od tematu**
     Brak.
 
-9. **Literatura**
+10. **Literatura**
    - [https://en.wikipedia.org/wiki/Traffic_signal_preemption#Vehicular_device_types](https://en.wikipedia.org/wiki/Traffic_signal_preemption#Vehicular_device_types)
    - [https://leotek.com/traffic-light-sensors/](https://leotek.com/traffic-light-sensors/)
