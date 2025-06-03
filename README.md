@@ -69,3 +69,25 @@
     - thread `PedButtonThread`, `TramSensorThread` - wątki dla przycisku i sensorów, pośredniczą w wysyłaniu próśb o zielone światło,
     - thread `LightThread` - wątek pośredniczący w komunikacji między kontrolerem a sygnalizatorem, odbiera od kontrolera sygnał i wysyła mu status sygnalizatora,
     - thread `RadioReceiverThread` - wątek odpowiadający za odbieranie żądań od pojazdów uprzywilejowanych
+  
+5. **Model - schematy**
+   - `UrbanTrafficSystem`
+     ![Screenshot from 2025-06-03 03-13-24](https://github.com/user-attachments/assets/e218a097-983d-4473-b1a2-224142532c33)
+
+   - `TrafficLightsSystem`
+    ![Screenshot from 2025-06-03 03-12-48](https://github.com/user-attachments/assets/60668034-4020-4ba6-98f1-78b692676938)
+
+     
+   - `EmergencyVehicleSystem`
+   ![Screenshot from 2025-06-03 03-10-04](https://github.com/user-attachments/assets/bda19caa-292e-4558-ba7f-70a90d7d9095)
+
+6. **Analizy modelu**
+   - Check Binding Constraints - "No problems found" ✅
+   - Check Connection Binding Consistency - Brak ostrzeżeń oraz błędów ✅
+  
+7. **Inne informacje zależne od tematu**
+    Brak.
+
+8. **Literatura**
+   - [https://en.wikipedia.org/wiki/Traffic_signal_preemption#Vehicular_device_types](https://en.wikipedia.org/wiki/Traffic_signal_preemption#Vehicular_device_types)
+   - [https://leotek.com/traffic-light-sensors/](https://leotek.com/traffic-light-sensors/)
