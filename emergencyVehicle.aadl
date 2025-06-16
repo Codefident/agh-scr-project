@@ -2,6 +2,7 @@ package emergencyVehicle
 public
 	with Data_Model;
 	with urbanTraffic;
+	with SEI;
 	
 	
 	-- DATA --
@@ -15,6 +16,7 @@ public
 	system EmergencyVehicleSystem
 		features
 			radioBus: requires bus access urbanTraffic::Radio;
+			radioOut: out data port emergencyVehicle::EmergencySignal;
 	end EmergencyVehicleSystem;
 	
 	system implementation EmergencyVehicleSystem.impl
@@ -32,6 +34,7 @@ public
 		connections
 			c1: port button.requestToSendEmergencySignal -> emergencyVehicleController.receiveRequest;
 			c2: port emergencyVehicleController.sendEmergencySignal -> radioSignalEmitter.inEmergencySignal;
+			c3: port radioSignalEmitter.emitEmergencySignal -> radioOut;
 			
 			b1: bus access radioSignalEmitter.vehicleBus <-> vehicleBus;
 			b2: bus access button.vehicleBus <-> vehicleBus;
@@ -129,9 +132,12 @@ public
 	-- DEVICES --
 	device RadioSignalEmitter
 		features
-			inEmergencySignal: in event port;
+			inEmergencySignal: in data port EmergencySignal;
+			emitEmergencySignal: out data port EmergencySignal;
 			radioBus: requires bus access urbanTraffic::Radio;
 			vehicleBus: requires bus access VehicleBus;
+		properties
+			SEI::GrossWeight => 0.1 kg;
 	end RadioSignalEmitter;
 	device implementation RadioSignalEmitter.impl
 	end RadioSignalEmitter.impl;
@@ -140,6 +146,8 @@ public
 		features
 			requestToSendEmergencySignal: out event port;
 			vehicleBus: requires bus access VehicleBus;
+		properties
+			SEI::GrossWeight => 0.2 kg;
 	end EmiteSignalButton;
 	device implementation EmiteSignalButton.impl
 	end EmiteSignalButton.impl;

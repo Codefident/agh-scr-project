@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="ASCII"?>
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aadl2="http://aadl.info/AADL/2.0" xmlns:instance="http://aadl.info/AADL/2.0/instance">
   <instance:SystemInstance name="RadioReceiver_impl_Instance" category="device">
+    <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+      <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.GrossWeight"/>
+      <ownedValue>
+        <ownedValue xsi:type="aadl2:RealLiteral" value="0.1">
+          <unit href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#/0/@ownedPropertyType.0/@ownedLiteral.0"/>
+        </ownedValue>
+      </ownedValue>
+      <propertyAssociation href="../trafficLights.aadl#/0/@ownedPublicSection/@ownedClassifier.31/@ownedPropertyAssociation.0"/>
+    </ownedPropertyAssociation>
     <featureInstance name="outEmergencySignal" direction="out" type="/1">
       <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
         <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
@@ -12,6 +21,18 @@
         <propertyAssociation href="../emergencyVehicle.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedPropertyAssociation.0"/>
       </ownedPropertyAssociation>
       <feature xsi:type="aadl2:DataPort" href="../trafficLights.aadl#/0/@ownedPublicSection/@ownedClassifier.31/@ownedDataPort.0"/>
+    </featureInstance>
+    <featureInstance name="radioIn" type="/1">
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:NamedValue">
+            <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.7"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../emergencyVehicle.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedPropertyAssociation.0"/>
+      </ownedPropertyAssociation>
+      <feature xsi:type="aadl2:DataPort" href="../trafficLights.aadl#/0/@ownedPublicSection/@ownedClassifier.31/@ownedDataPort.1"/>
     </featureInstance>
     <featureInstance name="radioBus" category="busAccess" type="/2">
       <feature xsi:type="aadl2:BusAccess" href="../trafficLights.aadl#/0/@ownedPublicSection/@ownedClassifier.31/@ownedBusAccess.0"/>
@@ -36,9 +57,45 @@
     <classifier xsi:type="aadl2:DataType" href="../emergencyVehicle.aadl#emergencyVehicle.EmergencySignal"/>
   </instance:ComponentInstance>
   <instance:ComponentInstance name="urbanTraffic::Radio" category="bus">
+    <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+      <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.BandWidthBudget"/>
+      <ownedValue>
+        <ownedValue xsi:type="aadl2:RealLiteral" value="320.0">
+          <unit href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.17/@ownedLiteral.5"/>
+        </ownedValue>
+      </ownedValue>
+      <propertyAssociation href="../urbanTraffic.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedPropertyAssociation.0"/>
+    </ownedPropertyAssociation>
+    <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+      <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.BandWidthCapacity"/>
+      <ownedValue>
+        <ownedValue xsi:type="aadl2:RealLiteral" value="2.0">
+          <unit href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.17/@ownedLiteral.6"/>
+        </ownedValue>
+      </ownedValue>
+      <propertyAssociation href="../urbanTraffic.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedPropertyAssociation.1"/>
+    </ownedPropertyAssociation>
     <classifier xsi:type="aadl2:BusType" href="../urbanTraffic.aadl#urbanTraffic.Radio"/>
   </instance:ComponentInstance>
   <instance:ComponentInstance name="trafficLights::CommBus" category="bus">
+    <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+      <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.BandWidthBudget"/>
+      <ownedValue>
+        <ownedValue xsi:type="aadl2:RealLiteral" value="420.0">
+          <unit href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.17/@ownedLiteral.5"/>
+        </ownedValue>
+      </ownedValue>
+      <propertyAssociation href="../trafficLights.aadl#/0/@ownedPublicSection/@ownedClassifier.19/@ownedPropertyAssociation.0"/>
+    </ownedPropertyAssociation>
+    <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+      <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.BandWidthCapacity"/>
+      <ownedValue>
+        <ownedValue xsi:type="aadl2:RealLiteral" value="3.0">
+          <unit href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.17/@ownedLiteral.6"/>
+        </ownedValue>
+      </ownedValue>
+      <propertyAssociation href="../trafficLights.aadl#/0/@ownedPublicSection/@ownedClassifier.19/@ownedPropertyAssociation.1"/>
+    </ownedPropertyAssociation>
     <classifier xsi:type="aadl2:BusType" href="../trafficLights.aadl#trafficLights.CommBus"/>
   </instance:ComponentInstance>
 </xmi:XMI>

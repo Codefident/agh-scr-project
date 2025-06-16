@@ -4,7 +4,7 @@
     <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
       <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.GrossWeight"/>
       <ownedValue>
-        <ownedValue xsi:type="aadl2:RealLiteral" value="1.0">
+        <ownedValue xsi:type="aadl2:RealLiteral" value="0.7">
           <unit href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#/0/@ownedPropertyType.0/@ownedLiteral.0"/>
         </ownedValue>
       </ownedValue>
@@ -60,6 +60,24 @@
     <classifier xsi:type="aadl2:DataType" href="../trafficLights.aadl#trafficLights.RequestSignal"/>
   </instance:ComponentInstance>
   <instance:ComponentInstance name="trafficLights::CommBus" category="bus">
+    <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+      <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.BandWidthBudget"/>
+      <ownedValue>
+        <ownedValue xsi:type="aadl2:RealLiteral" value="420.0">
+          <unit href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.17/@ownedLiteral.5"/>
+        </ownedValue>
+      </ownedValue>
+      <propertyAssociation href="../trafficLights.aadl#/0/@ownedPublicSection/@ownedClassifier.19/@ownedPropertyAssociation.0"/>
+    </ownedPropertyAssociation>
+    <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+      <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.BandWidthCapacity"/>
+      <ownedValue>
+        <ownedValue xsi:type="aadl2:RealLiteral" value="3.0">
+          <unit href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.17/@ownedLiteral.6"/>
+        </ownedValue>
+      </ownedValue>
+      <propertyAssociation href="../trafficLights.aadl#/0/@ownedPublicSection/@ownedClassifier.19/@ownedPropertyAssociation.1"/>
+    </ownedPropertyAssociation>
     <classifier xsi:type="aadl2:BusType" href="../trafficLights.aadl#trafficLights.CommBus"/>
   </instance:ComponentInstance>
 </xmi:XMI>

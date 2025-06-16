@@ -2,6 +2,7 @@ package urbanTraffic
 public
 	with trafficLights;
 	with emergencyVehicle;
+	with SEI;
 	
 	---- top system
 	system UrbanTrafficSystem
@@ -13,12 +14,16 @@ public
 			emergencyVehicleSystem: system emergencyVehicle::EmergencyVehicleSystem.impl;
 			radioBus: bus Radio.impl;
 		connections
+			c1: port emergencyVehicleSystem.radioOut -> trafficLightsSystem.radioIn;
 			b_lights: bus access radioBus -> trafficLightsSystem.radioBus;
 			b_emergency: bus access radioBus -> emergencyVehicleSystem.radioBus;
 	end UrbanTrafficSystem.impl;
 	
 	
 	bus Radio
+		properties
+			SEI::BandWidthBudget => 320.0 KBytesps;
+			SEI::BandWidthCapacity => 2.0 MBytesps;
 	end Radio;
 	bus implementation Radio.impl
 	end Radio.impl;

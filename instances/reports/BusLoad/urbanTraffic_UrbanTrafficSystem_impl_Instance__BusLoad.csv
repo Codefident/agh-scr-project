@@ -1,0 +1,14 @@
+Bus load analysis of UrbanTrafficSystem_impl_Instance
+
+
+"Physical Bus","Capacity (KB/s)","Budget (KB/s)","Required Budget (KB/s)","Actual (KB/s)"
+"radioBus","2000.0","320.0","0.0","0.0"
+"commBus","3000.0","420.0","0.0","0.0"
+
+"Bus radioBus has data overhead of 0 bytes"
+"Bound Virtual Bus/Connection","Capacity (KB/s)","Budget (KB/s)","Required Budget (KB/s)","Actual (KB/s)"
+
+"Bus commBus has data overhead of 0 bytes"
+"Bound Virtual Bus/Connection","Capacity (KB/s)","Budget (KB/s)","Required Budget (KB/s)","Actual (KB/s)"
+
+

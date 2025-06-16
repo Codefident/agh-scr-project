@@ -1,0 +1,13 @@
+Bus load analysis of VehicleBus_impl_Instance
+
+
+"Physical Bus","Capacity (KB/s)","Budget (KB/s)","Required Budget (KB/s)","Actual (KB/s)"
+"VehicleBus_impl_Instance","0.0","0.0","0.0","0.0"
+
+"Bus VehicleBus_impl_Instance has data overhead of 0 bytes"
+"Bound Virtual Bus/Connection","Capacity (KB/s)","Budget (KB/s)","Required Budget (KB/s)","Actual (KB/s)"
+
+"WARNING: Bus VehicleBus_impl_Instance has no capacity"
+"WARNING: Bus VehicleBus_impl_Instance has no bandwidth budget"
+
+

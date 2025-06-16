@@ -1,0 +1,53 @@
+Bus load analysis of EmergencyVehicleSystem_impl_Instance
+
+
+"Physical Bus","Capacity (KB/s)","Budget (KB/s)","Required Budget (KB/s)","Actual (KB/s)"
+"vehicleBus","0.0","0.0","0.0","0.0"
+
+"Bus vehicleBus has data overhead of 0 bytes"
+"Bound Virtual Bus/Connection","Capacity (KB/s)","Budget (KB/s)","Required Budget (KB/s)","Actual (KB/s)"
+"vehicleBus -> radioSignalEmitter.vehicleBus","","0.0","","0.0"
+"vehicleBus -> button.vehicleBus","","0.0","","0.0"
+"vehicleBus -> cpu.vehicleBus","","0.0","","0.0"
+"vehicleBus -> mem.vehicleBus","","0.0","","0.0"
+"radioSignalEmitter.vehicleBus -> vehicleBus","","0.0","","0.0"
+"button.requestToSendEmergencySignal -> emergencyVehicleController.buttonThread.eventIn","","0.0","","0.0"
+"button.vehicleBus -> vehicleBus","","0.0","","0.0"
+"mem.vehicleBus -> vehicleBus","","0.0","","0.0"
+"emergencyVehicleController.radioEmitterThread.dataOut -> radioSignalEmitter.inEmergencySignal","","0.0","","0.0"
+"cpu.vehicleBus -> vehicleBus","","0.0","","0.0"
+
+"WARNING: Bus vehicleBus has no capacity"
+"WARNING: Bus vehicleBus has no bandwidth budget"
+
+"Connection vehicleBus -> radioSignalEmitter.vehicleBus bound to vehicleBus"
+"WARNING: Connection vehicleBus -> radioSignalEmitter.vehicleBus has no bandwidth budget"
+
+"Connection vehicleBus -> button.vehicleBus bound to vehicleBus"
+"WARNING: Connection vehicleBus -> button.vehicleBus has no bandwidth budget"
+
+"Connection vehicleBus -> cpu.vehicleBus bound to vehicleBus"
+"WARNING: Connection vehicleBus -> cpu.vehicleBus has no bandwidth budget"
+
+"Connection vehicleBus -> mem.vehicleBus bound to vehicleBus"
+"WARNING: Connection vehicleBus -> mem.vehicleBus has no bandwidth budget"
+
+"Connection radioSignalEmitter.vehicleBus -> vehicleBus bound to vehicleBus"
+"WARNING: Connection radioSignalEmitter.vehicleBus -> vehicleBus has no bandwidth budget"
+
+"Connection button.requestToSendEmergencySignal -> emergencyVehicleController.buttonThread.eventIn bound to vehicleBus"
+"WARNING: Connection button.requestToSendEmergencySignal -> emergencyVehicleController.buttonThread.eventIn has no bandwidth budget"
+
+"Connection button.vehicleBus -> vehicleBus bound to vehicleBus"
+"WARNING: Connection button.vehicleBus -> vehicleBus has no bandwidth budget"
+
+"Connection mem.vehicleBus -> vehicleBus bound to vehicleBus"
+"WARNING: Connection mem.vehicleBus -> vehicleBus has no bandwidth budget"
+
+"Connection emergencyVehicleController.radioEmitterThread.dataOut -> radioSignalEmitter.inEmergencySignal bound to vehicleBus"
+"WARNING: Connection emergencyVehicleController.radioEmitterThread.dataOut -> radioSignalEmitter.inEmergencySignal has no bandwidth budget"
+
+"Connection cpu.vehicleBus -> vehicleBus bound to vehicleBus"
+"WARNING: Connection cpu.vehicleBus -> vehicleBus has no bandwidth budget"
+
+
