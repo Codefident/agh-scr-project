@@ -1,0 +1,658 @@
+<?xml version="1.0" encoding="ASCII"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aadl2="http://aadl.info/AADL/2.0" xmlns:instance="http://aadl.info/AADL/2.0/instance">
+  <instance:SystemInstance name="SignalRouter_impl_Instance" category="process">
+    <featureInstance name="mainCarStatus" type="/1">
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:NamedValue">
+            <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.1"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../trafficLights.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedPropertyAssociation.0"/>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Memory_Properties.aadl#Memory_Properties.Data_Size"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:IntegerLiteral" value="2">
+            <unit href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.15/@ownedLiteral.1"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../trafficLights.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedPropertyAssociation.1"/>
+      </ownedPropertyAssociation>
+      <feature xsi:type="aadl2:DataPort" href="../trafficLights.aadl#/0/@ownedPublicSection/@ownedClassifier.7/@ownedDataPort.0"/>
+    </featureInstance>
+    <featureInstance name="sideCarStatus" type="/1">
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:NamedValue">
+            <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.1"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../trafficLights.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedPropertyAssociation.0"/>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Memory_Properties.aadl#Memory_Properties.Data_Size"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:IntegerLiteral" value="2">
+            <unit href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.15/@ownedLiteral.1"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../trafficLights.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedPropertyAssociation.1"/>
+      </ownedPropertyAssociation>
+      <feature xsi:type="aadl2:DataPort" href="../trafficLights.aadl#/0/@ownedPublicSection/@ownedClassifier.7/@ownedDataPort.1"/>
+    </featureInstance>
+    <featureInstance name="tramStatus" type="/1">
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:NamedValue">
+            <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.1"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../trafficLights.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedPropertyAssociation.0"/>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Memory_Properties.aadl#Memory_Properties.Data_Size"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:IntegerLiteral" value="2">
+            <unit href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.15/@ownedLiteral.1"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../trafficLights.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedPropertyAssociation.1"/>
+      </ownedPropertyAssociation>
+      <feature xsi:type="aadl2:DataPort" href="../trafficLights.aadl#/0/@ownedPublicSection/@ownedClassifier.7/@ownedDataPort.2"/>
+    </featureInstance>
+    <featureInstance name="mainPedStatus" type="/1">
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:NamedValue">
+            <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.1"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../trafficLights.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedPropertyAssociation.0"/>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Memory_Properties.aadl#Memory_Properties.Data_Size"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:IntegerLiteral" value="2">
+            <unit href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.15/@ownedLiteral.1"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../trafficLights.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedPropertyAssociation.1"/>
+      </ownedPropertyAssociation>
+      <feature xsi:type="aadl2:DataPort" href="../trafficLights.aadl#/0/@ownedPublicSection/@ownedClassifier.7/@ownedDataPort.3"/>
+    </featureInstance>
+    <featureInstance name="sidePedStatus" type="/1">
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:NamedValue">
+            <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.1"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../trafficLights.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedPropertyAssociation.0"/>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Memory_Properties.aadl#Memory_Properties.Data_Size"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:IntegerLiteral" value="2">
+            <unit href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.15/@ownedLiteral.1"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../trafficLights.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedPropertyAssociation.1"/>
+      </ownedPropertyAssociation>
+      <feature xsi:type="aadl2:DataPort" href="../trafficLights.aadl#/0/@ownedPublicSection/@ownedClassifier.7/@ownedDataPort.4"/>
+    </featureInstance>
+    <featureInstance name="statusOut" direction="out" type="/1">
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:NamedValue">
+            <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.1"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../trafficLights.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedPropertyAssociation.0"/>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Memory_Properties.aadl#Memory_Properties.Data_Size"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:IntegerLiteral" value="2">
+            <unit href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.15/@ownedLiteral.1"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../trafficLights.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedPropertyAssociation.1"/>
+      </ownedPropertyAssociation>
+      <feature xsi:type="aadl2:DataPort" href="../trafficLights.aadl#/0/@ownedPublicSection/@ownedClassifier.7/@ownedDataPort.5"/>
+    </featureInstance>
+    <featureInstance name="controlIn" type="/2">
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Memory_Properties.aadl#Memory_Properties.Data_Size"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:IntegerLiteral" value="15">
+            <unit href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.15/@ownedLiteral.1"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../trafficLights.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedPropertyAssociation.1"/>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Enumerators"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:ListValue">
+            <ownedListElement xsi:type="aadl2:StringLiteral" value="Go"/>
+            <ownedListElement xsi:type="aadl2:StringLiteral" value="Stop"/>
+            <ownedListElement xsi:type="aadl2:StringLiteral" value="ChangingSignal"/>
+            <ownedListElement xsi:type="aadl2:StringLiteral" value="Failure"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../trafficLights.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedPropertyAssociation.0"/>
+      </ownedPropertyAssociation>
+      <feature xsi:type="aadl2:DataPort" href="../trafficLights.aadl#/0/@ownedPublicSection/@ownedClassifier.7/@ownedDataPort.6"/>
+    </featureInstance>
+    <featureInstance name="mainCarSignal" direction="out" type="/2">
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Memory_Properties.aadl#Memory_Properties.Data_Size"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:IntegerLiteral" value="15">
+            <unit href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.15/@ownedLiteral.1"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../trafficLights.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedPropertyAssociation.1"/>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Enumerators"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:ListValue">
+            <ownedListElement xsi:type="aadl2:StringLiteral" value="Go"/>
+            <ownedListElement xsi:type="aadl2:StringLiteral" value="Stop"/>
+            <ownedListElement xsi:type="aadl2:StringLiteral" value="ChangingSignal"/>
+            <ownedListElement xsi:type="aadl2:StringLiteral" value="Failure"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../trafficLights.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedPropertyAssociation.0"/>
+      </ownedPropertyAssociation>
+      <feature xsi:type="aadl2:DataPort" href="../trafficLights.aadl#/0/@ownedPublicSection/@ownedClassifier.7/@ownedDataPort.7"/>
+    </featureInstance>
+    <featureInstance name="sideCarSignal" direction="out" type="/2">
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Memory_Properties.aadl#Memory_Properties.Data_Size"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:IntegerLiteral" value="15">
+            <unit href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.15/@ownedLiteral.1"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../trafficLights.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedPropertyAssociation.1"/>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Enumerators"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:ListValue">
+            <ownedListElement xsi:type="aadl2:StringLiteral" value="Go"/>
+            <ownedListElement xsi:type="aadl2:StringLiteral" value="Stop"/>
+            <ownedListElement xsi:type="aadl2:StringLiteral" value="ChangingSignal"/>
+            <ownedListElement xsi:type="aadl2:StringLiteral" value="Failure"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../trafficLights.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedPropertyAssociation.0"/>
+      </ownedPropertyAssociation>
+      <feature xsi:type="aadl2:DataPort" href="../trafficLights.aadl#/0/@ownedPublicSection/@ownedClassifier.7/@ownedDataPort.8"/>
+    </featureInstance>
+    <featureInstance name="tramSignal" direction="out" type="/2">
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Memory_Properties.aadl#Memory_Properties.Data_Size"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:IntegerLiteral" value="15">
+            <unit href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.15/@ownedLiteral.1"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../trafficLights.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedPropertyAssociation.1"/>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Enumerators"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:ListValue">
+            <ownedListElement xsi:type="aadl2:StringLiteral" value="Go"/>
+            <ownedListElement xsi:type="aadl2:StringLiteral" value="Stop"/>
+            <ownedListElement xsi:type="aadl2:StringLiteral" value="ChangingSignal"/>
+            <ownedListElement xsi:type="aadl2:StringLiteral" value="Failure"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../trafficLights.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedPropertyAssociation.0"/>
+      </ownedPropertyAssociation>
+      <feature xsi:type="aadl2:DataPort" href="../trafficLights.aadl#/0/@ownedPublicSection/@ownedClassifier.7/@ownedDataPort.9"/>
+    </featureInstance>
+    <featureInstance name="mainPedSignal" direction="out" type="/2">
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Memory_Properties.aadl#Memory_Properties.Data_Size"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:IntegerLiteral" value="15">
+            <unit href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.15/@ownedLiteral.1"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../trafficLights.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedPropertyAssociation.1"/>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Enumerators"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:ListValue">
+            <ownedListElement xsi:type="aadl2:StringLiteral" value="Go"/>
+            <ownedListElement xsi:type="aadl2:StringLiteral" value="Stop"/>
+            <ownedListElement xsi:type="aadl2:StringLiteral" value="ChangingSignal"/>
+            <ownedListElement xsi:type="aadl2:StringLiteral" value="Failure"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../trafficLights.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedPropertyAssociation.0"/>
+      </ownedPropertyAssociation>
+      <feature xsi:type="aadl2:DataPort" href="../trafficLights.aadl#/0/@ownedPublicSection/@ownedClassifier.7/@ownedDataPort.10"/>
+    </featureInstance>
+    <featureInstance name="sidePedSignal" direction="out" type="/2">
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Memory_Properties.aadl#Memory_Properties.Data_Size"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:IntegerLiteral" value="15">
+            <unit href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.15/@ownedLiteral.1"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../trafficLights.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedPropertyAssociation.1"/>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Enumerators"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:ListValue">
+            <ownedListElement xsi:type="aadl2:StringLiteral" value="Go"/>
+            <ownedListElement xsi:type="aadl2:StringLiteral" value="Stop"/>
+            <ownedListElement xsi:type="aadl2:StringLiteral" value="ChangingSignal"/>
+            <ownedListElement xsi:type="aadl2:StringLiteral" value="Failure"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../trafficLights.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedPropertyAssociation.0"/>
+      </ownedPropertyAssociation>
+      <feature xsi:type="aadl2:DataPort" href="../trafficLights.aadl#/0/@ownedPublicSection/@ownedClassifier.7/@ownedDataPort.11"/>
+    </featureInstance>
+    <componentInstance name="routerThread" category="thread">
+      <featureInstance name="inMainCar" type="/1">
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:NamedValue">
+              <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.1"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="../trafficLights.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedPropertyAssociation.0"/>
+        </ownedPropertyAssociation>
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Memory_Properties.aadl#Memory_Properties.Data_Size"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:IntegerLiteral" value="2">
+              <unit href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.15/@ownedLiteral.1"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="../trafficLights.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedPropertyAssociation.1"/>
+        </ownedPropertyAssociation>
+        <feature xsi:type="aadl2:DataPort" href="../trafficLights.aadl#/0/@ownedPublicSection/@ownedClassifier.17/@ownedDataPort.0"/>
+      </featureInstance>
+      <featureInstance name="inSideCar" type="/1">
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:NamedValue">
+              <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.1"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="../trafficLights.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedPropertyAssociation.0"/>
+        </ownedPropertyAssociation>
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Memory_Properties.aadl#Memory_Properties.Data_Size"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:IntegerLiteral" value="2">
+              <unit href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.15/@ownedLiteral.1"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="../trafficLights.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedPropertyAssociation.1"/>
+        </ownedPropertyAssociation>
+        <feature xsi:type="aadl2:DataPort" href="../trafficLights.aadl#/0/@ownedPublicSection/@ownedClassifier.17/@ownedDataPort.1"/>
+      </featureInstance>
+      <featureInstance name="inTram" type="/1">
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:NamedValue">
+              <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.1"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="../trafficLights.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedPropertyAssociation.0"/>
+        </ownedPropertyAssociation>
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Memory_Properties.aadl#Memory_Properties.Data_Size"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:IntegerLiteral" value="2">
+              <unit href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.15/@ownedLiteral.1"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="../trafficLights.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedPropertyAssociation.1"/>
+        </ownedPropertyAssociation>
+        <feature xsi:type="aadl2:DataPort" href="../trafficLights.aadl#/0/@ownedPublicSection/@ownedClassifier.17/@ownedDataPort.2"/>
+      </featureInstance>
+      <featureInstance name="inMainPed" type="/1">
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:NamedValue">
+              <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.1"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="../trafficLights.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedPropertyAssociation.0"/>
+        </ownedPropertyAssociation>
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Memory_Properties.aadl#Memory_Properties.Data_Size"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:IntegerLiteral" value="2">
+              <unit href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.15/@ownedLiteral.1"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="../trafficLights.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedPropertyAssociation.1"/>
+        </ownedPropertyAssociation>
+        <feature xsi:type="aadl2:DataPort" href="../trafficLights.aadl#/0/@ownedPublicSection/@ownedClassifier.17/@ownedDataPort.3"/>
+      </featureInstance>
+      <featureInstance name="inSidePed" type="/1">
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:NamedValue">
+              <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.1"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="../trafficLights.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedPropertyAssociation.0"/>
+        </ownedPropertyAssociation>
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Memory_Properties.aadl#Memory_Properties.Data_Size"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:IntegerLiteral" value="2">
+              <unit href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.15/@ownedLiteral.1"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="../trafficLights.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedPropertyAssociation.1"/>
+        </ownedPropertyAssociation>
+        <feature xsi:type="aadl2:DataPort" href="../trafficLights.aadl#/0/@ownedPublicSection/@ownedClassifier.17/@ownedDataPort.4"/>
+      </featureInstance>
+      <featureInstance name="inSignal" type="/2">
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Memory_Properties.aadl#Memory_Properties.Data_Size"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:IntegerLiteral" value="15">
+              <unit href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.15/@ownedLiteral.1"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="../trafficLights.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedPropertyAssociation.1"/>
+        </ownedPropertyAssociation>
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Enumerators"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:ListValue">
+              <ownedListElement xsi:type="aadl2:StringLiteral" value="Go"/>
+              <ownedListElement xsi:type="aadl2:StringLiteral" value="Stop"/>
+              <ownedListElement xsi:type="aadl2:StringLiteral" value="ChangingSignal"/>
+              <ownedListElement xsi:type="aadl2:StringLiteral" value="Failure"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="../trafficLights.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedPropertyAssociation.0"/>
+        </ownedPropertyAssociation>
+        <feature xsi:type="aadl2:DataPort" href="../trafficLights.aadl#/0/@ownedPublicSection/@ownedClassifier.17/@ownedDataPort.5"/>
+      </featureInstance>
+      <featureInstance name="outMainCar" direction="out" type="/2">
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Memory_Properties.aadl#Memory_Properties.Data_Size"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:IntegerLiteral" value="15">
+              <unit href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.15/@ownedLiteral.1"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="../trafficLights.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedPropertyAssociation.1"/>
+        </ownedPropertyAssociation>
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Enumerators"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:ListValue">
+              <ownedListElement xsi:type="aadl2:StringLiteral" value="Go"/>
+              <ownedListElement xsi:type="aadl2:StringLiteral" value="Stop"/>
+              <ownedListElement xsi:type="aadl2:StringLiteral" value="ChangingSignal"/>
+              <ownedListElement xsi:type="aadl2:StringLiteral" value="Failure"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="../trafficLights.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedPropertyAssociation.0"/>
+        </ownedPropertyAssociation>
+        <feature xsi:type="aadl2:DataPort" href="../trafficLights.aadl#/0/@ownedPublicSection/@ownedClassifier.17/@ownedDataPort.6"/>
+      </featureInstance>
+      <featureInstance name="outSideCar" direction="out" type="/2">
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Memory_Properties.aadl#Memory_Properties.Data_Size"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:IntegerLiteral" value="15">
+              <unit href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.15/@ownedLiteral.1"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="../trafficLights.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedPropertyAssociation.1"/>
+        </ownedPropertyAssociation>
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Enumerators"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:ListValue">
+              <ownedListElement xsi:type="aadl2:StringLiteral" value="Go"/>
+              <ownedListElement xsi:type="aadl2:StringLiteral" value="Stop"/>
+              <ownedListElement xsi:type="aadl2:StringLiteral" value="ChangingSignal"/>
+              <ownedListElement xsi:type="aadl2:StringLiteral" value="Failure"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="../trafficLights.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedPropertyAssociation.0"/>
+        </ownedPropertyAssociation>
+        <feature xsi:type="aadl2:DataPort" href="../trafficLights.aadl#/0/@ownedPublicSection/@ownedClassifier.17/@ownedDataPort.7"/>
+      </featureInstance>
+      <featureInstance name="outTram" direction="out" type="/2">
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Memory_Properties.aadl#Memory_Properties.Data_Size"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:IntegerLiteral" value="15">
+              <unit href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.15/@ownedLiteral.1"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="../trafficLights.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedPropertyAssociation.1"/>
+        </ownedPropertyAssociation>
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Enumerators"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:ListValue">
+              <ownedListElement xsi:type="aadl2:StringLiteral" value="Go"/>
+              <ownedListElement xsi:type="aadl2:StringLiteral" value="Stop"/>
+              <ownedListElement xsi:type="aadl2:StringLiteral" value="ChangingSignal"/>
+              <ownedListElement xsi:type="aadl2:StringLiteral" value="Failure"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="../trafficLights.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedPropertyAssociation.0"/>
+        </ownedPropertyAssociation>
+        <feature xsi:type="aadl2:DataPort" href="../trafficLights.aadl#/0/@ownedPublicSection/@ownedClassifier.17/@ownedDataPort.8"/>
+      </featureInstance>
+      <featureInstance name="outMainPed" direction="out" type="/2">
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Memory_Properties.aadl#Memory_Properties.Data_Size"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:IntegerLiteral" value="15">
+              <unit href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.15/@ownedLiteral.1"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="../trafficLights.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedPropertyAssociation.1"/>
+        </ownedPropertyAssociation>
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Enumerators"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:ListValue">
+              <ownedListElement xsi:type="aadl2:StringLiteral" value="Go"/>
+              <ownedListElement xsi:type="aadl2:StringLiteral" value="Stop"/>
+              <ownedListElement xsi:type="aadl2:StringLiteral" value="ChangingSignal"/>
+              <ownedListElement xsi:type="aadl2:StringLiteral" value="Failure"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="../trafficLights.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedPropertyAssociation.0"/>
+        </ownedPropertyAssociation>
+        <feature xsi:type="aadl2:DataPort" href="../trafficLights.aadl#/0/@ownedPublicSection/@ownedClassifier.17/@ownedDataPort.9"/>
+      </featureInstance>
+      <featureInstance name="outSidePed" direction="out" type="/2">
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Memory_Properties.aadl#Memory_Properties.Data_Size"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:IntegerLiteral" value="15">
+              <unit href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.15/@ownedLiteral.1"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="../trafficLights.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedPropertyAssociation.1"/>
+        </ownedPropertyAssociation>
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Enumerators"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:ListValue">
+              <ownedListElement xsi:type="aadl2:StringLiteral" value="Go"/>
+              <ownedListElement xsi:type="aadl2:StringLiteral" value="Stop"/>
+              <ownedListElement xsi:type="aadl2:StringLiteral" value="ChangingSignal"/>
+              <ownedListElement xsi:type="aadl2:StringLiteral" value="Failure"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="../trafficLights.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedPropertyAssociation.0"/>
+        </ownedPropertyAssociation>
+        <feature xsi:type="aadl2:DataPort" href="../trafficLights.aadl#/0/@ownedPublicSection/@ownedClassifier.17/@ownedDataPort.10"/>
+      </featureInstance>
+      <featureInstance name="outStatus" direction="out" type="/1">
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:NamedValue">
+              <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.1"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="../trafficLights.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedPropertyAssociation.0"/>
+        </ownedPropertyAssociation>
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Memory_Properties.aadl#Memory_Properties.Data_Size"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:IntegerLiteral" value="2">
+              <unit href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.15/@ownedLiteral.1"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="../trafficLights.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedPropertyAssociation.1"/>
+        </ownedPropertyAssociation>
+        <feature xsi:type="aadl2:DataPort" href="../trafficLights.aadl#/0/@ownedPublicSection/@ownedClassifier.17/@ownedDataPort.11"/>
+      </featureInstance>
+      <subcomponent xsi:type="aadl2:ThreadSubcomponent" href="../trafficLights.aadl#/0/@ownedPublicSection/@ownedClassifier.8/@ownedThreadSubcomponent.0"/>
+      <index>0</index>
+      <classifier xsi:type="aadl2:ThreadImplementation" href="../trafficLights.aadl#trafficLights.SignalRouterThread.impl"/>
+    </componentInstance>
+    <connectionInstance name="mainCarStatus -> routerThread.inMainCar" kind="portConnection" destination="/0/@componentInstance.0/@featureInstance.0" source="/0/@featureInstance.0">
+      <connectionReference context="/0" source="/0/@featureInstance.0" destination="/0/@componentInstance.0/@featureInstance.0">
+        <connection xsi:type="aadl2:PortConnection" href="../trafficLights.aadl#/0/@ownedPublicSection/@ownedClassifier.8/@ownedPortConnection.0"/>
+      </connectionReference>
+    </connectionInstance>
+    <connectionInstance name="sideCarStatus -> routerThread.inSideCar" kind="portConnection" destination="/0/@componentInstance.0/@featureInstance.1" source="/0/@featureInstance.1">
+      <connectionReference context="/0" source="/0/@featureInstance.1" destination="/0/@componentInstance.0/@featureInstance.1">
+        <connection xsi:type="aadl2:PortConnection" href="../trafficLights.aadl#/0/@ownedPublicSection/@ownedClassifier.8/@ownedPortConnection.1"/>
+      </connectionReference>
+    </connectionInstance>
+    <connectionInstance name="tramStatus -> routerThread.inTram" kind="portConnection" destination="/0/@componentInstance.0/@featureInstance.2" source="/0/@featureInstance.2">
+      <connectionReference context="/0" source="/0/@featureInstance.2" destination="/0/@componentInstance.0/@featureInstance.2">
+        <connection xsi:type="aadl2:PortConnection" href="../trafficLights.aadl#/0/@ownedPublicSection/@ownedClassifier.8/@ownedPortConnection.2"/>
+      </connectionReference>
+    </connectionInstance>
+    <connectionInstance name="mainPedStatus -> routerThread.inMainPed" kind="portConnection" destination="/0/@componentInstance.0/@featureInstance.3" source="/0/@featureInstance.3">
+      <connectionReference context="/0" source="/0/@featureInstance.3" destination="/0/@componentInstance.0/@featureInstance.3">
+        <connection xsi:type="aadl2:PortConnection" href="../trafficLights.aadl#/0/@ownedPublicSection/@ownedClassifier.8/@ownedPortConnection.3"/>
+      </connectionReference>
+    </connectionInstance>
+    <connectionInstance name="sidePedStatus -> routerThread.inSidePed" kind="portConnection" destination="/0/@componentInstance.0/@featureInstance.4" source="/0/@featureInstance.4">
+      <connectionReference context="/0" source="/0/@featureInstance.4" destination="/0/@componentInstance.0/@featureInstance.4">
+        <connection xsi:type="aadl2:PortConnection" href="../trafficLights.aadl#/0/@ownedPublicSection/@ownedClassifier.8/@ownedPortConnection.4"/>
+      </connectionReference>
+    </connectionInstance>
+    <connectionInstance name="controlIn -> routerThread.inSignal" kind="portConnection" destination="/0/@componentInstance.0/@featureInstance.5" source="/0/@featureInstance.6">
+      <connectionReference context="/0" source="/0/@featureInstance.6" destination="/0/@componentInstance.0/@featureInstance.5">
+        <connection xsi:type="aadl2:PortConnection" href="../trafficLights.aadl#/0/@ownedPublicSection/@ownedClassifier.8/@ownedPortConnection.6"/>
+      </connectionReference>
+    </connectionInstance>
+    <connectionInstance name="routerThread.outMainCar -> mainCarSignal" kind="portConnection" destination="/0/@featureInstance.7" source="/0/@componentInstance.0/@featureInstance.6">
+      <connectionReference context="/0" source="/0/@componentInstance.0/@featureInstance.6" destination="/0/@featureInstance.7">
+        <connection xsi:type="aadl2:PortConnection" href="../trafficLights.aadl#/0/@ownedPublicSection/@ownedClassifier.8/@ownedPortConnection.7"/>
+      </connectionReference>
+    </connectionInstance>
+    <connectionInstance name="routerThread.outSideCar -> sideCarSignal" kind="portConnection" destination="/0/@featureInstance.8" source="/0/@componentInstance.0/@featureInstance.7">
+      <connectionReference context="/0" source="/0/@componentInstance.0/@featureInstance.7" destination="/0/@featureInstance.8">
+        <connection xsi:type="aadl2:PortConnection" href="../trafficLights.aadl#/0/@ownedPublicSection/@ownedClassifier.8/@ownedPortConnection.8"/>
+      </connectionReference>
+    </connectionInstance>
+    <connectionInstance name="routerThread.outTram -> tramSignal" kind="portConnection" destination="/0/@featureInstance.9" source="/0/@componentInstance.0/@featureInstance.8">
+      <connectionReference context="/0" source="/0/@componentInstance.0/@featureInstance.8" destination="/0/@featureInstance.9">
+        <connection xsi:type="aadl2:PortConnection" href="../trafficLights.aadl#/0/@ownedPublicSection/@ownedClassifier.8/@ownedPortConnection.9"/>
+      </connectionReference>
+    </connectionInstance>
+    <connectionInstance name="routerThread.outMainPed -> mainPedSignal" kind="portConnection" destination="/0/@featureInstance.10" source="/0/@componentInstance.0/@featureInstance.9">
+      <connectionReference context="/0" source="/0/@componentInstance.0/@featureInstance.9" destination="/0/@featureInstance.10">
+        <connection xsi:type="aadl2:PortConnection" href="../trafficLights.aadl#/0/@ownedPublicSection/@ownedClassifier.8/@ownedPortConnection.10"/>
+      </connectionReference>
+    </connectionInstance>
+    <connectionInstance name="routerThread.outSidePed -> sidePedSignal" kind="portConnection" destination="/0/@featureInstance.11" source="/0/@componentInstance.0/@featureInstance.10">
+      <connectionReference context="/0" source="/0/@componentInstance.0/@featureInstance.10" destination="/0/@featureInstance.11">
+        <connection xsi:type="aadl2:PortConnection" href="../trafficLights.aadl#/0/@ownedPublicSection/@ownedClassifier.8/@ownedPortConnection.11"/>
+      </connectionReference>
+    </connectionInstance>
+    <connectionInstance name="routerThread.outStatus -> statusOut" kind="portConnection" destination="/0/@featureInstance.5" source="/0/@componentInstance.0/@featureInstance.11">
+      <connectionReference context="/0" source="/0/@componentInstance.0/@featureInstance.11" destination="/0/@featureInstance.5">
+        <connection xsi:type="aadl2:PortConnection" href="../trafficLights.aadl#/0/@ownedPublicSection/@ownedClassifier.8/@ownedPortConnection.5"/>
+      </connectionReference>
+    </connectionInstance>
+    <classifier xsi:type="aadl2:ProcessImplementation" href="../trafficLights.aadl#trafficLights.SignalRouter.impl"/>
+    <systemOperationMode name="No Modes"/>
+    <componentImplementation xsi:type="aadl2:ProcessImplementation" href="../trafficLights.aadl#trafficLights.SignalRouter.impl"/>
+  </instance:SystemInstance>
+  <instance:ComponentInstance name="trafficLights::LightStatus" category="data">
+    <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+      <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
+      <ownedValue>
+        <ownedValue xsi:type="aadl2:NamedValue">
+          <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.1"/>
+        </ownedValue>
+      </ownedValue>
+      <propertyAssociation href="../trafficLights.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedPropertyAssociation.0"/>
+    </ownedPropertyAssociation>
+    <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+      <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Memory_Properties.aadl#Memory_Properties.Data_Size"/>
+      <ownedValue>
+        <ownedValue xsi:type="aadl2:IntegerLiteral" value="2">
+          <unit href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.15/@ownedLiteral.1"/>
+        </ownedValue>
+      </ownedValue>
+      <propertyAssociation href="../trafficLights.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedPropertyAssociation.1"/>
+    </ownedPropertyAssociation>
+    <classifier xsi:type="aadl2:DataType" href="../trafficLights.aadl#trafficLights.LightStatus"/>
+  </instance:ComponentInstance>
+  <instance:ComponentInstance name="trafficLights::Signal" category="data">
+    <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+      <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Enumerators"/>
+      <ownedValue>
+        <ownedValue xsi:type="aadl2:ListValue">
+          <ownedListElement xsi:type="aadl2:StringLiteral" value="Go"/>
+          <ownedListElement xsi:type="aadl2:StringLiteral" value="Stop"/>
+          <ownedListElement xsi:type="aadl2:StringLiteral" value="ChangingSignal"/>
+          <ownedListElement xsi:type="aadl2:StringLiteral" value="Failure"/>
+        </ownedValue>
+      </ownedValue>
+      <propertyAssociation href="../trafficLights.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedPropertyAssociation.0"/>
+    </ownedPropertyAssociation>
+    <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+      <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Memory_Properties.aadl#Memory_Properties.Data_Size"/>
+      <ownedValue>
+        <ownedValue xsi:type="aadl2:IntegerLiteral" value="15">
+          <unit href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.15/@ownedLiteral.1"/>
+        </ownedValue>
+      </ownedValue>
+      <propertyAssociation href="../trafficLights.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedPropertyAssociation.1"/>
+    </ownedPropertyAssociation>
+    <classifier xsi:type="aadl2:DataType" href="../trafficLights.aadl#trafficLights.Signal"/>
+  </instance:ComponentInstance>
+</xmi:XMI>

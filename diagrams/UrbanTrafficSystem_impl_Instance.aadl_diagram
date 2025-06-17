@@ -1,5 +1,104 @@
 <?xml version="1.0" encoding="ASCII"?>
 <diagram:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:diagram="http://osate.org/diagram" formatVersion="7">
+  <element uuid="709b463c-99fc-466a-b2a4-08f50f710923" manual="true">
+    <element uuid="b1752411-ddd4-4876-b8e1-1ecb895fec71" manual="true">
+      <element uuid="a8b1cd8e-a16d-47bd-ba70-a6e620a40d37" manual="true" dockArea="left">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>radioBus</seg>
+        </bo>
+        <position y="10.0"/>
+      </element>
+      <element uuid="c25d814e-242a-40cc-b36c-cc6784658b1d" manual="true" dockArea="right">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>radioOut</seg>
+        </bo>
+        <position x="303.21224212646484" y="10.0"/>
+      </element>
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>component_instance</seg>
+        <seg>emergencyVehicleSystem</seg>
+      </bo>
+      <position x="142.52212524414062" y="88.0"/>
+      <size width="373.36328125" height="60.0"/>
+    </element>
+    <element uuid="75c2db7d-c937-40a5-9d0c-f1d8042fb92e" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>component_instance</seg>
+        <seg>radioBus</seg>
+      </bo>
+      <position x="12.0" y="106.66666666666667"/>
+      <size width="110.52213287353516" height="35.0"/>
+    </element>
+    <element uuid="46093e6f-5fe1-46ee-b6df-fba1b5938abc" manual="true">
+      <element uuid="ea1ada49-2db2-4a7f-84d1-5297f0653fb6" manual="true" dockArea="left">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>radioBus</seg>
+        </bo>
+        <position y="10.0"/>
+      </element>
+      <element uuid="3c95e178-cf68-43f3-9b61-9179cf3a3f54" manual="true" dockArea="left">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>radioIn</seg>
+        </bo>
+        <position y="60.0"/>
+      </element>
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>component_instance</seg>
+        <seg>trafficLightsSystem</seg>
+      </bo>
+      <position x="535.8853759765625" y="38.0"/>
+      <size width="328.9557342529297" height="110.0"/>
+    </element>
+    <element uuid="bdb0b8c9-cbd9-4163-9f60-edea703d3776" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>b_emergency : UrbanTrafficSystem_impl_Instance.radioBus -> UrbanTrafficSystem_impl_Instance.emergencyVehicleSystem.radioBus</seg>
+      </bo>
+      <bendpoints>
+        <point x="122.52213287353516" y="130.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="88d54ee2-d1f0-469e-8470-30bbd6f2d08c" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>b_lights : UrbanTrafficSystem_impl_Instance.radioBus -> UrbanTrafficSystem_impl_Instance.trafficLightsSystem.radioBus</seg>
+      </bo>
+      <bendpoints>
+        <point x="126.52213287353516" y="118.33333587646484"/>
+        <point x="132.52212524414062" y="118.33333587646484"/>
+        <point x="132.52212524414062" y="77.0"/>
+        <point x="525.8853759765625" y="77.0"/>
+        <point x="525.8853759765625" y="80.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="0ac0d6b0-82f5-4719-91d8-ded59979c085" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>c1 : UrbanTrafficSystem_impl_Instance.emergencyVehicleSystem.radioOut -> UrbanTrafficSystem_impl_Instance.trafficLightsSystem.radioIn</seg>
+      </bo>
+    </element>
+    <bo>
+      <seg>org.osate.ge.diagrams.instance</seg>
+      <seg>system_instance</seg>
+      <seg>/trafficlights/instances/urbantraffic_urbantrafficsystem_impl_instance.aaxl2</seg>
+    </bo>
+    <position/>
+    <size width="876.8411254882812" height="160.0"/>
+  </element>
   <config type="structure" connectionPrimaryLabelsVisible="false">
     <enabledAadlProperties/>
     <context>

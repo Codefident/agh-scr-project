@@ -130,7 +130,7 @@
       </ownedPropertyAssociation>
       <feature xsi:type="aadl2:DataPort" href="../trafficLights.aadl#/0/@ownedPublicSection/@ownedClassifier.5/@ownedDataPort.5"/>
     </featureInstance>
-    <componentInstance name="pedButtonThread" category="thread">
+    <componentInstance name="pedMainButtonThread" category="thread">
       <featureInstance name="dataIn" type="/1">
         <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
           <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
@@ -150,13 +150,13 @@
           </ownedValue>
           <propertyAssociation href="../trafficLights.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPropertyAssociation.1"/>
         </ownedPropertyAssociation>
-        <feature xsi:type="aadl2:DataPort" href="../trafficLights.aadl#/0/@ownedPublicSection/@ownedClassifier.7/@ownedDataPort.0"/>
+        <feature xsi:type="aadl2:DataPort" href="../trafficLights.aadl#/0/@ownedPublicSection/@ownedClassifier.9/@ownedDataPort.0"/>
       </featureInstance>
       <subcomponent xsi:type="aadl2:ThreadSubcomponent" href="../trafficLights.aadl#/0/@ownedPublicSection/@ownedClassifier.6/@ownedThreadSubcomponent.0"/>
       <index>0</index>
       <classifier xsi:type="aadl2:ThreadImplementation" href="../trafficLights.aadl#trafficLights.PedButtonThread.impl"/>
     </componentInstance>
-    <componentInstance name="tramSensorThread" category="thread">
+    <componentInstance name="pedSideButtonThread" category="thread">
       <featureInstance name="dataIn" type="/1">
         <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
           <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
@@ -180,6 +180,32 @@
       </featureInstance>
       <subcomponent xsi:type="aadl2:ThreadSubcomponent" href="../trafficLights.aadl#/0/@ownedPublicSection/@ownedClassifier.6/@ownedThreadSubcomponent.1"/>
       <index>0</index>
+      <classifier xsi:type="aadl2:ThreadImplementation" href="../trafficLights.aadl#trafficLights.PedButtonThread.impl"/>
+    </componentInstance>
+    <componentInstance name="tramSensorThread" category="thread">
+      <featureInstance name="dataIn" type="/1">
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:NamedValue">
+              <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.1"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="../trafficLights.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPropertyAssociation.0"/>
+        </ownedPropertyAssociation>
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Memory_Properties.aadl#Memory_Properties.Data_Size"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:IntegerLiteral" value="2">
+              <unit href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.15/@ownedLiteral.1"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="../trafficLights.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPropertyAssociation.1"/>
+        </ownedPropertyAssociation>
+        <feature xsi:type="aadl2:DataPort" href="../trafficLights.aadl#/0/@ownedPublicSection/@ownedClassifier.11/@ownedDataPort.0"/>
+      </featureInstance>
+      <subcomponent xsi:type="aadl2:ThreadSubcomponent" href="../trafficLights.aadl#/0/@ownedPublicSection/@ownedClassifier.6/@ownedThreadSubcomponent.2"/>
+      <index>0</index>
       <classifier xsi:type="aadl2:ThreadImplementation" href="../trafficLights.aadl#trafficLights.TramSensorThread.impl"/>
     </componentInstance>
     <componentInstance name="radioReceiverThread" category="thread">
@@ -193,7 +219,7 @@
           </ownedValue>
           <propertyAssociation href="../emergencyVehicle.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedPropertyAssociation.0"/>
         </ownedPropertyAssociation>
-        <feature xsi:type="aadl2:DataPort" href="../trafficLights.aadl#/0/@ownedPublicSection/@ownedClassifier.13/@ownedDataPort.0"/>
+        <feature xsi:type="aadl2:DataPort" href="../trafficLights.aadl#/0/@ownedPublicSection/@ownedClassifier.15/@ownedDataPort.0"/>
       </featureInstance>
       <featureInstance name="dataOut" direction="out" type="/2">
         <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
@@ -205,9 +231,9 @@
           </ownedValue>
           <propertyAssociation href="../emergencyVehicle.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedPropertyAssociation.0"/>
         </ownedPropertyAssociation>
-        <feature xsi:type="aadl2:DataPort" href="../trafficLights.aadl#/0/@ownedPublicSection/@ownedClassifier.13/@ownedDataPort.1"/>
+        <feature xsi:type="aadl2:DataPort" href="../trafficLights.aadl#/0/@ownedPublicSection/@ownedClassifier.15/@ownedDataPort.1"/>
       </featureInstance>
-      <subcomponent xsi:type="aadl2:ThreadSubcomponent" href="../trafficLights.aadl#/0/@ownedPublicSection/@ownedClassifier.6/@ownedThreadSubcomponent.2"/>
+      <subcomponent xsi:type="aadl2:ThreadSubcomponent" href="../trafficLights.aadl#/0/@ownedPublicSection/@ownedClassifier.6/@ownedThreadSubcomponent.3"/>
       <index>0</index>
       <classifier xsi:type="aadl2:ThreadImplementation" href="../trafficLights.aadl#trafficLights.RadioReceiverThread.impl"/>
     </componentInstance>
@@ -234,7 +260,7 @@
           </ownedValue>
           <propertyAssociation href="../trafficLights.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedPropertyAssociation.0"/>
         </ownedPropertyAssociation>
-        <feature xsi:type="aadl2:DataPort" href="../trafficLights.aadl#/0/@ownedPublicSection/@ownedClassifier.11/@ownedDataPort.0"/>
+        <feature xsi:type="aadl2:DataPort" href="../trafficLights.aadl#/0/@ownedPublicSection/@ownedClassifier.13/@ownedDataPort.0"/>
       </featureInstance>
       <featureInstance name="dataIn" type="/4">
         <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
@@ -255,39 +281,39 @@
           </ownedValue>
           <propertyAssociation href="../trafficLights.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedPropertyAssociation.1"/>
         </ownedPropertyAssociation>
-        <feature xsi:type="aadl2:DataPort" href="../trafficLights.aadl#/0/@ownedPublicSection/@ownedClassifier.11/@ownedDataPort.1"/>
+        <feature xsi:type="aadl2:DataPort" href="../trafficLights.aadl#/0/@ownedPublicSection/@ownedClassifier.13/@ownedDataPort.1"/>
       </featureInstance>
-      <subcomponent xsi:type="aadl2:ThreadSubcomponent" href="../trafficLights.aadl#/0/@ownedPublicSection/@ownedClassifier.6/@ownedThreadSubcomponent.3"/>
+      <subcomponent xsi:type="aadl2:ThreadSubcomponent" href="../trafficLights.aadl#/0/@ownedPublicSection/@ownedClassifier.6/@ownedThreadSubcomponent.4"/>
       <index>0</index>
       <classifier xsi:type="aadl2:ThreadImplementation" href="../trafficLights.aadl#trafficLights.LightThread.impl"/>
     </componentInstance>
-    <connectionInstance name="receivePedMainRequest -> pedButtonThread.dataIn" kind="portConnection" destination="/0/@componentInstance.0/@featureInstance.0" source="/0/@featureInstance.0">
+    <connectionInstance name="receivePedMainRequest -> pedMainButtonThread.dataIn" kind="portConnection" destination="/0/@componentInstance.0/@featureInstance.0" source="/0/@featureInstance.0">
       <connectionReference context="/0" source="/0/@featureInstance.0" destination="/0/@componentInstance.0/@featureInstance.0">
         <connection xsi:type="aadl2:PortConnection" href="../trafficLights.aadl#/0/@ownedPublicSection/@ownedClassifier.6/@ownedPortConnection.1"/>
       </connectionReference>
     </connectionInstance>
-    <connectionInstance name="receivePedSideRequest -> pedButtonThread.dataIn" kind="portConnection" destination="/0/@componentInstance.0/@featureInstance.0" source="/0/@featureInstance.1">
-      <connectionReference context="/0" source="/0/@featureInstance.1" destination="/0/@componentInstance.0/@featureInstance.0">
+    <connectionInstance name="receivePedSideRequest -> pedSideButtonThread.dataIn" kind="portConnection" destination="/0/@componentInstance.1/@featureInstance.0" source="/0/@featureInstance.1">
+      <connectionReference context="/0" source="/0/@featureInstance.1" destination="/0/@componentInstance.1/@featureInstance.0">
         <connection xsi:type="aadl2:PortConnection" href="../trafficLights.aadl#/0/@ownedPublicSection/@ownedClassifier.6/@ownedPortConnection.2"/>
       </connectionReference>
     </connectionInstance>
-    <connectionInstance name="receiveTramRequest -> tramSensorThread.dataIn" kind="portConnection" destination="/0/@componentInstance.1/@featureInstance.0" source="/0/@featureInstance.2">
-      <connectionReference context="/0" source="/0/@featureInstance.2" destination="/0/@componentInstance.1/@featureInstance.0">
+    <connectionInstance name="receiveTramRequest -> tramSensorThread.dataIn" kind="portConnection" destination="/0/@componentInstance.2/@featureInstance.0" source="/0/@featureInstance.2">
+      <connectionReference context="/0" source="/0/@featureInstance.2" destination="/0/@componentInstance.2/@featureInstance.0">
         <connection xsi:type="aadl2:PortConnection" href="../trafficLights.aadl#/0/@ownedPublicSection/@ownedClassifier.6/@ownedPortConnection.0"/>
       </connectionReference>
     </connectionInstance>
-    <connectionInstance name="receiveLightStatus -> lightThread.dataIn" kind="portConnection" destination="/0/@componentInstance.3/@featureInstance.1" source="/0/@featureInstance.3">
-      <connectionReference context="/0" source="/0/@featureInstance.3" destination="/0/@componentInstance.3/@featureInstance.1">
+    <connectionInstance name="receiveLightStatus -> lightThread.dataIn" kind="portConnection" destination="/0/@componentInstance.4/@featureInstance.1" source="/0/@featureInstance.3">
+      <connectionReference context="/0" source="/0/@featureInstance.3" destination="/0/@componentInstance.4/@featureInstance.1">
         <connection xsi:type="aadl2:PortConnection" href="../trafficLights.aadl#/0/@ownedPublicSection/@ownedClassifier.6/@ownedPortConnection.4"/>
       </connectionReference>
     </connectionInstance>
-    <connectionInstance name="receiveEmergencySignal -> radioReceiverThread.dataIn" kind="portConnection" destination="/0/@componentInstance.2/@featureInstance.0" source="/0/@featureInstance.4">
-      <connectionReference context="/0" source="/0/@featureInstance.4" destination="/0/@componentInstance.2/@featureInstance.0">
+    <connectionInstance name="receiveEmergencySignal -> radioReceiverThread.dataIn" kind="portConnection" destination="/0/@componentInstance.3/@featureInstance.0" source="/0/@featureInstance.4">
+      <connectionReference context="/0" source="/0/@featureInstance.4" destination="/0/@componentInstance.3/@featureInstance.0">
         <connection xsi:type="aadl2:PortConnection" href="../trafficLights.aadl#/0/@ownedPublicSection/@ownedClassifier.6/@ownedPortConnection.5"/>
       </connectionReference>
     </connectionInstance>
-    <connectionInstance name="lightThread.dataOut -> sendSignal" kind="portConnection" destination="/0/@featureInstance.5" source="/0/@componentInstance.3/@featureInstance.0">
-      <connectionReference context="/0" source="/0/@componentInstance.3/@featureInstance.0" destination="/0/@featureInstance.5">
+    <connectionInstance name="lightThread.dataOut -> sendSignal" kind="portConnection" destination="/0/@featureInstance.5" source="/0/@componentInstance.4/@featureInstance.0">
+      <connectionReference context="/0" source="/0/@componentInstance.4/@featureInstance.0" destination="/0/@featureInstance.5">
         <connection xsi:type="aadl2:PortConnection" href="../trafficLights.aadl#/0/@ownedPublicSection/@ownedClassifier.6/@ownedPortConnection.3"/>
       </connectionReference>
     </connectionInstance>
