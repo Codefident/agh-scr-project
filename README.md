@@ -97,6 +97,11 @@
    - `EmergencyVehicleSystem`<br/>
    ![emergencyVehicleDiagram](https://github.com/Codefident/agh-scr-project/blob/main/diagrams-images/emergencyVehicleDiagram.svg)
 
+    **Schematy z bindingami**
+
+    - `UrbanTrafficSystem` z actual bindings<br/>
+    ![urbanTrafficDiagramBindings](https://github.com/Codefident/agh-scr-project/blob/main/diagrams-images/trafficLightsDiagramBindings.png)
+
 8. **Analizy modelu**
    - Check Binding Constraints - "No problems found" ✅<br/>
      ![image](https://github.com/user-attachments/assets/0e54d590-d4a0-4e58-a400-5cf813cb57d0)
