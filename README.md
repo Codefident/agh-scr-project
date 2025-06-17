@@ -87,7 +87,7 @@
         - thread `LightThread` - wątek pośredniczący w komunikacji między kontrolerem a sygnalizatorem, odbiera od kontrolera sygnał i wysyła mu status sygnalizatora,
         - thread `RadioReceiverThread` - wątek odpowiadający za odbieranie żądań od pojazdów uprzywilejowanych
   
-7. **Model - schematy**
+7. **Model - schematy** - diagramy systemów, dla czytelności pierwsze 3 bez wyświetlonych `actual bindings`, kolejne 2 już je zawierają:
    - `UrbanTrafficSystem`<br/>
      ![urbanTrafficDiagram](https://github.com/Codefident/agh-scr-project/blob/main/diagrams-images/urbanTrafficDiagram.svg)
 
@@ -99,8 +99,11 @@
 
     **Schematy z bindingami**
 
-    - `UrbanTrafficSystem` z actual bindings<br/>
-    ![urbanTrafficDiagramBindings](https://github.com/Codefident/agh-scr-project/blob/main/diagrams-images/trafficLightsDiagramBindings.png)
+    - `trafficLightsDiagram` z actual bindings<br/>
+    ![trafficLightsDiagramBindings](https://github.com/Codefident/agh-scr-project/blob/main/diagrams-images/trafficLightsDiagramBindings.png)
+
+    - `EmergencyVehicleSystem` z actual bindings<br/>
+    ![emergencyVehicleDiagram](https://github.com/Codefident/agh-scr-project/blob/main/diagrams-images/emergencyVehicleDiagramBindings.png)
 
 8. **Analizy modelu**
    - Check Binding Constraints - "No problems found" ✅<br/>
