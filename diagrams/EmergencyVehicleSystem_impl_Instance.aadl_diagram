@@ -1,5 +1,288 @@
 <?xml version="1.0" encoding="ASCII"?>
 <diagram:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:diagram="http://osate.org/diagram" formatVersion="7">
+  <element uuid="ff04f309-72de-47b6-b78c-30c2fccd3ea3" manual="true">
+    <element uuid="4a4163ef-fe46-4a58-8c3a-6ab753dbd578" manual="true">
+      <element uuid="1b25959d-8419-4c01-9bc5-af6bae955cfd" manual="true" dockArea="right">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>requestToSendEmergencySignal</seg>
+        </bo>
+        <position x="325.23045349121094" y="60.0"/>
+      </element>
+      <element uuid="4f72754a-241a-465d-a4c6-07242ce6fc60" manual="true" dockArea="right">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>vehicleBus</seg>
+        </bo>
+        <position x="470.45179748535156" y="10.0"/>
+      </element>
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>component_instance</seg>
+        <seg>button</seg>
+      </bo>
+      <position x="213.56639862060547" y="90.0"/>
+      <size width="554.4830474853516" height="110.0"/>
+    </element>
+    <element uuid="21afc829-070a-4c7f-b7fc-c16ed734e85e" manual="true">
+      <element uuid="9c0f1e4b-e654-4e1c-b12c-767d02190436" manual="true" dockArea="left">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>vehicleBus</seg>
+        </bo>
+        <position y="10.0"/>
+      </element>
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>component_instance</seg>
+        <seg>cpu</seg>
+      </bo>
+      <position x="2044.6991348266602" y="53.33333333333334"/>
+      <size width="244.30728912353516" height="60.0"/>
+    </element>
+    <element uuid="f3b36978-5f81-4e44-a51c-a6bec7f5dc2d" manual="true">
+      <element uuid="2d34793d-d617-46ed-8955-8ac9813dfc09" manual="true" dockArea="left">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>receiveRequest</seg>
+        </bo>
+        <position y="10.0"/>
+      </element>
+      <element uuid="0048cd69-a192-4d37-ad34-e4286a83c20f" manual="true" dockArea="right">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>sendEmergencySignal</seg>
+        </bo>
+        <position x="408.9348602294922" y="10.0"/>
+      </element>
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>component_instance</seg>
+        <seg>emergencyVehicleController</seg>
+      </bo>
+      <position x="788.0494766235352" y="140.0"/>
+      <size width="569.3918914794922" height="60.0"/>
+    </element>
+    <element uuid="27cd0b23-9074-4480-81c9-aa94b5616b84" manual="true">
+      <element uuid="d2007bc4-7b7c-4662-b487-9823989a4394" manual="true" dockArea="right">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>vehicleBus</seg>
+        </bo>
+        <position x="170.2109375" y="10.0"/>
+      </element>
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>component_instance</seg>
+        <seg>mem</seg>
+      </bo>
+      <position x="1616.4256973266602" y="60.0"/>
+      <size width="254.2421875" height="60.0"/>
+    </element>
+    <element uuid="3288410d-0210-42cd-b67c-fad1d126d000" manual="true">
+      <element uuid="d3627a91-27b4-4689-9d8d-c60c447865c7" manual="true" dockArea="right">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>emitEmergencySignal</seg>
+        </bo>
+        <position x="334.7096405029297" y="60.0"/>
+      </element>
+      <element uuid="e1763ab5-78d9-4c38-a289-1d7dd83921be" manual="true" dockArea="left">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>inEmergencySignal</seg>
+        </bo>
+        <position y="10.0"/>
+      </element>
+      <element uuid="ecc4c2b4-7667-4924-953e-051c74d307f7" manual="true" dockArea="left">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>radioBus</seg>
+        </bo>
+        <position y="60.0"/>
+      </element>
+      <element uuid="ac604cbf-86e3-4c02-837d-2a35a8c96d68" manual="true" dockArea="right">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>vehicleBus</seg>
+        </bo>
+        <position x="409.1953125" y="10.0"/>
+      </element>
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>component_instance</seg>
+        <seg>radioSignalEmitter</seg>
+      </bo>
+      <position x="1377.4413223266602" y="140.0"/>
+      <size width="493.2265625" height="110.0"/>
+    </element>
+    <element uuid="4e2ab520-39d0-418e-a1a7-956f02acaab1" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>component_instance</seg>
+        <seg>vehicleBus</seg>
+      </bo>
+      <position x="1900.6678848266602" y="72.0"/>
+      <size width="124.03125" height="70.0"/>
+    </element>
+    <element uuid="1871c463-7805-4706-a4c1-40421df5eaf7" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>b1 : EmergencyVehicleSystem_impl_Instance.radioSignalEmitter.vehicleBus -> EmergencyVehicleSystem_impl_Instance.vehicleBus</seg>
+      </bo>
+      <bendpoints>
+        <point x="1880.6678466796875" y="182.0"/>
+        <point x="1880.6678466796875" y="122.0"/>
+        <point x="1896.6678466796875" y="122.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="95900cd2-8a2f-4bb3-9d2f-04d982171a63" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>b1 : EmergencyVehicleSystem_impl_Instance.vehicleBus -> EmergencyVehicleSystem_impl_Instance.radioSignalEmitter.vehicleBus</seg>
+      </bo>
+      <bendpoints>
+        <point x="1896.6678466796875" y="132.0"/>
+        <point x="1880.6678466796875" y="132.0"/>
+        <point x="1880.6678466796875" y="182.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="214d5d45-ff93-4b02-a8a5-06fdc51ac5ec" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>b2 : EmergencyVehicleSystem_impl_Instance.button.vehicleBus -> EmergencyVehicleSystem_impl_Instance.vehicleBus</seg>
+      </bo>
+      <bendpoints>
+        <point x="778.0494995117188" y="132.0"/>
+        <point x="778.0494995117188" y="38.0"/>
+        <point x="1890.6678466796875" y="38.0"/>
+        <point x="1890.6678466796875" y="82.0"/>
+        <point x="1896.6678466796875" y="82.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="e719811f-7b20-473e-86fe-b1d9891286d6" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>b2 : EmergencyVehicleSystem_impl_Instance.vehicleBus -> EmergencyVehicleSystem_impl_Instance.button.vehicleBus</seg>
+      </bo>
+      <bendpoints>
+        <point x="1896.6678466796875" y="92.0"/>
+        <point x="1880.6678466796875" y="92.0"/>
+        <point x="1880.6678466796875" y="49.0"/>
+        <point x="778.0494995117188" y="49.0"/>
+        <point x="778.0494995117188" y="132.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="094de8b2-3ddc-4568-a619-65382b522fc4" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>bcpu : EmergencyVehicleSystem_impl_Instance.cpu.vehicleBus -> EmergencyVehicleSystem_impl_Instance.vehicleBus</seg>
+      </bo>
+      <bendpoints>
+        <point x="2024.6990966796875" y="95.33333587646484"/>
+      </bendpoints>
+    </element>
+    <element uuid="aee2da02-099e-429b-89dd-271c0f140230" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>bcpu : EmergencyVehicleSystem_impl_Instance.vehicleBus -> EmergencyVehicleSystem_impl_Instance.cpu.vehicleBus</seg>
+      </bo>
+      <bendpoints>
+        <point x="2028.6990966796875" y="118.66666412353516"/>
+        <point x="2034.6990966796875" y="118.66666412353516"/>
+        <point x="2034.6990966796875" y="95.33333587646484"/>
+      </bendpoints>
+    </element>
+    <element uuid="0fa0a1fb-467d-495d-840e-903cae11cf74" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>bmem : EmergencyVehicleSystem_impl_Instance.mem.vehicleBus -> EmergencyVehicleSystem_impl_Instance.vehicleBus</seg>
+      </bo>
+      <bendpoints>
+        <point x="1900.6678466796875" y="102.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="8471251c-e5da-4c18-b003-3e42395fbc71" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>bmem : EmergencyVehicleSystem_impl_Instance.vehicleBus -> EmergencyVehicleSystem_impl_Instance.mem.vehicleBus</seg>
+      </bo>
+      <bendpoints>
+        <point x="1896.6678466796875" y="112.0"/>
+        <point x="1880.6678466796875" y="112.0"/>
+        <point x="1880.6678466796875" y="102.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="210da46c-1316-4b45-85d0-f62b6973f5fc" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>brad : EmergencyVehicleSystem_impl_Instance.radioBus -> EmergencyVehicleSystem_impl_Instance.radioSignalEmitter.radioBus</seg>
+      </bo>
+    </element>
+    <element uuid="0ba53508-821c-4608-9306-e19664e8aeef" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>c1 : EmergencyVehicleSystem_impl_Instance.button.requestToSendEmergencySignal -> EmergencyVehicleSystem_impl_Instance.emergencyVehicleController.receiveRequest</seg>
+      </bo>
+    </element>
+    <element uuid="6a9b54cc-e92e-446d-b998-349f5428d176" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>c2 : EmergencyVehicleSystem_impl_Instance.emergencyVehicleController.sendEmergencySignal -> EmergencyVehicleSystem_impl_Instance.radioSignalEmitter.inEmergencySignal</seg>
+      </bo>
+    </element>
+    <element uuid="bf33bf55-d653-4788-a77b-e0da5cd2a3fe" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>c3 : EmergencyVehicleSystem_impl_Instance.radioSignalEmitter.emitEmergencySignal -> EmergencyVehicleSystem_impl_Instance.radioOut</seg>
+      </bo>
+    </element>
+    <element uuid="b7833f91-c9fb-4316-9cd7-4b048d9b9be0" manual="true" dockArea="left">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>feature_instance</seg>
+        <seg>radioBus</seg>
+      </bo>
+      <position y="200.0"/>
+    </element>
+    <element uuid="180ea9b1-7e52-412b-b5f1-31a2f44f27bf" manual="true" dockArea="right">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>feature_instance</seg>
+        <seg>radioOut</seg>
+      </bo>
+      <position x="2371.52872467041" y="200.0"/>
+    </element>
+    <bo>
+      <seg>org.osate.ge.diagrams.instance</seg>
+      <seg>system_instance</seg>
+      <seg>/trafficlights/instances/emergencyvehicle_emergencyvehiclesystem_impl_instance.aaxl2</seg>
+    </bo>
+    <position/>
+    <size width="2441.6797637939453" height="262.0"/>
+  </element>
   <config type="structure" connectionPrimaryLabelsVisible="false">
     <enabledAadlProperties/>
     <context>

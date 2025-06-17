@@ -1,0 +1,15 @@
+Weight totals Report
+
+Warning! commBus: [L] No net weight plus subcomponent weight or no gross weight
+mainCarLight: [L] Sum of weights / gross weight is 18.000 kg (no limit specified)
+sideCarLight: [L] Sum of weights / gross weight is 18.000 kg (no limit specified)
+tramLight: [L] Sum of weights / gross weight is 14.000 kg (no limit specified)
+mainPedLight: [L] Sum of weights / gross weight is 16.000 kg (no limit specified)
+sidePedLight: [L] Sum of weights / gross weight is 16.000 kg (no limit specified)
+pedButtonMain: [L] Sum of weights / gross weight is 0.700 kg (no limit specified)
+pedButtonSide: [L] Sum of weights / gross weight is 0.700 kg (no limit specified)
+tramSensor: [L] Sum of weights / gross weight is 10.000 kg (no limit specified)
+radioReceiver: [L] Sum of weights / gross weight is 0.100 kg (no limit specified)
+Warning! mem: [L] No net weight plus subcomponent weight or no gross weight
+Warning! cpu: [L] No net weight plus subcomponent weight or no gross weight
+TrafficLightsSystem_impl_Instance: [L] Sum of weights / gross weight is 93.500 kg (no limit specified)

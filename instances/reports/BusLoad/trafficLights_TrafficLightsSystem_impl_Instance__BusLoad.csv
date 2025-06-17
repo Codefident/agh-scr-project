@@ -6,61 +6,21 @@ Bus load analysis of TrafficLightsSystem_impl_Instance
 
 "Bus commBus has data overhead of 0 bytes"
 "Bound Virtual Bus/Connection","Capacity (KB/s)","Budget (KB/s)","Required Budget (KB/s)","Actual (KB/s)"
-"mainCarLight.sendStatus -> mainController.lightThread.dataIn","","0.0","","0.0"
-"sideCarLight.sendStatus -> mainController.lightThread.dataIn","","0.0","","0.0"
-"tramLight.sendStatus -> mainController.lightThread.dataIn","","0.0","","0.0"
-"mainPedLight.sendStatus -> mainController.lightThread.dataIn","","0.0","","0.0"
-"sidePedLight.sendStatus -> mainController.lightThread.dataIn","","0.0","","0.0"
-"pedButtonMain.requestSignal -> mainController.pedButtonThread.dataIn","","0.0","","0.0"
-"pedButtonSide.requestSignal -> mainController.pedButtonThread.dataIn","","0.0","","0.0"
+"pedButtonMain.requestSignal -> mainController.pedMainButtonThread.dataIn","","0.0","","0.0"
+"pedButtonSide.requestSignal -> mainController.pedSideButtonThread.dataIn","","0.0","","0.0"
 "tramSensor.requestSignal -> mainController.tramSensorThread.dataIn","","0.0","","0.0"
 "radioReceiver.outEmergencySignal -> mainController.radioReceiverThread.dataIn","","0.0","","0.0"
-"mainController.lightThread.dataOut -> mainCarLight.signalReceive","","0.0","","0.0"
-"mainController.lightThread.dataOut -> sideCarLight.signalReceive","","0.0","","0.0"
-"mainController.lightThread.dataOut -> tramLight.signalReceive","","0.0","","0.0"
-"mainController.lightThread.dataOut -> mainPedLight.signalReceive","","0.0","","0.0"
-"mainController.lightThread.dataOut -> sidePedLight.signalReceive","","0.0","","0.0"
 
-"Connection mainCarLight.sendStatus -> mainController.lightThread.dataIn bound to commBus"
-"WARNING: Connection mainCarLight.sendStatus -> mainController.lightThread.dataIn has no bandwidth budget"
+"Connection pedButtonMain.requestSignal -> mainController.pedMainButtonThread.dataIn bound to commBus"
+"WARNING: Connection pedButtonMain.requestSignal -> mainController.pedMainButtonThread.dataIn has no bandwidth budget"
 
-"Connection sideCarLight.sendStatus -> mainController.lightThread.dataIn bound to commBus"
-"WARNING: Connection sideCarLight.sendStatus -> mainController.lightThread.dataIn has no bandwidth budget"
-
-"Connection tramLight.sendStatus -> mainController.lightThread.dataIn bound to commBus"
-"WARNING: Connection tramLight.sendStatus -> mainController.lightThread.dataIn has no bandwidth budget"
-
-"Connection mainPedLight.sendStatus -> mainController.lightThread.dataIn bound to commBus"
-"WARNING: Connection mainPedLight.sendStatus -> mainController.lightThread.dataIn has no bandwidth budget"
-
-"Connection sidePedLight.sendStatus -> mainController.lightThread.dataIn bound to commBus"
-"WARNING: Connection sidePedLight.sendStatus -> mainController.lightThread.dataIn has no bandwidth budget"
-
-"Connection pedButtonMain.requestSignal -> mainController.pedButtonThread.dataIn bound to commBus"
-"WARNING: Connection pedButtonMain.requestSignal -> mainController.pedButtonThread.dataIn has no bandwidth budget"
-
-"Connection pedButtonSide.requestSignal -> mainController.pedButtonThread.dataIn bound to commBus"
-"WARNING: Connection pedButtonSide.requestSignal -> mainController.pedButtonThread.dataIn has no bandwidth budget"
+"Connection pedButtonSide.requestSignal -> mainController.pedSideButtonThread.dataIn bound to commBus"
+"WARNING: Connection pedButtonSide.requestSignal -> mainController.pedSideButtonThread.dataIn has no bandwidth budget"
 
 "Connection tramSensor.requestSignal -> mainController.tramSensorThread.dataIn bound to commBus"
 "WARNING: Connection tramSensor.requestSignal -> mainController.tramSensorThread.dataIn has no bandwidth budget"
 
 "Connection radioReceiver.outEmergencySignal -> mainController.radioReceiverThread.dataIn bound to commBus"
 "WARNING: Connection radioReceiver.outEmergencySignal -> mainController.radioReceiverThread.dataIn has no bandwidth budget"
-
-"Connection mainController.lightThread.dataOut -> mainCarLight.signalReceive bound to commBus"
-"WARNING: Connection mainController.lightThread.dataOut -> mainCarLight.signalReceive has no bandwidth budget"
-
-"Connection mainController.lightThread.dataOut -> sideCarLight.signalReceive bound to commBus"
-"WARNING: Connection mainController.lightThread.dataOut -> sideCarLight.signalReceive has no bandwidth budget"
-
-"Connection mainController.lightThread.dataOut -> tramLight.signalReceive bound to commBus"
-"WARNING: Connection mainController.lightThread.dataOut -> tramLight.signalReceive has no bandwidth budget"
-
-"Connection mainController.lightThread.dataOut -> mainPedLight.signalReceive bound to commBus"
-"WARNING: Connection mainController.lightThread.dataOut -> mainPedLight.signalReceive has no bandwidth budget"
-
-"Connection mainController.lightThread.dataOut -> sidePedLight.signalReceive bound to commBus"
-"WARNING: Connection mainController.lightThread.dataOut -> sidePedLight.signalReceive has no bandwidth budget"
 
 

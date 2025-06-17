@@ -1,157 +1,221 @@
 <?xml version="1.0" encoding="ASCII"?>
 <diagram:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:diagram="http://osate.org/diagram" formatVersion="7">
-  <element uuid="e1083121-1dc0-4ac2-9649-619569b7fd50" manual="true">
-    <element uuid="62030a1a-f3c5-4833-ad67-8b9f9fa54705" manual="true">
+  <element uuid="e5b2c5de-7b0c-4e4a-b0f5-66615a8acfe3" manual="true">
+    <element uuid="a7ff28c2-54e1-46b2-9c13-cabdd35428c2" manual="true">
       <bo>
         <seg>org.osate.ge.diagrams.instance</seg>
         <seg>component_instance</seg>
         <seg>commBus</seg>
       </bo>
-      <position x="1582.1004957719283" y="504.0"/>
+      <position x="1730.9934463500977" y="59.0"/>
       <size width="118.00910949707031" height="210.0"/>
     </element>
-    <element uuid="6098c7e4-b39f-429a-92a7-e8d6465906c0" manual="true">
-      <element uuid="8063c935-1141-4ae2-9e79-efa3820cacbf" manual="true" dockArea="right">
+    <element uuid="97102be4-9947-498d-a4de-ad6d6e78581f" manual="true">
+      <element uuid="bf47ca09-1399-44c1-a1cf-7f1943cecd69" manual="true" dockArea="left">
         <bo>
           <seg>org.osate.ge.diagrams.instance</seg>
           <seg>feature_instance</seg>
           <seg>busConn</seg>
         </bo>
-        <position x="146.47394943237305" y="10.0"/>
+        <position y="10.0"/>
       </element>
       <bo>
         <seg>org.osate.ge.diagrams.instance</seg>
         <seg>component_instance</seg>
         <seg>cpu</seg>
       </bo>
-      <position x="1209.518211364746" y="451.0"/>
+      <position x="1869.0026016235352" y="157.0"/>
       <size width="216.70310974121094" height="60.0"/>
     </element>
-    <element uuid="8fc297b5-e2fa-4cd7-b359-67830998e9f0" manual="true">
-      <element uuid="25b37541-540a-45a9-a4d3-a3d1ce3b036c" manual="true" dockArea="right">
+    <element uuid="391190ea-5042-4605-b8d3-3a5c4444c09d" manual="true">
+      <element uuid="9cabdb71-3de8-4a2d-a87d-b09d324b6bc1" manual="true" dockArea="right">
         <bo>
           <seg>org.osate.ge.diagrams.instance</seg>
           <seg>feature_instance</seg>
           <seg>busConn</seg>
         </bo>
-        <position x="279.80077743530273" y="10.0"/>
+        <position x="279.80077743530273" y="35.0"/>
       </element>
-      <element uuid="8a08e003-89a4-42f2-82e8-e5aa260ebf33" manual="true" dockArea="right">
+      <element uuid="419a5ae5-c230-4d0e-8282-4d3d2430e1d9" manual="true" dockArea="left">
         <bo>
           <seg>org.osate.ge.diagrams.instance</seg>
           <seg>feature_instance</seg>
           <seg>sendStatus</seg>
         </bo>
-        <position x="263.4791564941406" y="60.0"/>
+        <position y="60.0"/>
       </element>
-      <element uuid="59fafd80-94c3-4a3b-8e55-37d0d50a8ffa" manual="true" dockArea="right">
+      <element uuid="53b4ae38-aa62-4d98-81a7-e580699a93d8" manual="true" dockArea="left">
         <bo>
           <seg>org.osate.ge.diagrams.instance</seg>
           <seg>feature_instance</seg>
           <seg>signalReceive</seg>
         </bo>
-        <position x="245.7903594970703" y="110.0"/>
+        <position y="10.0"/>
       </element>
       <bo>
         <seg>org.osate.ge.diagrams.instance</seg>
         <seg>component_instance</seg>
         <seg>mainCarLight</seg>
       </bo>
-      <position x="213.56639862060547" y="582.0"/>
-      <size width="350.0299377441406" height="160.0"/>
+      <position x="1240.9635391235352" y="351.0"/>
+      <size width="350.0299377441406" height="110.0"/>
     </element>
-    <element uuid="74011601-5246-4391-be57-326822c45c6d" manual="true">
-      <element uuid="791c941d-125d-44ad-8f95-a700ec112de5" manual="true" dockArea="left">
+    <element uuid="20d40b4d-1acd-449b-a60d-1a3fc29a7581" manual="true">
+      <element uuid="67cc6cf2-d8f8-4fe3-b2cc-a1e23a10fab6" manual="true" dockArea="left">
         <bo>
           <seg>org.osate.ge.diagrams.instance</seg>
           <seg>feature_instance</seg>
           <seg>receiveEmergencySignal</seg>
         </bo>
-        <position y="110.0"/>
+        <position y="88.57142857142856"/>
       </element>
-      <element uuid="5044d465-5347-4944-8a7e-8a9ea1f04c3d" manual="true" dockArea="left">
+      <element uuid="34b36af4-c23b-4958-9f42-f0d44d8868f2" manual="true" dockArea="right">
         <bo>
           <seg>org.osate.ge.diagrams.instance</seg>
           <seg>feature_instance</seg>
-          <seg>receiveLightStatus</seg>
+          <seg>receiveMainCarStatus</seg>
         </bo>
-        <position y="60.0"/>
+        <position x="354.3841323852539" y="160.0"/>
       </element>
-      <element uuid="7ba40c0e-899c-4688-80e4-5f0fa428d809" manual="true" dockArea="left">
+      <element uuid="37eb40f3-ecaf-4701-901c-173cd3500fe6" manual="true" dockArea="left">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>receiveMainPedStatus</seg>
+        </bo>
+        <position y="217.1428571428571"/>
+      </element>
+      <element uuid="3f7e5966-2461-4a1e-9873-d41d6bdc06c3" manual="true" dockArea="left">
         <bo>
           <seg>org.osate.ge.diagrams.instance</seg>
           <seg>feature_instance</seg>
           <seg>receivePedMainRequest</seg>
         </bo>
-        <position y="210.0"/>
+        <position y="24.285714285714285"/>
       </element>
-      <element uuid="d0f8ea80-e50c-4ff8-94ff-71d2834f1295" manual="true" dockArea="left">
+      <element uuid="3a3cfb9f-92be-410c-99e7-43f336f3ff5b" manual="true" dockArea="left">
         <bo>
           <seg>org.osate.ge.diagrams.instance</seg>
           <seg>feature_instance</seg>
           <seg>receivePedSideRequest</seg>
         </bo>
-        <position y="260.0"/>
+        <position y="281.4285714285714"/>
       </element>
-      <element uuid="25790da6-0c5a-42be-9d44-884528fb849a" manual="true" dockArea="left">
+      <element uuid="eb1e9338-f237-4fdc-9e7b-7de9a21a240a" manual="true" dockArea="right">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>receiveSideCarStatus</seg>
+        </bo>
+        <position x="357.37891387939453" y="360.0"/>
+      </element>
+      <element uuid="6fd0b3ed-5499-4968-8b55-967113f7f8c7" manual="true" dockArea="right">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>receiveSidePedStatus</seg>
+        </bo>
+        <position x="355.6341323852539" y="60.0"/>
+      </element>
+      <element uuid="b70ae5dd-ca5b-4b89-97e8-56a77f91dcca" manual="true" dockArea="left">
         <bo>
           <seg>org.osate.ge.diagrams.instance</seg>
           <seg>feature_instance</seg>
           <seg>receiveTramRequest</seg>
         </bo>
-        <position y="160.0"/>
+        <position y="345.71428571428567"/>
       </element>
-      <element uuid="98aeb0bd-c757-4a67-b0ac-e4b51dbc89c6" manual="true" dockArea="left">
+      <element uuid="8623736e-462e-49b5-bbdc-3b164b4e66fb" manual="true" dockArea="right">
         <bo>
           <seg>org.osate.ge.diagrams.instance</seg>
           <seg>feature_instance</seg>
-          <seg>sendSignal</seg>
+          <seg>receiveTramStatus</seg>
         </bo>
-        <position y="10.0"/>
+        <position x="374.39063262939453" y="260.0"/>
+      </element>
+      <element uuid="f9206217-09b4-46de-96ea-da652033c591" manual="true" dockArea="right">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>sendMainCarSignal</seg>
+        </bo>
+        <position x="372.86719512939453" y="110.0"/>
+      </element>
+      <element uuid="a9b155b6-cdf6-4ac6-a05e-6bec840b22d9" manual="true" dockArea="left">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>sendMainPedSignal</seg>
+        </bo>
+        <position y="152.85714285714283"/>
+      </element>
+      <element uuid="3664fcc1-501b-4529-8ef7-7e9f984d6cac" manual="true" dockArea="right">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>sendSideCarSignal</seg>
+        </bo>
+        <position x="375.8619842529297" y="310.0"/>
+      </element>
+      <element uuid="cab449fb-f8f0-4d17-8399-aa4f104df40b" manual="true" dockArea="right">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>sendSidePedSignal</seg>
+        </bo>
+        <position x="374.11719512939453" y="10.0"/>
+      </element>
+      <element uuid="9549c601-bb26-4980-930f-8aee7cb85562" manual="true" dockArea="right">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>sendTramSignal</seg>
+        </bo>
+        <position x="392.8737106323242" y="210.0"/>
       </element>
       <bo>
         <seg>org.osate.ge.diagrams.instance</seg>
         <seg>component_instance</seg>
         <seg>mainController</seg>
       </bo>
-      <position x="1546.2213516235352" y="40.0"/>
-      <size width="512.6796951293945" height="310.0"/>
+      <position x="698.2838516235352" y="251.0"/>
+      <size width="512.6796951293945" height="410.0"/>
     </element>
-    <element uuid="0f75f64b-d1c6-4712-9cf6-5a5c21b972f5" manual="true">
-      <element uuid="030fd926-bf97-4371-aabc-2c99321ccf32" manual="true" dockArea="left">
+    <element uuid="08aa8257-1137-4091-aa22-37ac3934327f" manual="true">
+      <element uuid="7a194cc7-1463-4eed-acaa-eeb0ad2a2e30" manual="true" dockArea="right">
         <bo>
           <seg>org.osate.ge.diagrams.instance</seg>
           <seg>feature_instance</seg>
           <seg>busConn</seg>
         </bo>
-        <position y="10.0"/>
+        <position x="281.5455665588379" y="110.0"/>
       </element>
-      <element uuid="66d09da4-2a8b-4e39-8484-13dd2b17d334" manual="true" dockArea="left">
+      <element uuid="e238ec22-0bf4-423c-9a87-5ad88f28ae68" manual="true" dockArea="right">
         <bo>
           <seg>org.osate.ge.diagrams.instance</seg>
           <seg>feature_instance</seg>
           <seg>sendStatus</seg>
         </bo>
-        <position y="110.0"/>
+        <position x="265.2239456176758" y="60.0"/>
       </element>
-      <element uuid="040af36f-fdc8-434e-af4a-6a839fe40b66" manual="true" dockArea="left">
+      <element uuid="23590108-de94-4e06-bd03-2732c6683703" manual="true" dockArea="right">
         <bo>
           <seg>org.osate.ge.diagrams.instance</seg>
           <seg>feature_instance</seg>
           <seg>signalReceive</seg>
         </bo>
-        <position y="60.0"/>
+        <position x="247.53514862060547" y="10.0"/>
       </element>
       <bo>
         <seg>org.osate.ge.diagrams.instance</seg>
         <seg>component_instance</seg>
         <seg>mainPedLight</seg>
       </bo>
-      <position x="2078.901039123535" y="942.0"/>
+      <position x="306.5091094970703" y="408.1428571428571"/>
       <size width="351.7747268676758" height="160.0"/>
     </element>
-    <element uuid="ef6a5979-1e68-4826-9cfc-1087339fe849" manual="true">
-      <element uuid="b115fffa-f9e1-4e51-abc0-45390af0ec61" manual="true" dockArea="right">
+    <element uuid="6897764c-b6ce-4d8d-b71c-bf5864351e59" manual="true">
+      <element uuid="b41c2f2d-62a6-4c71-bd99-cf4a412cc667" manual="true" dockArea="right">
         <bo>
           <seg>org.osate.ge.diagrams.instance</seg>
           <seg>feature_instance</seg>
@@ -164,36 +228,36 @@
         <seg>component_instance</seg>
         <seg>mem</seg>
       </bo>
-      <position x="1199.5833129882812" y="922.0"/>
+      <position x="1364.35546875" y="91.0"/>
       <size width="226.63800811767578" height="60.0"/>
     </element>
-    <element uuid="77846e88-768d-4e7c-a1a2-243a870d19cc" manual="true">
-      <element uuid="506678d4-8409-4f00-bbca-7bc466bba3eb" manual="true" dockArea="right">
+    <element uuid="52e37093-c78b-4183-8b1e-68f8d975a672" manual="true">
+      <element uuid="1306767d-26fe-4325-a55f-a79313550342" manual="true" dockArea="right">
         <bo>
           <seg>org.osate.ge.diagrams.instance</seg>
           <seg>feature_instance</seg>
           <seg>busConn</seg>
         </bo>
-        <position x="291.2591209411621" y="60.0"/>
+        <position x="291.2591209411621" y="10.0"/>
       </element>
-      <element uuid="ee9e36a1-e50d-4799-91ec-7c08e7f9f1b3" manual="true" dockArea="right">
+      <element uuid="6c982d06-e6ae-4116-9a6e-e25f91cc6729" manual="true" dockArea="right">
         <bo>
           <seg>org.osate.ge.diagrams.instance</seg>
           <seg>feature_instance</seg>
           <seg>requestSignal</seg>
         </bo>
-        <position x="257.5546875" y="10.0"/>
+        <position x="257.5546875" y="60.0"/>
       </element>
       <bo>
         <seg>org.osate.ge.diagrams.instance</seg>
         <seg>component_instance</seg>
         <seg>pedButtonMain</seg>
       </bo>
-      <position x="1064.733039855957" y="320.0"/>
+      <position x="296.7955551147461" y="38.0"/>
       <size width="361.48828125" height="110.0"/>
     </element>
-    <element uuid="601692c3-b7b5-4cd2-9e33-ff36e8a9ad42" manual="true">
-      <element uuid="a7f734ec-c49c-4144-8c9e-70089919713e" manual="true" dockArea="right">
+    <element uuid="6308667a-cf20-4228-91fb-5b85439aefea" manual="true">
+      <element uuid="ed7cea17-4040-450b-b703-456fbd46aaea" manual="true" dockArea="right">
         <bo>
           <seg>org.osate.ge.diagrams.instance</seg>
           <seg>feature_instance</seg>
@@ -201,7 +265,7 @@
         </bo>
         <position x="288.2643241882324" y="60.0"/>
       </element>
-      <element uuid="311a0a01-f6ab-4ed1-86c6-813fa35f0333" manual="true" dockArea="right">
+      <element uuid="81275ade-0a2c-48a9-be3d-ecec52d768a2" manual="true" dockArea="right">
         <bo>
           <seg>org.osate.ge.diagrams.instance</seg>
           <seg>feature_instance</seg>
@@ -214,52 +278,52 @@
         <seg>component_instance</seg>
         <seg>pedButtonSide</seg>
       </bo>
-      <position x="1067.7278366088867" y="532.0"/>
+      <position x="299.7903518676758" y="661.0"/>
       <size width="358.4934844970703" height="110.0"/>
     </element>
-    <element uuid="e993c848-2b19-44a3-8050-72d3e227ca50" manual="true">
-      <element uuid="19510c96-74fe-49af-8de4-d561fcacd70b" manual="true" dockArea="right">
+    <element uuid="6a7095ab-7f7a-4da2-9b9c-70d1325d53f9" manual="true">
+      <element uuid="1b1a3b4f-b5ba-45a3-ada7-7fce0773a56a" manual="true" dockArea="right">
         <bo>
           <seg>org.osate.ge.diagrams.instance</seg>
           <seg>feature_instance</seg>
           <seg>busConn</seg>
         </bo>
-        <position x="374.48827743530273" y="60.0"/>
+        <position x="374.48827743530273" y="10.0"/>
       </element>
-      <element uuid="6ec261b5-1de9-4446-9264-d1b34b0ed1f2" manual="true" dockArea="right">
+      <element uuid="afde0052-ceca-4a3b-b665-beee29e92ca4" manual="true" dockArea="right">
         <bo>
           <seg>org.osate.ge.diagrams.instance</seg>
           <seg>feature_instance</seg>
           <seg>outEmergencySignal</seg>
         </bo>
-        <position x="294.48828125" y="10.0"/>
+        <position x="294.48828125" y="60.0"/>
       </element>
-      <element uuid="c19a5584-efbf-4e3c-8b2f-eb1c4cb35691" manual="true" dockArea="left">
+      <element uuid="6904cf3f-e92b-47f6-82a7-5c13c551df03" manual="true" dockArea="left">
         <bo>
           <seg>org.osate.ge.diagrams.instance</seg>
           <seg>feature_instance</seg>
           <seg>radioBus</seg>
         </bo>
-        <position y="10.0"/>
+        <position y="60.0"/>
       </element>
-      <element uuid="064ffc0d-e9b8-4c04-9e15-585ffed9f4f0" manual="true" dockArea="left">
+      <element uuid="377ac912-32fb-4620-baf1-75ba6657f7f4" manual="true" dockArea="left">
         <bo>
           <seg>org.osate.ge.diagrams.instance</seg>
           <seg>feature_instance</seg>
           <seg>radioIn</seg>
         </bo>
-        <position y="60.0"/>
+        <position y="10.0"/>
       </element>
       <bo>
         <seg>org.osate.ge.diagrams.instance</seg>
         <seg>component_instance</seg>
         <seg>radioReceiver</seg>
       </bo>
-      <position x="981.5038833618164" y="60.0"/>
+      <position x="213.56639862060547" y="168.0"/>
       <size width="444.7174377441406" height="110.0"/>
     </element>
-    <element uuid="fd75aba2-f2ee-4319-a3b9-ea06bab09111" manual="true">
-      <element uuid="4329d449-59c1-46b4-b1ec-0e7f37e44f37" manual="true" dockArea="right">
+    <element uuid="fad4cd3d-be86-459d-956e-8c5d8d8408b9" manual="true">
+      <element uuid="b221bd52-59ee-4f5b-b144-cc3cbcdbb9fe" manual="true" dockArea="right">
         <bo>
           <seg>org.osate.ge.diagrams.instance</seg>
           <seg>feature_instance</seg>
@@ -267,7 +331,7 @@
         </bo>
         <position x="273.80468368530273" y="35.0"/>
       </element>
-      <element uuid="8cd6a0c0-bf88-4cd0-9c4c-a364d9c512dd" manual="true" dockArea="left">
+      <element uuid="487ac031-69b3-4847-aeb6-aa9394267d28" manual="true" dockArea="left">
         <bo>
           <seg>org.osate.ge.diagrams.instance</seg>
           <seg>feature_instance</seg>
@@ -275,7 +339,7 @@
         </bo>
         <position y="60.0"/>
       </element>
-      <element uuid="56f33a49-e08c-4f34-8536-960ad4454820" manual="true" dockArea="left">
+      <element uuid="2f753642-9c7f-4639-8ebc-d223e753157a" manual="true" dockArea="left">
         <bo>
           <seg>org.osate.ge.diagrams.instance</seg>
           <seg>feature_instance</seg>
@@ -288,157 +352,19 @@
         <seg>component_instance</seg>
         <seg>sideCarLight</seg>
       </bo>
-      <position x="1015.065081278483" y="792.0"/>
+      <position x="1242.962237040202" y="611.0"/>
       <size width="344.0338439941406" height="110.0"/>
     </element>
-    <element uuid="cd30d7a0-0b25-4227-9d89-b1069822c7a5" manual="true">
-      <element uuid="307eee54-1e62-4616-aa64-fa29a4e6d294" manual="true" dockArea="right">
+    <element uuid="1e7b0322-1dae-44a3-b8e5-7790dcbec5e7" manual="true">
+      <element uuid="9d8e94f0-5f07-4cd3-b1f6-13f69a82766f" manual="true" dockArea="right">
         <bo>
           <seg>org.osate.ge.diagrams.instance</seg>
           <seg>feature_instance</seg>
           <seg>busConn</seg>
         </bo>
-        <position x="275.5494728088379" y="110.0"/>
+        <position x="275.5494728088379" y="35.0"/>
       </element>
-      <element uuid="d2ea129f-4912-41e1-ba95-50734154beb7" manual="true" dockArea="right">
-        <bo>
-          <seg>org.osate.ge.diagrams.instance</seg>
-          <seg>feature_instance</seg>
-          <seg>sendStatus</seg>
-        </bo>
-        <position x="259.2278518676758" y="60.0"/>
-      </element>
-      <element uuid="c2c81e77-36f1-4d5b-8cc0-6a6928c740b9" manual="true" dockArea="right">
-        <bo>
-          <seg>org.osate.ge.diagrams.instance</seg>
-          <seg>feature_instance</seg>
-          <seg>signalReceive</seg>
-        </bo>
-        <position x="241.53905487060547" y="10.0"/>
-      </element>
-      <bo>
-        <seg>org.osate.ge.diagrams.instance</seg>
-        <seg>component_instance</seg>
-        <seg>sidePedLight</seg>
-      </bo>
-      <position x="217.8177032470703" y="881.0"/>
-      <size width="345.7786331176758" height="160.0"/>
-    </element>
-    <element uuid="ae68f01d-1779-4139-bd1e-bced525a32d9" manual="true">
-      <element uuid="1668c758-95ad-41c1-9fa6-ff56b2c73c01" manual="true" dockArea="right">
-        <bo>
-          <seg>org.osate.ge.diagrams.instance</seg>
-          <seg>feature_instance</seg>
-          <seg>controlIn</seg>
-        </bo>
-        <position x="297.0143241882324" y="10.0"/>
-      </element>
-      <element uuid="02850f59-341c-40cd-b57d-db68a3ef546c" manual="true" dockArea="left">
-        <bo>
-          <seg>org.osate.ge.diagrams.instance</seg>
-          <seg>feature_instance</seg>
-          <seg>mainCarSignal</seg>
-        </bo>
-        <position y="140.0"/>
-      </element>
-      <element uuid="df0dd4fb-6791-4605-92e6-8feed059dcc3" manual="true" dockArea="left">
-        <bo>
-          <seg>org.osate.ge.diagrams.instance</seg>
-          <seg>feature_instance</seg>
-          <seg>mainCarStatus</seg>
-        </bo>
-        <position y="50.0"/>
-      </element>
-      <element uuid="3d1e204c-40f2-4045-be80-752059633f4c" manual="true" dockArea="right">
-        <bo>
-          <seg>org.osate.ge.diagrams.instance</seg>
-          <seg>feature_instance</seg>
-          <seg>mainPedSignal</seg>
-        </bo>
-        <position x="256.9296875" y="310.0"/>
-      </element>
-      <element uuid="2c754105-47e8-4fc2-b638-16d1db2fd7bd" manual="true" dockArea="right">
-        <bo>
-          <seg>org.osate.ge.diagrams.instance</seg>
-          <seg>feature_instance</seg>
-          <seg>mainPedStatus</seg>
-        </bo>
-        <position x="255.3997344970703" y="360.0"/>
-      </element>
-      <element uuid="10f72c9c-8147-4e5a-9b9e-01b19da663cd" manual="true" dockArea="right">
-        <bo>
-          <seg>org.osate.ge.diagrams.instance</seg>
-          <seg>feature_instance</seg>
-          <seg>sideCarSignal</seg>
-        </bo>
-        <position x="264.67057037353516" y="210.0"/>
-      </element>
-      <element uuid="b500cf6c-cb81-4ef1-997e-3069f4500b63" manual="true" dockArea="right">
-        <bo>
-          <seg>org.osate.ge.diagrams.instance</seg>
-          <seg>feature_instance</seg>
-          <seg>sideCarStatus</seg>
-        </bo>
-        <position x="263.14061737060547" y="260.0"/>
-      </element>
-      <element uuid="03c8c882-6363-4243-8c8b-7febe32276d7" manual="true" dockArea="left">
-        <bo>
-          <seg>org.osate.ge.diagrams.instance</seg>
-          <seg>feature_instance</seg>
-          <seg>sidePedSignal</seg>
-        </bo>
-        <position y="230.0"/>
-      </element>
-      <element uuid="5b9c3fcc-8f6d-489e-80eb-2662c98f8438" manual="true" dockArea="left">
-        <bo>
-          <seg>org.osate.ge.diagrams.instance</seg>
-          <seg>feature_instance</seg>
-          <seg>sidePedStatus</seg>
-        </bo>
-        <position y="320.0"/>
-      </element>
-      <element uuid="71a642c1-1b88-4d21-8297-1a92dcb91bd7" manual="true" dockArea="right">
-        <bo>
-          <seg>org.osate.ge.diagrams.instance</seg>
-          <seg>feature_instance</seg>
-          <seg>statusOut</seg>
-        </bo>
-        <position x="290.7643280029297" y="60.0"/>
-      </element>
-      <element uuid="b304da50-a62f-45b2-960f-2609bbcb98e7" manual="true" dockArea="right">
-        <bo>
-          <seg>org.osate.ge.diagrams.instance</seg>
-          <seg>feature_instance</seg>
-          <seg>tramSignal</seg>
-        </bo>
-        <position x="283.08202362060547" y="110.0"/>
-      </element>
-      <element uuid="cac7f543-b1e8-440e-8bc9-72bb6e651ff7" manual="true" dockArea="right">
-        <bo>
-          <seg>org.osate.ge.diagrams.instance</seg>
-          <seg>feature_instance</seg>
-          <seg>tramStatus</seg>
-        </bo>
-        <position x="281.5520782470703" y="160.0"/>
-      </element>
-      <bo>
-        <seg>org.osate.ge.diagrams.instance</seg>
-        <seg>component_instance</seg>
-        <seg>signalRouter</seg>
-      </bo>
-      <position x="583.5963516235352" y="592.0"/>
-      <size width="367.9075469970703" height="410.0"/>
-    </element>
-    <element uuid="c596a49b-57ee-4a3e-af58-e66246787e4f" manual="true">
-      <element uuid="9a69e810-2cac-4f25-9635-a9ed88d7b30f" manual="true" dockArea="right">
-        <bo>
-          <seg>org.osate.ge.diagrams.instance</seg>
-          <seg>feature_instance</seg>
-          <seg>busConn</seg>
-        </bo>
-        <position x="255.3932228088379" y="35.0"/>
-      </element>
-      <element uuid="483ebd4f-33ba-4aa0-bf86-69206a29dca8" manual="true" dockArea="left">
+      <element uuid="3782aa8d-07e3-487d-8e5c-b8aca566d435" manual="true" dockArea="left">
         <bo>
           <seg>org.osate.ge.diagrams.instance</seg>
           <seg>feature_instance</seg>
@@ -446,7 +372,40 @@
         </bo>
         <position y="60.0"/>
       </element>
-      <element uuid="f4feb279-e99a-4f1b-9e70-ef0a2ff248b7" manual="true" dockArea="left">
+      <element uuid="0c91d376-2a9e-449a-98c2-258d1bbcfe55" manual="true" dockArea="left">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>signalReceive</seg>
+        </bo>
+        <position y="10.0"/>
+      </element>
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>component_instance</seg>
+        <seg>sidePedLight</seg>
+      </bo>
+      <position x="1242.3806406656902" y="221.0"/>
+      <size width="345.7786331176758" height="110.0"/>
+    </element>
+    <element uuid="589293af-2df7-407a-b6a2-d758ed7039c8" manual="true">
+      <element uuid="8a1b4b94-33e1-4e4f-9c4e-ec305717a711" manual="true" dockArea="right">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>busConn</seg>
+        </bo>
+        <position x="255.3932228088379" y="35.0"/>
+      </element>
+      <element uuid="59ca9b5d-c637-4d46-9038-182277ca865e" manual="true" dockArea="left">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>sendStatus</seg>
+        </bo>
+        <position y="60.0"/>
+      </element>
+      <element uuid="b66c0243-b78a-49fd-972b-b19bba24f6c8" manual="true" dockArea="left">
         <bo>
           <seg>org.osate.ge.diagrams.instance</seg>
           <seg>feature_instance</seg>
@@ -459,11 +418,11 @@
         <seg>component_instance</seg>
         <seg>tramLight</seg>
       </bo>
-      <position x="1021.2022349039713" y="662.0"/>
+      <position x="1249.0993906656902" y="481.0"/>
       <size width="325.6223831176758" height="110.0"/>
     </element>
-    <element uuid="aef95241-80fd-415b-9847-21c9df45c4d1" manual="true">
-      <element uuid="1390a282-35f3-4436-b1f4-379f32162d99" manual="true" dockArea="right">
+    <element uuid="460ec4ad-f94c-4a46-a8e9-d11bb9e6a712" manual="true">
+      <element uuid="77781642-6a2e-4746-aa98-855f0e8b8184" manual="true" dockArea="right">
         <bo>
           <seg>org.osate.ge.diagrams.instance</seg>
           <seg>feature_instance</seg>
@@ -471,7 +430,7 @@
         </bo>
         <position x="267.20964431762695" y="60.0"/>
       </element>
-      <element uuid="380afca7-9efb-44ad-95a8-746b97cebeee" manual="true" dockArea="right">
+      <element uuid="f0ca8472-b063-4496-adae-201f1cf75a3c" manual="true" dockArea="right">
         <bo>
           <seg>org.osate.ge.diagrams.instance</seg>
           <seg>feature_instance</seg>
@@ -484,480 +443,460 @@
         <seg>component_instance</seg>
         <seg>tramSensor</seg>
       </bo>
-      <position x="1088.7825164794922" y="190.0"/>
+      <position x="320.84503173828125" y="791.0"/>
       <size width="337.43880462646484" height="110.0"/>
     </element>
-    <element uuid="76163cb4-e92d-400b-a117-8718269a3770" manual="true">
+    <element uuid="4b4355e2-209f-4bff-a6f5-8f11b68c719b" manual="true">
       <bo>
         <seg>org.osate.ge.diagrams.instance</seg>
         <seg>connection_reference</seg>
         <seg>b1 : TrafficLightsSystem_impl_Instance.commBus -> TrafficLightsSystem_impl_Instance.pedButtonMain.busConn</seg>
       </bo>
       <bendpoints>
-        <point x="2458.1005859375" y="814.0"/>
-        <point x="2356.22119140625" y="814.0"/>
-        <point x="2356.22119140625" y="672.0"/>
+        <point x="1726.993408203125" y="79.0"/>
+        <point x="1600.993408203125" y="79.0"/>
+        <point x="1600.993408203125" y="80.0"/>
       </bendpoints>
     </element>
-    <element uuid="83e2b10a-63f8-412f-91fb-8f108fb64374" manual="true">
+    <element uuid="5c78dc2b-6d7e-4c76-a636-09ea03ce8b99" manual="true">
       <bo>
         <seg>org.osate.ge.diagrams.instance</seg>
         <seg>connection_reference</seg>
         <seg>b1 : TrafficLightsSystem_impl_Instance.pedButtonMain.busConn -> TrafficLightsSystem_impl_Instance.commBus</seg>
       </bo>
       <bendpoints>
-        <point x="2356.22119140625" y="672.0"/>
-        <point x="2356.22119140625" y="824.0"/>
-        <point x="2458.1005859375" y="824.0"/>
+        <point x="668.2838745117188" y="80.0"/>
+        <point x="668.2838745117188" y="69.0"/>
+        <point x="1726.993408203125" y="69.0"/>
       </bendpoints>
     </element>
-    <element uuid="c36ece82-68bd-4a69-85be-0196f79a7e5b" manual="true">
+    <element uuid="98ad78fd-e55f-488d-bf18-f0d4cb734768" manual="true">
       <bo>
         <seg>org.osate.ge.diagrams.instance</seg>
         <seg>connection_reference</seg>
         <seg>b2 : TrafficLightsSystem_impl_Instance.commBus -> TrafficLightsSystem_impl_Instance.pedButtonSide.busConn</seg>
       </bo>
       <bendpoints>
-        <point x="2458.1005859375" y="874.0"/>
-        <point x="2316.22119140625" y="874.0"/>
-        <point x="2316.22119140625" y="884.0"/>
+        <point x="1726.993408203125" y="229.0"/>
+        <point x="1690.993408203125" y="229.0"/>
+        <point x="1690.993408203125" y="753.0"/>
       </bendpoints>
     </element>
-    <element uuid="8a2c3c93-394c-4c4a-a325-7828b5dada7a" manual="true">
+    <element uuid="082a5b4c-7431-4e90-b39c-a3b733fe9b19" manual="true">
       <bo>
         <seg>org.osate.ge.diagrams.instance</seg>
         <seg>connection_reference</seg>
         <seg>b2 : TrafficLightsSystem_impl_Instance.pedButtonSide.busConn -> TrafficLightsSystem_impl_Instance.commBus</seg>
       </bo>
       <bendpoints>
-        <point x="2462.1005859375" y="884.0"/>
+        <point x="688.2838745117188" y="753.0"/>
+        <point x="688.2838745117188" y="764.0"/>
+        <point x="1700.993408203125" y="764.0"/>
+        <point x="1700.993408203125" y="239.0"/>
+        <point x="1726.993408203125" y="239.0"/>
       </bendpoints>
     </element>
-    <element uuid="b6e81220-3e14-4af8-ae36-1d35b92fce85" manual="true">
+    <element uuid="e8662100-7206-4d4b-af3d-07dbffcca1a4" manual="true">
       <bo>
         <seg>org.osate.ge.diagrams.instance</seg>
         <seg>connection_reference</seg>
         <seg>b3 : TrafficLightsSystem_impl_Instance.commBus -> TrafficLightsSystem_impl_Instance.tramSensor.busConn</seg>
       </bo>
       <bendpoints>
-        <point x="2458.1005859375" y="804.0"/>
-        <point x="2366.22119140625" y="804.0"/>
-        <point x="2366.22119140625" y="542.0"/>
+        <point x="1726.993408203125" y="249.0"/>
+        <point x="1710.993408203125" y="249.0"/>
+        <point x="1710.993408203125" y="883.0"/>
       </bendpoints>
     </element>
-    <element uuid="f9927238-bb8e-4176-b98c-345dbe0fed84" manual="true">
+    <element uuid="7941fab2-110a-4924-a5c9-00b2e2ad782b" manual="true">
       <bo>
         <seg>org.osate.ge.diagrams.instance</seg>
         <seg>connection_reference</seg>
         <seg>b3 : TrafficLightsSystem_impl_Instance.tramSensor.busConn -> TrafficLightsSystem_impl_Instance.commBus</seg>
       </bo>
       <bendpoints>
-        <point x="2366.22119140625" y="542.0"/>
-        <point x="2366.22119140625" y="794.0"/>
-        <point x="2458.1005859375" y="794.0"/>
+        <point x="668.2838745117188" y="883.0"/>
+        <point x="668.2838745117188" y="894.0"/>
+        <point x="1720.993408203125" y="894.0"/>
+        <point x="1720.993408203125" y="259.0"/>
+        <point x="1726.993408203125" y="259.0"/>
       </bendpoints>
     </element>
-    <element uuid="db3068cc-03b0-457a-a882-65b431cf9821" manual="true">
+    <element uuid="e96462a5-e90e-44f6-8012-412960474bbb" manual="true">
       <bo>
         <seg>org.osate.ge.diagrams.instance</seg>
         <seg>connection_reference</seg>
         <seg>b4 : TrafficLightsSystem_impl_Instance.commBus -> TrafficLightsSystem_impl_Instance.mainCarLight.busConn</seg>
       </bo>
       <bendpoints>
-        <point x="2458.1005859375" y="864.0"/>
-        <point x="2316.22119140625" y="864.0"/>
-        <point x="2316.22119140625" y="781.0"/>
-        <point x="1453.596435546875" y="781.0"/>
-        <point x="1453.596435546875" y="884.0"/>
+        <point x="1726.993408203125" y="149.0"/>
+        <point x="1640.993408203125" y="149.0"/>
+        <point x="1640.993408203125" y="418.0"/>
       </bendpoints>
     </element>
-    <element uuid="61adb3c9-4df5-4845-8b79-8d0127828667" manual="true">
+    <element uuid="781f0322-1123-4c1d-8515-f9ed8d4044a0" manual="true">
       <bo>
         <seg>org.osate.ge.diagrams.instance</seg>
         <seg>connection_reference</seg>
         <seg>b4 : TrafficLightsSystem_impl_Instance.mainCarLight.busConn -> TrafficLightsSystem_impl_Instance.commBus</seg>
       </bo>
       <bendpoints>
-        <point x="1453.596435546875" y="884.0"/>
-        <point x="1453.596435546875" y="700.0"/>
-        <point x="2346.22119140625" y="700.0"/>
-        <point x="2346.22119140625" y="834.0"/>
-        <point x="2458.1005859375" y="834.0"/>
+        <point x="1640.993408203125" y="418.0"/>
+        <point x="1640.993408203125" y="159.0"/>
+        <point x="1726.993408203125" y="159.0"/>
       </bendpoints>
     </element>
-    <element uuid="76b8c5d7-6c97-4ced-b060-7ad4dff256c1" manual="true">
+    <element uuid="13bcaa38-acdb-493f-9748-d10a08ab32bd" manual="true">
       <bo>
         <seg>org.osate.ge.diagrams.instance</seg>
         <seg>connection_reference</seg>
         <seg>b5 : TrafficLightsSystem_impl_Instance.commBus -> TrafficLightsSystem_impl_Instance.sideCarLight.busConn</seg>
       </bo>
       <bendpoints>
-        <point x="2458.1005859375" y="924.0"/>
-        <point x="2326.22119140625" y="924.0"/>
-        <point x="2326.22119140625" y="1119.0"/>
+        <point x="1726.993408203125" y="199.0"/>
+        <point x="1660.993408203125" y="199.0"/>
+        <point x="1660.993408203125" y="678.0"/>
       </bendpoints>
     </element>
-    <element uuid="1d0e0828-5e71-4e83-82aa-5fb3f797e313" manual="true">
+    <element uuid="424ef744-b564-4cd9-a56d-4ba2e8046d7a" manual="true">
       <bo>
         <seg>org.osate.ge.diagrams.instance</seg>
         <seg>connection_reference</seg>
         <seg>b5 : TrafficLightsSystem_impl_Instance.sideCarLight.busConn -> TrafficLightsSystem_impl_Instance.commBus</seg>
       </bo>
       <bendpoints>
-        <point x="2326.22119140625" y="1119.0"/>
-        <point x="2326.22119140625" y="914.0"/>
-        <point x="2458.1005859375" y="914.0"/>
+        <point x="1660.993408203125" y="678.0"/>
+        <point x="1660.993408203125" y="189.0"/>
+        <point x="1726.993408203125" y="189.0"/>
       </bendpoints>
     </element>
-    <element uuid="36b55362-8ac2-40e1-a1bf-b8f83ce86da0" manual="true">
+    <element uuid="fae7f7a2-7cf2-487b-9e81-f93d3f2c1af3" manual="true">
       <bo>
         <seg>org.osate.ge.diagrams.instance</seg>
         <seg>connection_reference</seg>
         <seg>b6 : TrafficLightsSystem_impl_Instance.commBus -> TrafficLightsSystem_impl_Instance.tramLight.busConn</seg>
       </bo>
       <bendpoints>
-        <point x="2458.1005859375" y="894.0"/>
-        <point x="2316.22119140625" y="894.0"/>
-        <point x="2316.22119140625" y="989.0"/>
+        <point x="1726.993408203125" y="169.0"/>
+        <point x="1650.993408203125" y="169.0"/>
+        <point x="1650.993408203125" y="548.0"/>
       </bendpoints>
     </element>
-    <element uuid="1e821b52-80c6-4263-8333-c2b0e5d33b50" manual="true">
+    <element uuid="d346df28-cc16-437a-b785-61bff1fbaa3a" manual="true">
       <bo>
         <seg>org.osate.ge.diagrams.instance</seg>
         <seg>connection_reference</seg>
         <seg>b6 : TrafficLightsSystem_impl_Instance.tramLight.busConn -> TrafficLightsSystem_impl_Instance.commBus</seg>
       </bo>
       <bendpoints>
-        <point x="2316.22119140625" y="989.0"/>
-        <point x="2316.22119140625" y="904.0"/>
-        <point x="2458.1005859375" y="904.0"/>
+        <point x="1650.993408203125" y="548.0"/>
+        <point x="1650.993408203125" y="179.0"/>
+        <point x="1726.993408203125" y="179.0"/>
       </bendpoints>
     </element>
-    <element uuid="46c9106d-33f8-494f-9c4d-d9c0c567d43b" manual="true">
+    <element uuid="a66f2034-18b2-4b88-bc6a-5c6f68ed0112" manual="true">
       <bo>
         <seg>org.osate.ge.diagrams.instance</seg>
         <seg>connection_reference</seg>
         <seg>b7 : TrafficLightsSystem_impl_Instance.commBus -> TrafficLightsSystem_impl_Instance.mainPedLight.busConn</seg>
       </bo>
       <bendpoints>
-        <point x="2584.109619140625" y="834.0"/>
-        <point x="2948.901123046875" y="834.0"/>
-        <point x="2948.901123046875" y="1244.0"/>
+        <point x="1726.993408203125" y="219.0"/>
+        <point x="1680.993408203125" y="219.0"/>
+        <point x="1680.993408203125" y="742.0"/>
+        <point x="688.2838745117188" y="742.0"/>
+        <point x="688.2838745117188" y="550.1428833007812"/>
       </bendpoints>
     </element>
-    <element uuid="76a41de3-ec52-42de-83a4-d6c7bc0a2be7" manual="true">
+    <element uuid="bcdacf46-03e4-4222-bda3-ff2abf345da6" manual="true">
       <bo>
         <seg>org.osate.ge.diagrams.instance</seg>
         <seg>connection_reference</seg>
         <seg>b7 : TrafficLightsSystem_impl_Instance.mainPedLight.busConn -> TrafficLightsSystem_impl_Instance.commBus</seg>
       </bo>
       <bendpoints>
-        <point x="2948.901123046875" y="1244.0"/>
-        <point x="2948.901123046875" y="904.0"/>
-        <point x="2584.109619140625" y="904.0"/>
+        <point x="688.2838745117188" y="550.1428833007812"/>
+        <point x="688.2838745117188" y="731.0"/>
+        <point x="1670.993408203125" y="731.0"/>
+        <point x="1670.993408203125" y="209.0"/>
+        <point x="1726.993408203125" y="209.0"/>
       </bendpoints>
     </element>
-    <element uuid="40896efe-4c0e-44c4-96d6-41e816e74870" manual="true">
+    <element uuid="16b112ba-6fbf-48ff-8de0-f68d679cc9ca" manual="true">
       <bo>
         <seg>org.osate.ge.diagrams.instance</seg>
         <seg>connection_reference</seg>
         <seg>b8 : TrafficLightsSystem_impl_Instance.commBus -> TrafficLightsSystem_impl_Instance.sidePedLight.busConn</seg>
       </bo>
       <bendpoints>
-        <point x="2458.1005859375" y="964.0"/>
-        <point x="2356.22119140625" y="964.0"/>
-        <point x="2356.22119140625" y="1283.0"/>
+        <point x="1726.993408203125" y="129.0"/>
+        <point x="1630.993408203125" y="129.0"/>
+        <point x="1630.993408203125" y="288.0"/>
       </bendpoints>
     </element>
-    <element uuid="4075051f-0b36-4e25-9eb4-c3c5708ebdf9" manual="true">
+    <element uuid="d0102980-9a75-4112-b60b-0e53440305f5" manual="true">
       <bo>
         <seg>org.osate.ge.diagrams.instance</seg>
         <seg>connection_reference</seg>
         <seg>b8 : TrafficLightsSystem_impl_Instance.sidePedLight.busConn -> TrafficLightsSystem_impl_Instance.commBus</seg>
       </bo>
       <bendpoints>
-        <point x="1453.596435546875" y="1283.0"/>
-        <point x="1453.596435546875" y="1272.0"/>
-        <point x="2346.22119140625" y="1272.0"/>
-        <point x="2346.22119140625" y="954.0"/>
-        <point x="2458.1005859375" y="954.0"/>
+        <point x="1630.993408203125" y="288.0"/>
+        <point x="1630.993408203125" y="139.0"/>
+        <point x="1726.993408203125" y="139.0"/>
       </bendpoints>
     </element>
-    <element uuid="0d83285a-3440-4e74-a091-7e06432be404" manual="true">
+    <element uuid="2f26fe1b-b23d-427a-a983-4f64d0486b49" manual="true">
       <bo>
         <seg>org.osate.ge.diagrams.instance</seg>
         <seg>connection_reference</seg>
         <seg>bcpu : TrafficLightsSystem_impl_Instance.commBus -> TrafficLightsSystem_impl_Instance.cpu.busConn</seg>
       </bo>
       <bendpoints>
-        <point x="2458.1005859375" y="844.0"/>
-        <point x="2326.22119140625" y="844.0"/>
-        <point x="2326.22119140625" y="753.0"/>
+        <point x="1849.0025634765625" y="199.0"/>
       </bendpoints>
     </element>
-    <element uuid="faa67e40-f139-4a17-9759-71fe212bbe52" manual="true">
+    <element uuid="0d8aaa81-f3ff-49fb-aa4d-d25791fd4e94" manual="true">
       <bo>
         <seg>org.osate.ge.diagrams.instance</seg>
         <seg>connection_reference</seg>
         <seg>bcpu : TrafficLightsSystem_impl_Instance.cpu.busConn -> TrafficLightsSystem_impl_Instance.commBus</seg>
       </bo>
       <bendpoints>
-        <point x="2326.22119140625" y="753.0"/>
-        <point x="2326.22119140625" y="854.0"/>
-        <point x="2458.1005859375" y="854.0"/>
+        <point x="1859.0025634765625" y="199.0"/>
+        <point x="1859.0025634765625" y="129.0"/>
+        <point x="1853.0025634765625" y="129.0"/>
       </bendpoints>
     </element>
-    <element uuid="fe5eef84-fa95-49d9-923d-fec7296551f5" manual="true">
+    <element uuid="9edcc5e4-218e-4c2b-925a-5fc5e04e6a19" manual="true">
       <bo>
         <seg>org.osate.ge.diagrams.instance</seg>
         <seg>connection_reference</seg>
         <seg>bmem : TrafficLightsSystem_impl_Instance.commBus -> TrafficLightsSystem_impl_Instance.mem.busConn</seg>
       </bo>
       <bendpoints>
-        <point x="2458.1005859375" y="934.0"/>
-        <point x="2336.22119140625" y="934.0"/>
-        <point x="2336.22119140625" y="1224.0"/>
+        <point x="1726.993408203125" y="99.0"/>
+        <point x="1600.993408203125" y="99.0"/>
+        <point x="1600.993408203125" y="133.0"/>
       </bendpoints>
     </element>
-    <element uuid="84cd7698-28cd-4394-9d3b-53fcf4b67134" manual="true">
+    <element uuid="60926f7a-cd78-4508-8e39-627daea18ba3" manual="true">
       <bo>
         <seg>org.osate.ge.diagrams.instance</seg>
         <seg>connection_reference</seg>
         <seg>bmem : TrafficLightsSystem_impl_Instance.mem.busConn -> TrafficLightsSystem_impl_Instance.commBus</seg>
       </bo>
       <bendpoints>
-        <point x="2336.22119140625" y="1224.0"/>
-        <point x="2336.22119140625" y="944.0"/>
-        <point x="2458.1005859375" y="944.0"/>
+        <point x="1600.993408203125" y="133.0"/>
+        <point x="1600.993408203125" y="89.0"/>
+        <point x="1726.993408203125" y="89.0"/>
       </bendpoints>
     </element>
-    <element uuid="767e485d-c6be-4dcf-919b-8779ee0d4778" manual="true">
+    <element uuid="3f101474-60b8-4b59-8d2a-be7bf1aedbd5" manual="true">
       <bo>
         <seg>org.osate.ge.diagrams.instance</seg>
         <seg>connection_reference</seg>
         <seg>brecComm : TrafficLightsSystem_impl_Instance.commBus -> TrafficLightsSystem_impl_Instance.radioReceiver.busConn</seg>
       </bo>
       <bendpoints>
-        <point x="2458.1005859375" y="774.0"/>
-        <point x="2386.22119140625" y="774.0"/>
-        <point x="2386.22119140625" y="412.0"/>
+        <point x="1726.993408203125" y="109.0"/>
+        <point x="1610.993408203125" y="109.0"/>
+        <point x="1610.993408203125" y="161.0"/>
+        <point x="688.2838745117188" y="161.0"/>
+        <point x="688.2838745117188" y="210.0"/>
       </bendpoints>
     </element>
-    <element uuid="5d561281-90c2-427d-89ee-d38f117fae1c" manual="true">
+    <element uuid="43f10ea8-2743-4750-bb23-9e245d1f8ade" manual="true">
       <bo>
         <seg>org.osate.ge.diagrams.instance</seg>
         <seg>connection_reference</seg>
         <seg>brecComm : TrafficLightsSystem_impl_Instance.radioReceiver.busConn -> TrafficLightsSystem_impl_Instance.commBus</seg>
       </bo>
       <bendpoints>
-        <point x="2386.22119140625" y="412.0"/>
-        <point x="2386.22119140625" y="784.0"/>
-        <point x="2458.1005859375" y="784.0"/>
+        <point x="1620.993408203125" y="210.0"/>
+        <point x="1620.993408203125" y="119.0"/>
+        <point x="1726.993408203125" y="119.0"/>
       </bendpoints>
     </element>
-    <element uuid="916aed23-d98a-4de0-a862-383546680eec" manual="true">
+    <element uuid="209ccf69-d8e1-4607-93ee-9078b7172714" manual="true">
       <bo>
         <seg>org.osate.ge.diagrams.instance</seg>
         <seg>connection_reference</seg>
         <seg>brecRadio : TrafficLightsSystem_impl_Instance.radioBus -> TrafficLightsSystem_impl_Instance.radioReceiver.radioBus</seg>
       </bo>
     </element>
-    <element uuid="20eabb45-6d51-42dc-bbd5-c909904f8126" manual="true">
+    <element uuid="828d4c23-1419-4364-b2ca-881a622e765f" manual="true">
       <bo>
         <seg>org.osate.ge.diagrams.instance</seg>
         <seg>connection_reference</seg>
         <seg>c1 : TrafficLightsSystem_impl_Instance.pedButtonMain.requestSignal -> TrafficLightsSystem_impl_Instance.mainController.receivePedMainRequest</seg>
       </bo>
       <bendpoints>
-        <point x="2376.22119140625" y="622.0"/>
-        <point x="2376.22119140625" y="542.0"/>
+        <point x="678.2838745117188" y="130.0"/>
+        <point x="678.2838745117188" y="307.28570556640625"/>
       </bendpoints>
     </element>
-    <element uuid="6df163b5-1578-4a0e-bc95-7a8e8a1970db" manual="true">
+    <element uuid="d63aba0a-2ed0-4c1b-960d-e734fab356c7" manual="true">
       <bo>
         <seg>org.osate.ge.diagrams.instance</seg>
         <seg>connection_reference</seg>
-        <seg>c10 : TrafficLightsSystem_impl_Instance.sidePedLight.sendStatus -> TrafficLightsSystem_impl_Instance.signalRouter.sidePedStatus</seg>
+        <seg>c10 : TrafficLightsSystem_impl_Instance.sideCarLight.sendStatus -> TrafficLightsSystem_impl_Instance.mainController.receiveSideCarStatus</seg>
       </bo>
       <bendpoints>
-        <point x="1453.596435546875" y="1233.0"/>
-        <point x="1453.596435546875" y="1204.0"/>
+        <point x="1220.9635009765625" y="703.0"/>
+        <point x="1220.9635009765625" y="643.0"/>
       </bendpoints>
     </element>
-    <element uuid="8daaedae-0ca0-43c8-af1f-e3bafdf22530" manual="true">
+    <element uuid="512c8dc2-0162-434f-b20d-634068943e97" manual="true">
       <bo>
         <seg>org.osate.ge.diagrams.instance</seg>
         <seg>connection_reference</seg>
-        <seg>c11 : TrafficLightsSystem_impl_Instance.signalRouter.mainCarSignal -> TrafficLightsSystem_impl_Instance.mainCarLight.signalReceive</seg>
+        <seg>c11 : TrafficLightsSystem_impl_Instance.tramLight.sendStatus -> TrafficLightsSystem_impl_Instance.mainController.receiveTramStatus</seg>
       </bo>
       <bendpoints>
-        <point x="1453.596435546875" y="1024.0"/>
-        <point x="1453.596435546875" y="984.0"/>
+        <point x="1220.9635009765625" y="573.0"/>
+        <point x="1220.9635009765625" y="543.0"/>
       </bendpoints>
     </element>
-    <element uuid="4f0c8fcb-8360-484a-a0a3-858d6c6a3a01" manual="true">
+    <element uuid="a820a78d-f687-4be1-b344-3de8f2da22b9" manual="true">
       <bo>
         <seg>org.osate.ge.diagrams.instance</seg>
         <seg>connection_reference</seg>
-        <seg>c12 : TrafficLightsSystem_impl_Instance.signalRouter.sideCarSignal -> TrafficLightsSystem_impl_Instance.sideCarLight.signalReceive</seg>
+        <seg>c12 : TrafficLightsSystem_impl_Instance.mainPedLight.sendStatus -> TrafficLightsSystem_impl_Instance.mainController.receiveMainPedStatus</seg>
       </bo>
     </element>
-    <element uuid="c5f755fa-45f2-4e7d-a0f0-f290b7eb522f" manual="true">
+    <element uuid="5bf93161-dcd8-4d9c-8ee9-6b8bc4bacbf3" manual="true">
       <bo>
         <seg>org.osate.ge.diagrams.instance</seg>
         <seg>connection_reference</seg>
-        <seg>c13 : TrafficLightsSystem_impl_Instance.signalRouter.tramSignal -> TrafficLightsSystem_impl_Instance.tramLight.signalReceive</seg>
+        <seg>c13 : TrafficLightsSystem_impl_Instance.sidePedLight.sendStatus -> TrafficLightsSystem_impl_Instance.mainController.receiveSidePedStatus</seg>
       </bo>
       <bendpoints>
-        <point x="1841.50390625" y="994.0"/>
-        <point x="1841.50390625" y="964.0"/>
+        <point x="1220.9635009765625" y="313.0"/>
+        <point x="1220.9635009765625" y="343.0"/>
       </bendpoints>
     </element>
-    <element uuid="2748ee08-8f71-415d-8f26-2faf2ad6e5b9" manual="true">
+    <element uuid="0368fffb-26ef-4415-973c-e60d510353b2" manual="true">
       <bo>
         <seg>org.osate.ge.diagrams.instance</seg>
         <seg>connection_reference</seg>
-        <seg>c14 : TrafficLightsSystem_impl_Instance.signalRouter.mainPedSignal -> TrafficLightsSystem_impl_Instance.mainPedLight.signalReceive</seg>
+        <seg>c14 : TrafficLightsSystem_impl_Instance.radioReceiver.outEmergencySignal -> TrafficLightsSystem_impl_Instance.mainController.receiveEmergencySignal</seg>
       </bo>
       <bendpoints>
-        <point x="1851.50390625" y="1194.0"/>
-        <point x="1851.50390625" y="1294.0"/>
+        <point x="668.2838745117188" y="260.0"/>
+        <point x="668.2838745117188" y="371.5714416503906"/>
       </bendpoints>
     </element>
-    <element uuid="e6943efc-284f-42b2-89a0-543ff3d4ba76" manual="true">
+    <element uuid="14d88a6b-e146-4628-bbfd-5139290ebe18" manual="true">
       <bo>
         <seg>org.osate.ge.diagrams.instance</seg>
         <seg>connection_reference</seg>
-        <seg>c15 : TrafficLightsSystem_impl_Instance.signalRouter.sidePedSignal -> TrafficLightsSystem_impl_Instance.sidePedLight.signalReceive</seg>
-      </bo>
-      <bendpoints>
-        <point x="1453.596435546875" y="1114.0"/>
-        <point x="1453.596435546875" y="1183.0"/>
-      </bendpoints>
-    </element>
-    <element uuid="bd3dccd2-0574-42f7-bca9-224ba0137ba3" manual="true">
-      <bo>
-        <seg>org.osate.ge.diagrams.instance</seg>
-        <seg>connection_reference</seg>
-        <seg>c16 : TrafficLightsSystem_impl_Instance.radioReceiver.outEmergencySignal -> TrafficLightsSystem_impl_Instance.mainController.receiveEmergencySignal</seg>
-      </bo>
-      <bendpoints>
-        <point x="2396.22119140625" y="362.0"/>
-        <point x="2396.22119140625" y="442.0"/>
-      </bendpoints>
-    </element>
-    <element uuid="b14fb30a-0555-4bfd-8733-5d8e46deaa84" manual="true">
-      <bo>
-        <seg>org.osate.ge.diagrams.instance</seg>
-        <seg>connection_reference</seg>
-        <seg>c17 : TrafficLightsSystem_impl_Instance.radioIn -> TrafficLightsSystem_impl_Instance.radioReceiver.radioIn</seg>
+        <seg>c15 : TrafficLightsSystem_impl_Instance.radioIn -> TrafficLightsSystem_impl_Instance.radioReceiver.radioIn</seg>
       </bo>
     </element>
-    <element uuid="5d4d3805-4100-480a-8961-f8cc1ef5c8d2" manual="true">
+    <element uuid="77b3038b-3ef5-43a3-a287-034d04f5f9c1" manual="true">
       <bo>
         <seg>org.osate.ge.diagrams.instance</seg>
         <seg>connection_reference</seg>
         <seg>c2 : TrafficLightsSystem_impl_Instance.pedButtonSide.requestSignal -> TrafficLightsSystem_impl_Instance.mainController.receivePedSideRequest</seg>
       </bo>
       <bendpoints>
-        <point x="2336.22119140625" y="834.0"/>
-        <point x="2336.22119140625" y="592.0"/>
+        <point x="668.2838745117188" y="703.0"/>
+        <point x="668.2838745117188" y="564.4285888671875"/>
       </bendpoints>
     </element>
-    <element uuid="3780d682-9e39-4ad3-b4b3-9a240436226d" manual="true">
+    <element uuid="3e05cd78-2bfd-488a-b204-399fcc3def3b" manual="true">
       <bo>
         <seg>org.osate.ge.diagrams.instance</seg>
         <seg>connection_reference</seg>
         <seg>c3 : TrafficLightsSystem_impl_Instance.tramSensor.requestSignal -> TrafficLightsSystem_impl_Instance.mainController.receiveTramRequest</seg>
       </bo>
-    </element>
-    <element uuid="ebfe2eb0-60d4-4271-baa3-c99649624d1a" manual="true">
-      <bo>
-        <seg>org.osate.ge.diagrams.instance</seg>
-        <seg>connection_reference</seg>
-        <seg>c4 : TrafficLightsSystem_impl_Instance.mainController.sendSignal -> TrafficLightsSystem_impl_Instance.signalRouter.controlIn</seg>
-      </bo>
       <bendpoints>
-        <point x="2416.22119140625" y="342.0"/>
-        <point x="2416.22119140625" y="298.0"/>
-        <point x="1841.50390625" y="298.0"/>
-        <point x="1841.50390625" y="894.0"/>
+        <point x="678.2838745117188" y="833.0"/>
+        <point x="678.2838745117188" y="628.7142944335938"/>
       </bendpoints>
     </element>
-    <element uuid="6c4b319a-237f-4a41-8a34-1686bd170395" manual="true">
+    <element uuid="bf647ede-9df7-4920-aeb3-79afac620753" manual="true">
       <bo>
         <seg>org.osate.ge.diagrams.instance</seg>
         <seg>connection_reference</seg>
-        <seg>c5 : TrafficLightsSystem_impl_Instance.signalRouter.statusOut -> TrafficLightsSystem_impl_Instance.mainController.receiveLightStatus</seg>
+        <seg>c4 : TrafficLightsSystem_impl_Instance.mainController.sendMainCarSignal -> TrafficLightsSystem_impl_Instance.mainCarLight.signalReceive</seg>
+      </bo>
+    </element>
+    <element uuid="b3dd8c2a-101d-426f-afac-99d5f53febd5" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>c5 : TrafficLightsSystem_impl_Instance.mainController.sendSideCarSignal -> TrafficLightsSystem_impl_Instance.sideCarLight.signalReceive</seg>
       </bo>
       <bendpoints>
-        <point x="1851.50390625" y="944.0"/>
-        <point x="1851.50390625" y="309.0"/>
-        <point x="2406.22119140625" y="309.0"/>
-        <point x="2406.22119140625" y="392.0"/>
+        <point x="1230.9635009765625" y="593.0"/>
+        <point x="1230.9635009765625" y="653.0"/>
       </bendpoints>
     </element>
-    <element uuid="2c1c0bfe-a91d-4798-ae6e-4e3862412ea4" manual="true">
+    <element uuid="b60f49c2-fcc7-4b1f-a20c-916f759bd805" manual="true">
       <bo>
         <seg>org.osate.ge.diagrams.instance</seg>
         <seg>connection_reference</seg>
-        <seg>c6 : TrafficLightsSystem_impl_Instance.mainCarLight.sendStatus -> TrafficLightsSystem_impl_Instance.signalRouter.mainCarStatus</seg>
-      </bo>
-    </element>
-    <element uuid="f727e40c-fa0c-4a2b-859f-fa29d3432ae9" manual="true">
-      <bo>
-        <seg>org.osate.ge.diagrams.instance</seg>
-        <seg>connection_reference</seg>
-        <seg>c7 : TrafficLightsSystem_impl_Instance.sideCarLight.sendStatus -> TrafficLightsSystem_impl_Instance.signalRouter.sideCarStatus</seg>
-      </bo>
-    </element>
-    <element uuid="8c49b280-140b-47d3-9a73-1c2cd52cd292" manual="true">
-      <bo>
-        <seg>org.osate.ge.diagrams.instance</seg>
-        <seg>connection_reference</seg>
-        <seg>c8 : TrafficLightsSystem_impl_Instance.tramLight.sendStatus -> TrafficLightsSystem_impl_Instance.signalRouter.tramStatus</seg>
+        <seg>c6 : TrafficLightsSystem_impl_Instance.mainController.sendTramSignal -> TrafficLightsSystem_impl_Instance.tramLight.signalReceive</seg>
       </bo>
       <bendpoints>
-        <point x="1841.50390625" y="1014.0"/>
-        <point x="1841.50390625" y="1044.0"/>
+        <point x="1220.9635009765625" y="493.0"/>
+        <point x="1220.9635009765625" y="523.0"/>
       </bendpoints>
     </element>
-    <element uuid="85da1c3f-58c8-4819-b9ab-ce8296f12ef1" manual="true">
+    <element uuid="8e9d1141-e717-4879-9857-f1447d1a7aaa" manual="true">
       <bo>
         <seg>org.osate.ge.diagrams.instance</seg>
         <seg>connection_reference</seg>
-        <seg>c9 : TrafficLightsSystem_impl_Instance.mainPedLight.sendStatus -> TrafficLightsSystem_impl_Instance.signalRouter.mainPedStatus</seg>
+        <seg>c7 : TrafficLightsSystem_impl_Instance.mainController.sendMainPedSignal -> TrafficLightsSystem_impl_Instance.mainPedLight.signalReceive</seg>
       </bo>
       <bendpoints>
-        <point x="2948.901123046875" y="1344.0"/>
-        <point x="2948.901123046875" y="1305.0"/>
-        <point x="1841.50390625" y="1305.0"/>
-        <point x="1841.50390625" y="1244.0"/>
+        <point x="668.2838745117188" y="435.8571472167969"/>
+        <point x="668.2838745117188" y="450.1428527832031"/>
       </bendpoints>
     </element>
-    <element uuid="e034252b-896f-4b45-8efe-a2c7388c4d11" manual="true" dockArea="left">
+    <element uuid="6f27db33-dfe2-4411-b02f-73c608db87ca" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>c8 : TrafficLightsSystem_impl_Instance.mainController.sendSidePedSignal -> TrafficLightsSystem_impl_Instance.sidePedLight.signalReceive</seg>
+      </bo>
+      <bendpoints>
+        <point x="1220.9635009765625" y="293.0"/>
+        <point x="1220.9635009765625" y="263.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="19980b1d-488f-493e-a978-3ad3abb80998" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>c9 : TrafficLightsSystem_impl_Instance.mainCarLight.sendStatus -> TrafficLightsSystem_impl_Instance.mainController.receiveMainCarStatus</seg>
+      </bo>
+    </element>
+    <element uuid="3f39ed90-dee7-4308-a56d-4f40c8c27dcf" manual="true" dockArea="left">
       <bo>
         <seg>org.osate.ge.diagrams.instance</seg>
         <seg>feature_instance</seg>
         <seg>radioBus</seg>
       </bo>
-      <position y="70.0"/>
+      <position y="228.0"/>
     </element>
-    <element uuid="3588dc32-62f5-4dba-aa11-8c8651e5d799" manual="true" dockArea="left">
+    <element uuid="485f22fa-ac33-4b74-b185-abc7a31fcb3b" manual="true" dockArea="left">
       <bo>
         <seg>org.osate.ge.diagrams.instance</seg>
         <seg>feature_instance</seg>
         <seg>radioIn</seg>
       </bo>
-      <position y="120.0"/>
+      <position y="178.0"/>
     </element>
     <bo>
       <seg>org.osate.ge.diagrams.instance</seg>
       <seg>system_instance</seg>
       <seg>/trafficlights/instances/trafficlights_trafficlightssystem_impl_instance.aaxl2</seg>
     </bo>
-    <position x="880.0" y="260.0"/>
-    <size width="2513.1978302001953" height="1114.0"/>
+    <position/>
+    <size width="2168.2278594970703" height="913.0"/>
   </element>
   <config type="structure" connectionPrimaryLabelsVisible="false">
     <enabledAadlProperties/>

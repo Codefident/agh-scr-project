@@ -55,7 +55,6 @@ public
 			
 			-- processes
 			mainController: process MainController.impl;
-			signalRouter: process SignalRouter.impl;
 			
 			
 		connections
@@ -64,27 +63,23 @@ public
 			c2: port pedButtonSide.requestSignal -> mainController.receivePedSideRequest;
 			c3: port tramSensor.requestSignal -> mainController.receiveTramRequest;
 
-			-- Main controller <-> router
-			c4: port mainController.sendSignal -> signalRouter.controlIn;
-			c5: port signalRouter.statusOut -> mainController.receiveLightStatus;
+			-- Signal output from controller to lights
+			c4: port mainController.sendMainCarSignal -> mainCarLight.signalReceive;
+			c5: port mainController.sendSideCarSignal -> sideCarLight.signalReceive;
+			c6: port mainController.sendTramSignal -> tramLight.signalReceive;
+			c7: port mainController.sendMainPedSignal -> mainPedLight.signalReceive;
+			c8: port mainController.sendSidePedSignal -> sidePedLight.signalReceive;
 			
-			-- Light Status to signal router
-			c6: port mainCarLight.sendStatus -> signalRouter.mainCarStatus;
-			c7: port sideCarLight.sendStatus -> signalRouter.sideCarStatus;
-			c8: port tramLight.sendStatus -> signalRouter.tramStatus;
-			c9: port mainPedLight.sendStatus -> signalRouter.mainPedStatus;
-			c10: port sidePedLight.sendStatus -> signalRouter.sidePedStatus;
-			
-			-- Light Signal to lights
-			c11: port signalRouter.mainCarSignal -> mainCarLight.signalReceive;
-			c12: port signalRouter.sideCarSignal -> sideCarLight.signalReceive;
-			c13: port signalRouter.tramSignal -> tramLight.signalReceive;
-			c14: port signalRouter.mainPedSignal -> mainPedLight.signalReceive;
-			c15: port signalRouter.sidePedSignal -> sidePedLight.signalReceive;
+			-- Light Status
+			c9: port mainCarLight.sendStatus -> mainController.receiveMainCarStatus;
+			c10: port sideCarLight.sendStatus -> mainController.receiveSideCarStatus;
+			c11: port tramLight.sendStatus -> mainController.receiveTramStatus;
+			c12: port mainPedLight.sendStatus -> mainController.receiveMainPedStatus;
+			c13: port sidePedLight.sendStatus -> mainController.receiveSidePedStatus;
 			
 			-- Emergency signal
-			c16: port radioReceiver.outEmergencySignal -> mainController.receiveEmergencySignal;
-			c17: port radioIn -> radioReceiver.radioIn;
+			c14: port radioReceiver.outEmergencySignal -> mainController.receiveEmergencySignal;
+			c15: port radioIn -> radioReceiver.radioIn;
 			
 			-- Bus
 			b1: bus access pedButtonMain.busConn <-> commBus;
@@ -137,9 +132,20 @@ public
 			receivePedMainRequest: in data port RequestSignal;
 			receivePedSideRequest: in data port RequestSignal;
 			receiveTramRequest: in data port RequestSignal;
-			receiveLightStatus: in data port LightStatus;
+			
+			receiveMainCarStatus: in data port LightStatus;
+			receiveSideCarStatus: in data port LightStatus;
+			receiveTramStatus: in data port LightStatus;
+			receiveMainPedStatus: in data port LightStatus;
+			receiveSidePedStatus: in data port LightStatus;
+
 			receiveEmergencySignal: in data port emergencyVehicle::EmergencySignal;
-			sendSignal: out data port Signal;
+			
+			sendMainCarSignal: out data port Signal;
+			sendSideCarSignal: out data port Signal;
+			sendTramSignal: out data port Signal;
+			sendMainPedSignal: out data port Signal;
+			sendSidePedSignal: out data port Signal;
 		properties
 			SEI::MIPSBudget => 1.3 mips;
 	end MainController;
@@ -155,58 +161,21 @@ public
 			c1: port receiveTramRequest -> tramSensorThread.dataIn;
 			c2: port receivePedMainRequest -> pedMainButtonThread.dataIn;
 			c3: port receivePedSideRequest -> pedSideButtonThread.dataIn;
-			c4: port lightThread.dataOut -> sendSignal;
-			c5: port receiveLightStatus -> lightThread.dataIn;
-			c6: port receiveEmergencySignal -> radioReceiverThread.dataIn;
-	end MainController.impl;
-	
-	process SignalRouter
-	    features
-	        -- Inputs from each light
-	        mainCarStatus: in data port LightStatus;
-	        sideCarStatus: in data port LightStatus;
-	        tramStatus: in data port LightStatus;
-	        mainPedStatus: in data port LightStatus;
-	        sidePedStatus: in data port LightStatus;
-	
-	        -- Aggregated output to MainController
-	        statusOut: out data port LightStatus;
-	
-	        -- Signal from MainController
-	        controlIn: in data port Signal;
-	
-	        -- Fan-out to each light
-	        mainCarSignal: out data port Signal;
-	        sideCarSignal: out data port Signal;
-	        tramSignal: out data port Signal;
-	        mainPedSignal: out data port Signal;
-	        sidePedSignal: out data port Signal;
-	end SignalRouter;
+			
+			c4: port lightThread.sendMainCarSignal -> sendMainCarSignal;
+			c5: port lightThread.sendSideCarSignal -> sendSideCarSignal;
+			c6: port lightThread.sendTramSignal -> sendTramSignal;
+			c7: port lightThread.sendMainPedSignal -> sendMainPedSignal;
+			c8: port lightThread.sendSidePedSignal -> sendSidePedSignal;
+			
+			c9: port receiveMainCarStatus -> lightThread.receiveMainCarStatus;
+			c10: port receiveSideCarStatus -> lightThread.receiveSideCarStatus;
+			c11: port receiveTramStatus -> lightThread.receiveTramStatus;
+			c12: port receiveMainPedStatus -> lightThread.receiveMainPedStatus;
+			c13: port receiveSidePedStatus -> lightThread.receiveSidePedStatus;
 
-	process implementation SignalRouter.impl
-	    subcomponents
-	        routerThread: thread SignalRouterThread.impl;
-	    connections
-	        -- Map light statuses to internal thread
-	        s1: port mainCarStatus -> routerThread.inMainCar;
-	        s2: port sideCarStatus -> routerThread.inSideCar;
-	        s3: port tramStatus -> routerThread.inTram;
-	        s4: port mainPedStatus -> routerThread.inMainPed;
-	        s5: port sidePedStatus -> routerThread.inSidePed;
-	
-	        -- Aggregate status to main controller
-	        s6: port routerThread.outStatus -> statusOut;
-	
-	        -- Signal in from controller
-	        s7: port controlIn -> routerThread.inSignal;
-	
-	        -- Forward signals to lights
-	        s8: port routerThread.outMainCar -> mainCarSignal;
-	        s9: port routerThread.outSideCar -> sideCarSignal;
-	        s10: port routerThread.outTram -> tramSignal;
-	        s11: port routerThread.outMainPed -> mainPedSignal;
-	        s12: port routerThread.outSidePed -> sidePedSignal;
-	end SignalRouter.impl;
+			c14: port receiveEmergencySignal -> radioReceiverThread.dataIn;
+	end MainController.impl;
 	
 	
 	-- THREADS --
@@ -226,8 +195,17 @@ public
 	
 	thread LightThread
 		features
-			dataOut: out data port Signal;
-			dataIn: in data port LightStatus;
+			sendMainCarSignal: out data port Signal;
+			sendSideCarSignal: out data port Signal;
+			sendTramSignal: out data port Signal;
+			sendMainPedSignal: out data port Signal;
+			sendSidePedSignal: out data port Signal;
+			
+			receiveMainCarStatus: in data port LightStatus;
+			receiveSideCarStatus: in data port LightStatus;
+			receiveTramStatus: in data port LightStatus;
+			receiveMainPedStatus: in data port LightStatus;
+			receiveSidePedStatus: in data port LightStatus;
 	end LightThread;
 	thread implementation LightThread.impl
 	end LightThread.impl;
@@ -239,29 +217,6 @@ public
 	end RadioReceiverThread;
 	thread implementation RadioReceiverThread.impl
 	end RadioReceiverThread.impl;
-	
-	thread SignalRouterThread
-	    features
-	        inMainCar: in data port LightStatus;
-	        inSideCar: in data port LightStatus;
-	        inTram: in data port LightStatus;
-	        inMainPed: in data port LightStatus;
-	        inSidePed: in data port LightStatus;
-	        
-	        inSignal: in data port Signal;
-	        
-	        outMainCar: out data port Signal;
-	        outSideCar: out data port Signal;
-	        outTram: out data port Signal;
-	        outMainPed: out data port Signal;
-	        outSidePed: out data port Signal;
-	        
-	        outStatus: out data port LightStatus;
-	end SignalRouterThread;
-	
-	thread implementation SignalRouterThread.impl
-	end SignalRouterThread.impl;
-	
 	
 	-- PROCESSOR --
 	processor CPU
