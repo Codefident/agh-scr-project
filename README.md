@@ -46,15 +46,18 @@
     przez odpowiedni odbiornik na skrzyżowaniu.
     ```
 
-    Przykładowe skrzyżowanie (_źródło: Google Maps_)
+    Przykładowe skrzyżowanie (_źródło: Google Maps_)<br/>
    ![Screenshot from 2025-06-03 13-23-06](https://github.com/user-attachments/assets/694396a5-5f10-4772-baef-3c02791ab7a6)
 
-    Przykładowy pojazd uprzywilejowany (_źródło: Wikisłownik)
+    Przykładowy pojazd uprzywilejowany (_źródło: Wikisłownik_)<br/>
     ![image](https://github.com/user-attachments/assets/e160ba80-7e08-42d2-8d24-1629c221fb5e)
 
 5. **Komponenty**:
     - **data**:
-        - data...
+        - data `Signal` - enumerator, wartości `"Go", "Stop", "ChangingSignal", "Failure"`, odpowiada za to jaki powinien być emitowany sygnał,
+        - data `RequestSignal` - boolean, odpowiada za żądanie zmiany świateł przez np. pieszego,
+        - data `LightStatus` - boolean, odpowiada za status świateł drogowych (czy działają, czy nie),
+        - data `EmergencySignal` - string, odpowiada za sygnał wysyłany przez pojazdy uprzywilejowane,
     - **system**:
         - system `UrbanTrafficSystem` - system nadrzędny, pomagający spiąć ze sobą system świateł oraz pojazdów uprzywilejowanych,
         - system `TrafficLightsSystem` - system sygnalizacji świetlnej,
@@ -85,19 +88,25 @@
         - thread `RadioReceiverThread` - wątek odpowiadający za odbieranie żądań od pojazdów uprzywilejowanych
   
 7. **Model - schematy**
-   - `UrbanTrafficSystem`
-     ![Screenshot from 2025-06-03 03-13-24](https://github.com/user-attachments/assets/e218a097-983d-4473-b1a2-224142532c33)
+   - `UrbanTrafficSystem`<br/>
+     ![urbanTrafficDiagram](https://github.com/Codefident/agh-scr-project/blob/main/diagrams-images/urbanTrafficDiagram.svg)
 
-   - `TrafficLightsSystem`
-    ![Screenshot from 2025-06-03 03-12-48](https://github.com/user-attachments/assets/60668034-4020-4ba6-98f1-78b692676938)
-
+   - `TrafficLightsSystem`<br/>
+    ![trafficLightsDiagram](https://github.com/Codefident/agh-scr-project/blob/main/diagrams-images/trafficLightsDiagram.svg)
      
-   - `EmergencyVehicleSystem`
-   ![Screenshot from 2025-06-03 03-10-04](https://github.com/user-attachments/assets/bda19caa-292e-4558-ba7f-70a90d7d9095)
+   - `EmergencyVehicleSystem`<br/>
+   ![emergencyVehicleDiagram](https://github.com/Codefident/agh-scr-project/blob/main/diagrams-images/emergencyVehicleDiagram.svg)
 
 8. **Analizy modelu**
-   - Check Binding Constraints - "No problems found" ✅
-   - Check Connection Binding Consistency - Brak ostrzeżeń oraz błędów ✅
+   - Check Binding Constraints - "No problems found" ✅<br/>
+     ![image](https://github.com/user-attachments/assets/0e54d590-d4a0-4e58-a400-5cf813cb57d0)
+
+   - Check Connection Binding Consistency - Brak ostrzeżeń oraz błędów ✅<br/>
+     ![image](https://github.com/user-attachments/assets/004e7c23-1ea1-47af-a44e-c470a21b75ab)
+
+   - Weight Totals, gdzie maksymalna łączna waga ustawiona została na 300kg i nie została przekroczona ✅:<br/>
+     ![image](https://github.com/user-attachments/assets/c21a1c7a-dba8-4fa6-a6f4-a260d9f744a6)
+
   
 9. **Inne informacje zależne od tematu**
     Brak.
