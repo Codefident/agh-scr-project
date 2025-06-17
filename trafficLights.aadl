@@ -30,6 +30,8 @@ public
 		features
 			radioBus: requires bus access urbanTraffic::Radio;
 			radioIn: in data port emergencyVehicle::EmergencySignal;
+		properties
+			SEI::WeightLimit=> 300.0 kg;
 	end TrafficLightsSystem;
 	
 	system implementation TrafficLightsSystem.impl
@@ -224,6 +226,7 @@ public
 			busConn: requires bus access CommBus;
 		properties
 			SEI::MIPSCapacity => 120.0 mips;
+			SEI::GrossWeight => 0.3 kg;
 	end CPU;
 	processor implementation CPU.impl
 	end CPU.impl;
@@ -232,6 +235,8 @@ public
 	memory Mem
 		features
 			busConn: requires bus access CommBus;
+		properties
+			SEI::GrossWeight => 0.7 kg;
 	end Mem;
 	memory implementation Mem.impl
 	end Mem.impl;
@@ -242,6 +247,7 @@ public
 		properties
 			SEI::BandWidthBudget => 420.0 KBytesps;
 			SEI::BandWidthCapacity => 3.0 MBytesps;
+			SEI::GrossWeight => 60.0 kg;
 	end CommBus;
 	bus implementation CommBus.impl
 	end CommBus.impl;
